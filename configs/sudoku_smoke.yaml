@@ -1,0 +1,11 @@
+# Paths are relative to the project root. This is an observed-source configuration.
+upstream_root: third_party/ncm
+upstream_commit: c70274273f489abc73832b2b98584a8483b6b203
+upstream_config: third_party/ncm/config/eval/sudoku-hard.yaml
+checkpoint_dir: artifacts/sudoku-hard
+data_dir: data/sudoku-hard
+n: 32
+batch_size: 8
+seed: 0
+device: cuda
+# The published config has batch_size=128; 8 is an explicit local-memory deviation.

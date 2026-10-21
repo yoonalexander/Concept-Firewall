@@ -1,0 +1,10 @@
+{
+  "model_revision": "d342ce8aaea58830eef3b8ad473664673e41f692",
+  "data_revision": "6580ba41a4b0a976dde876fbe84d25327617b0e6",
+  "sha256": {
+    "artifacts/sudoku-hard/generator.pt": "9e0bfe44abc1ca3930b7a63cd56cd0b9564b95e29edfe12dd0903207b89df8b8",
+    "artifacts/sudoku-hard/tokenizer.pt": "3bc6aecad8e15820f9d9bb09750e3c59bdf91ca953f1f11dbd109aaed1d80c0b",
+    "data/sudoku-hard/puzzles.pickle": "dd7b6763e5594094a1366ac8423f87fc9431056721c61df52ce3490023f17d5e",
+    "data/sudoku-hard/solutions.pickle": "b52de75f5e4642adca58b18967bcd4bbcafa699c61b21ac33ee0fd7389e0d576"
+  }
+}

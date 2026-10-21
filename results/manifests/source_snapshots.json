@@ -1,0 +1,12 @@
+{
+  "8bc88feab742cd698e32c8b444b82ec7083a1a86dc0a06eb2cc3df02cb43edad": {
+    "path": "results/source_snapshots/8bc88feab742cd698e32c8b444b82ec7083a1a86dc0a06eb2cc3df02cb43edad.zip",
+    "archive_sha256": "e6f0abebbd55c188c77a44b564e2c879e8c7fed36966a2246783c818da1f4cc5",
+    "note": "Source-content hash covers Python package, configs and pyproject; environment snapshot also included. Repository has no commit yet."
+  },
+  "2ac472dc63e2ec4c845b0059fc014a2cfc18a37423519a35ee6ea536f66f0d5b": {
+    "path": "results/source_snapshots/2ac472dc63e2ec4c845b0059fc014a2cfc18a37423519a35ee6ea536f66f0d5b.zip",
+    "archive_sha256": "1689f5cf9b3221df07425ec6b996f71734d38bcee84162b79d5605da29001959",
+    "note": "Source-content hash covers Python package, configs and pyproject; environment snapshot also included. Repository has no commit yet."
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "protocol_version": 1,
+  "purpose": "Initial exploratory evaluation; no within-puzzle, causal, online or safety claim",
+  "primary_level": 6,
+  "secondary_levels": [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12],
+  "primary_comparison": "AUROC paired difference of input_decoded_latent minus input_decoded at level 6",
+  "split_seed": 20261020,
+  "fractions": {"train": 0.5, "validation": 0.15, "calibration": 0.15, "test": 0.2},
+  "minimum_each_class_per_partition": 20,
+  "regularization_C": [0.01, 0.1, 1.0],
+  "selection_metric": "validation log loss before calibration",
+  "calibration": "Platt logistic on held-out calibration logits only",
+  "threshold": "calibration negative scores; conservative empirical 5 percent FPR budget; no population guarantee",
+  "false_positive_budget": 0.05,
+  "bootstrap_replicates": 500,
+  "bootstrap_seed": 601,
+  "models": ["prevalence", "level_only", "input", "decoded", "codes", "latent", "input_decoded", "input_decoded_latent", "shuffled_latent"],
+  "limitations": "Exact duplicate clue grids grouped by SHA256; Sudoku symmetry classes not audited. Partitions carve up the public official test set. All levels reported; level 12 is post-generation diagnosis. Secondary comparisons are exploratory without multiplicity adjustment."
+}

@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "concept-firewall"
+version = "0.1.0"
+description = "Reproducible observational correctness research on frozen NCM hierarchies"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+research = ["torch>=2.6", "numpy", "omegaconf", "hydra-core", "transformers>=4.51", "huggingface_hub", "regex", "sacrebleu", "rouge_score", "pyarrow", "matplotlib", "scikit-learn"]
+test = ["pytest>=8"]
+
+[project.scripts]
+concept-firewall = "concept_firewall.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "run_id": "20261021T014201396770Z-baseline",
+  "mode": "baseline",
+  "status": "passed",
+  "started_utc": "2026-10-21T01:42:01.396770+00:00",
+  "command": [
+    "C:\\Users\\Admin\\Documents\\Projects\\Concept-Firewall\\.venv\\Scripts\\python.exe",
+    "-m",
+    "concept_firewall",
+    "baseline",
+    "--config",
+    "configs/sudoku_smoke.yaml"
+  ],
+  "code_revision": null,
+  "source_tree_sha256": "5f443a1b8384628aaef47b324d11cfc65e424b8c1e1c9719251c5bf1c66f2065",
+  "upstream_commit": "c70274273f489abc73832b2b98584a8483b6b203",
+  "configuration": {
+    "upstream_root": "third_party/ncm",
+    "upstream_commit": "c70274273f489abc73832b2b98584a8483b6b203",
+    "upstream_config": "third_party/ncm/config/eval/sudoku-hard.yaml",
+    "checkpoint_dir": "artifacts/sudoku-hard",
+    "data_dir": "data/sudoku-hard",
+    "n": 32,
+    "batch_size": 8,
+    "seed": 0,
+    "device": "cuda"
+  },
+  "environment": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "torch": "2.11.0+cu128",
+      "numpy": "2.5.4",
+      "omegaconf": "2.3.1",
+      "hydra-core": "1.3.7",
+      "transformers": "5.20.2",
+      "pyarrow": "26.0.0",
+      "scikit-learn": "1.9.1"
+    },
+    "torch_cuda": "12.8",
+    "cuda_available": true,
+    "gpu": "NVIDIA GeForce RTX 5060",
+    "gpu_memory_bytes": 8546484224
+  },
+  "claims": "Research measurements only; no intervention or safety effectiveness established.",
+  "artifact_sha256": {
+    "artifacts/sudoku-hard/generator.pt": "9e0bfe44abc1ca3930b7a63cd56cd0b9564b95e29edfe12dd0903207b89df8b8",
+    "artifacts/sudoku-hard/tokenizer.pt": "3bc6aecad8e15820f9d9bb09750e3c59bdf91ca953f1f11dbd109aaed1d80c0b",
+    "data/sudoku-hard/puzzles.pickle": "dd7b6763e5594094a1366ac8423f87fc9431056721c61df52ce3490023f17d5e",
+    "data/sudoku-hard/solutions.pickle": "b52de75f5e4642adca58b18967bcd4bbcafa699c61b21ac33ee0fd7389e0d576"
+  },
+  "upstream_command": [
+    "C:\\Users\\Admin\\Documents\\Projects\\Concept-Firewall\\.venv\\Scripts\\python.exe",
+    "evaluate.py",
+    "--config",
+    "C:\\Users\\Admin\\Documents\\Projects\\Concept-Firewall\\third_party\\ncm\\config\\eval\\sudoku-hard.yaml",
+    "--checkpoint-dir",
+    "C:\\Users\\Admin\\Documents\\Projects\\Concept-Firewall\\artifacts\\sudoku-hard",
+    "--data-dir",
+    "C:\\Users\\Admin\\Documents\\Projects\\Concept-Firewall\\data\\sudoku-hard",
+    "--gpus",
+    "0",
+    "--n",
+    "32",
+    "--bs",
+    "8",
+    "--out",
+    "C:\\Users\\Admin\\Documents\\Projects\\Concept-Firewall\\results\\raw\\20261021T014201396770Z-baseline"
+  ],
+  "raw_directory": "results\\raw\\20261021T014201396770Z-baseline",
+  "process_wall_ms": 24533.427500005928,
+  "samples": 32,
+  "upstream_metrics_log": "[evaluate] 1 shard(s) on GPU(s) 0 -> C:\\Users\\Admin\\Documents\\Projects\\Concept-Firewall\\results\\raw\\20261021T014201396770Z-baseline/\n\nmerged 1 shards -> 32 sudoku-hard outputs\n\n solved %  solved  cell %  valid %\n    75.00   24/32   97.26    75.00\n"
+}

@@ -1,0 +1,11 @@
+# Experiment protocol
+
+1. Restore the pinned, unmodified upstream submodule and check `doctor` in the project environment. Record Python, PyTorch, CUDA, GPU, config and source hash. Download only pinned hard-Sudoku artifacts.
+2. Run the official evaluator on the declared subset and retain all predictions, stdout and shard logs. A successful 32-input run validates operation; it does not reproduce a published full-benchmark score.
+3. Run observational collection with identical inputs, batches and generation settings. Reject mismatches against official final predictions. Decode all twelve cumulative latents and store prefix-only records separately from final outcome labels. Count malformed outputs as failures.
+4. Inspect real transitions and class counts. Before fitting probes, freeze a puzzle-ID split manifest, calibration strategy, selected hyperparameters/levels, primary comparison and threshold rule. Split exact duplicate clue grids together; avoid claims of Sudoku-symmetry-disjoint evaluation unless a canonicalization audit is implemented.
+5. Fit preprocessing only on train puzzles. Use validation for model selection; calibration on a separate calibration partition if sufficient data exist. Test once with frozen choices. Report that any carved-out portion of official test data is an internal held-out partition, not an untouched official benchmark.
+6. Report per-level and unique-puzzle counts, failure prevalence, AUROC and average precision with their definitions, Brier and calibration, chosen false-positive operating points and puzzle-clustered confidence intervals. Undefined single-class metrics remain unavailable. Include paired comparisons, weak and strong input-only controls, decoded controls, prevalence/level-only controls and shuffled training labels.
+7. A deterministic single-trajectory dataset supports prediction across unseen puzzles under one generator. It cannot identify conditional recoverability or causal mechanisms. No online intervention, speedup or safety claim follows from post-hoc trajectories.
+
+Current implementation status and exact runs are in `reproduction_log.md`. Follow-on model fitting and policies must satisfy their prior gates before any claims are made.

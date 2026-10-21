@@ -1,0 +1,182 @@
+{
+  "categories": {
+    "repaired_by_final_level": 24,
+    "wrong_at_every_level": 8
+  },
+  "per_level": [
+    {
+      "level": 1,
+      "trajectories": 32,
+      "unique_puzzles": 32,
+      "correct": 0,
+      "malformed": 32.0
+    },
+    {
+      "level": 2,
+      "trajectories": 32,
+      "unique_puzzles": 32,
+      "correct": 0,
+      "malformed": 32.0
+    },
+    {
+      "level": 3,
+      "trajectories": 32,
+      "unique_puzzles": 32,
+      "correct": 0,
+      "malformed": 32.0
+    },
+    {
+      "level": 4,
+      "trajectories": 32,
+      "unique_puzzles": 32,
+      "correct": 0,
+      "malformed": 32.0
+    },
+    {
+      "level": 5,
+      "trajectories": 32,
+      "unique_puzzles": 32,
+      "correct": 0,
+      "malformed": 32.0
+    },
+    {
+      "level": 6,
+      "trajectories": 32,
+      "unique_puzzles": 32,
+      "correct": 0,
+      "malformed": 32.0
+    },
+    {
+      "level": 7,
+      "trajectories": 32,
+      "unique_puzzles": 32,
+      "correct": 0,
+      "malformed": 32.0
+    },
+    {
+      "level": 8,
+      "trajectories": 32,
+      "unique_puzzles": 32,
+      "correct": 0,
+      "malformed": 32.0
+    },
+    {
+      "level": 9,
+      "trajectories": 32,
+      "unique_puzzles": 32,
+      "correct": 0,
+      "malformed": 32.0
+    },
+    {
+      "level": 10,
+      "trajectories": 32,
+      "unique_puzzles": 32,
+      "correct": 0,
+      "malformed": 32.0
+    },
+    {
+      "level": 11,
+      "trajectories": 32,
+      "unique_puzzles": 32,
+      "correct": 0,
+      "malformed": 32.0
+    },
+    {
+      "level": 12,
+      "trajectories": 32,
+      "unique_puzzles": 32,
+      "correct": 24,
+      "malformed": 0.0
+    }
+  ],
+  "transitions": [
+    {
+      "from": 1,
+      "to": 2,
+      "wrong_wrong": 32,
+      "wrong_right": 0,
+      "right_wrong": 0,
+      "right_right": 0
+    },
+    {
+      "from": 2,
+      "to": 3,
+      "wrong_wrong": 32,
+      "wrong_right": 0,
+      "right_wrong": 0,
+      "right_right": 0
+    },
+    {
+      "from": 3,
+      "to": 4,
+      "wrong_wrong": 32,
+      "wrong_right": 0,
+      "right_wrong": 0,
+      "right_right": 0
+    },
+    {
+      "from": 4,
+      "to": 5,
+      "wrong_wrong": 32,
+      "wrong_right": 0,
+      "right_wrong": 0,
+      "right_right": 0
+    },
+    {
+      "from": 5,
+      "to": 6,
+      "wrong_wrong": 32,
+      "wrong_right": 0,
+      "right_wrong": 0,
+      "right_right": 0
+    },
+    {
+      "from": 6,
+      "to": 7,
+      "wrong_wrong": 32,
+      "wrong_right": 0,
+      "right_wrong": 0,
+      "right_right": 0
+    },
+    {
+      "from": 7,
+      "to": 8,
+      "wrong_wrong": 32,
+      "wrong_right": 0,
+      "right_wrong": 0,
+      "right_right": 0
+    },
+    {
+      "from": 8,
+      "to": 9,
+      "wrong_wrong": 32,
+      "wrong_right": 0,
+      "right_wrong": 0,
+      "right_right": 0
+    },
+    {
+      "from": 9,
+      "to": 10,
+      "wrong_wrong": 32,
+      "wrong_right": 0,
+      "right_wrong": 0,
+      "right_right": 0
+    },
+    {
+      "from": 10,
+      "to": 11,
+      "wrong_wrong": 32,
+      "wrong_right": 0,
+      "right_wrong": 0,
+      "right_right": 0
+    },
+    {
+      "from": 11,
+      "to": 12,
+      "wrong_wrong": 8,
+      "wrong_right": 24,
+      "right_wrong": 0,
+      "right_right": 0
+    }
+  ]
+}

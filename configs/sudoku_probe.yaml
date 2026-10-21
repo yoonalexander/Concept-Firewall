@@ -1,0 +1,9 @@
+upstream_root: third_party/ncm
+upstream_commit: c70274273f489abc73832b2b98584a8483b6b203
+upstream_config: third_party/ncm/config/eval/sudoku-hard.yaml
+checkpoint_dir: artifacts/sudoku-hard
+data_dir: data/sudoku-hard
+n: 2000
+batch_size: 8
+seed: 0
+device: cuda
