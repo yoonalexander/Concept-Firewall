@@ -6,6 +6,8 @@ The supplied [design](Concept_Firewall_Design_Document.md) remains canonical. Th
 
 See [ROADMAP.md](ROADMAP.md) for every project phase, the M0–M7 milestone mapping, current status, deliverables, and evidence gates.
 
+The scoped **0.1.1 Sudoku study package** has [release notes](RELEASE_NOTES.md), a [clean-checkout reproduction guide](docs/reproduce_study.md), a checksummed retained-evidence bundle, and [source/artifact notices](THIRD_PARTY_NOTICES.md). It preserves the negative result and leaves M4–M7 deferred.
+
 The released evaluator has now run on all 2,000 hard-Sudoku puzzles: **1,725 solved (86.25%)**. Corrected full-prefix collection produced **24,000 records**, with every final output matching the official baseline. See [baseline evidence](results/reports/baseline_reproduction.md) and [trajectory analysis](results/reports/level_trajectory_analysis.md). A reconstruction error found during review is documented transparently; initial native-length reports are superseded.
 
 **Initial M0–M3 result:** the prespecified level-6 pooled-latent increment is **−0.0078 AUROC (95% interval −0.0368 to +0.0193)**, so useful incremental prediction was not demonstrated. See [probe evaluation](results/reports/probe_evaluation.md). The initial verification passed **74 tests and 119 subtests**; saved probes reproduce all 400 held-out predictions for each of five audited primary-level families. Later phases remain gated.
@@ -49,7 +51,7 @@ To reproduce the completed bounded diagnostic study:
 .\.venv\Scripts\python.exe -m concept_firewall followup --audit-manifest results/manifests/AUDIT.json --protocol configs/m3_followup.json
 ```
 
-The follow-up consumes the locally retained original trajectory/probe artifacts, whose hashes are checked by the audit. On another machine, restore those ignored artifacts from a verified copy or reproduce the original collection and probes; this is not a download-only shortcut. Old run manifests retain their exact commands and source snapshots.
+The follow-up consumes the retained original trajectory/probe artifacts, whose hashes are checked by the audit. On another machine, use the [artifact restore command](docs/reproduce_study.md) and its committed inventory, or reproduce the original collection and probes under new run IDs. This is not a download-only shortcut. Old run manifests retain their exact commands and source snapshots.
 
 The 32-input smoke configuration reduces batch size from the released 128 to 8 for local memory. It is operational validation, not a statistical accuracy estimate. Baseline executes the actual official evaluator and keeps its logs. Collection requires a successful baseline with the same configuration and verifies every final board against that run. It preserves all 12 levels, code prefixes, pooled tokenizer latents, features and current correctness; final outcome labels are separate.
 

@@ -14,6 +14,7 @@ from concept_firewall.schema import LevelState, puzzle_identity
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--manifest", type=Path, required=True)
+parser.add_argument("--output", type=Path, help="Write a new audit without overwriting historical evidence")
 args = parser.parse_args()
 root = Path(__file__).resolve().parents[1]
 manifest_path = args.manifest.resolve()
@@ -63,5 +64,8 @@ for family in ("input", "decoded", "latent", "input_decoded", "input_decoded_lat
         raise ValueError(f"Portable {family} predictions differ from held-out evaluation: {largest_error}")
     checks[family] = {"probe_sha256": sha256_file(path), "test_predictions_checked": len(expected["puzzle_ids"]), "max_absolute_probability_error": largest_error, "scaler_train_only_mean_verified": True}
 report = root / "results/manifests" / f"{manifest['run_id']}-artifact_validation.json"
+if args.output is not None:
+    report = args.output.resolve()
+report.parent.mkdir(parents=True, exist_ok=True)
 report.write_text(json.dumps({"status": "passed", "probe_manifest_sha256": sha256_file(manifest_path), "collection_manifest_sha256": sha256_file(collection_path), "script_sha256": sha256_file(Path(__file__)), "level": level, "checks": checks}, indent=2) + "\n", encoding="utf-8")
 print(report)
