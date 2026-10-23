@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "probe_manifest_sha256": "5eea44ab62547f49c910b1a03cdc2d1042c2cf70e3e6c70103bef4ccbac107cc",
+  "collection_manifest_sha256": "d840813433b83c79402694e261d1334719fa722bae76f1023dcfba62ec79ae08",
+  "script_sha256": "13e0b62d5a7662af748b3de33a433380d57956b2fd6dfcd311ea630520ae5daa",
+  "level": 6,
+  "checks": {
+    "input": {
+      "probe_sha256": "86715f1e6fe56c3267b7635bc91039fc196b1fcab881da4e736d1290c94477a9",
+      "test_predictions_checked": 400,
+      "max_absolute_probability_error": 5.551115123125783e-17,
+      "scaler_train_only_mean_verified": true
+    },
+    "decoded": {
+      "probe_sha256": "67add6e538bd7199d897e79ca34b29dfe48aeeaa1b9941e63ac45ba7c34a7ff0",
+      "test_predictions_checked": 400,
+      "max_absolute_probability_error": 1.942890293094024e-16,
+      "scaler_train_only_mean_verified": true
+    },
+    "latent": {
+      "probe_sha256": "de9bec3cc015990c530ff9cc0b1ec2f92310d84e5629855861cd9b2b733bf5f3",
+      "test_predictions_checked": 400,
+      "max_absolute_probability_error": 8.326672684688674e-17,
+      "scaler_train_only_mean_verified": true
+    },
+    "input_decoded": {
+      "probe_sha256": "85f951616202bb805c388a562452550d13caa623e5ced743568e05505bd14db7",
+      "test_predictions_checked": 400,
+      "max_absolute_probability_error": 5.551115123125783e-17,
+      "scaler_train_only_mean_verified": true
+    },
+    "input_decoded_latent": {
+      "probe_sha256": "ccfb81e80069f353b319640763c06e7e3ac930f9c2d35ac67ede9accf08bdcb1",
+      "test_predictions_checked": 400,
+      "max_absolute_probability_error": 6.938893903907228e-17,
+      "scaler_train_only_mean_verified": true
+    }
+  }
+}

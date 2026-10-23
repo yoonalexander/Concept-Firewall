@@ -18,6 +18,8 @@ The result supports closing this bounded study. It does not establish that all N
 - A Python wheel for the command-line tools. Run model/evidence commands from the complete project checkout, which also supplies configs and the pinned NCM submodule.
 - A fresh-checkout reproduction report that states exactly which evidence was replayed and which expensive generation steps were not repeated.
 
+[Clean-checkout verification passed](results/reports/clean_checkout_reproduction.md): 87 tests and 119 subtests, all retained labels and official-file hashes checked, portable probe predictions reproduced, and every result in the fixed spatial follow-up matched exactly. The delivered `dist` folder contains source, wheel, retained evidence, replay evidence/logs, and SHA-256 checksums. Large archives are local delivery files rather than ordinary Git contents.
+
 Start with the [reproduction guide](docs/reproduce_study.md), [study closeout](results/reports/sudoku_study_closeout.md), [roadmap](ROADMAP.md), and [source/artifact notices](THIRD_PARTY_NOTICES.md).
 
 The software version is `0.1.1`; it does not mark the roadmap's v0.4/v0.5/v1.0 evidence gates as passed. No paper, hosted service, or paid compute is part of this delivery.

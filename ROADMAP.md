@@ -1,9 +1,12 @@
 # Concept Firewall Roadmap
 
-**Updated:** October 23, 2026  
-**Project:** Reproducible research on predicting and recovering from NCM generation errors.  
-**Current position:** Initial M0–M3 implementation, bounded follow-up and scoped negative-result closeout completed; the M3 continuation gate has not passed.  
-**Current package version:** `0.1.0`. The release targets below describe evidence requirements, not already published releases.
+**Updated:** October 23, 2026
+
+**Project:** Reproducible research on predicting and recovering from NCM generation errors.
+
+**Current position:** Initial M0–M3 implementation, bounded follow-up, scoped negative-result closeout, and reproducibility packaging completed; the M3 continuation gate has not passed.
+
+**Current package version:** `0.1.1`, tagged `sudoku-study-v0.1.1`. This scoped software package does not imply completion of the later evidence targets below.
 
 This file is the project execution roadmap. The [original design document](Concept_Firewall_Design_Document.md) remains the scientific specification; the [design review](docs/design_review.md) and [experiment protocol](docs/experiment_protocol.md) explain implementation decisions. Future phases remain part of the roadmap even while their prerequisites are unmet.
 
@@ -31,7 +34,7 @@ The design's experiment phases and engineering milestones use different numberin
 | Phase 4 | M5 — Intervene | Benchmark live policies against equal-cost alternatives | Planned; gated |
 | Phase 5 | M6 — Generalize | Evaluate source-grounded translation and summarization errors | Planned stretch extension |
 | Phase 6 | M7 — Visualize | Build an optional research trajectory explorer | Optional; gated |
-| Cross-cutting closeout | Research release | Package the declared study, reproducible evidence, and limitations | Scoped Sudoku study closed; formal software release remains open |
+| Cross-cutting closeout | Research release | Package the declared study, reproducible evidence, and limitations | Scoped Sudoku study packaged with verified evidence replay; v1.0 milestone not claimed |
 
 **Status rule:** completing an implementation or experiment does not mean its hypothesis succeeded. A negative result can complete an experiment while preventing dependent research phases from starting.
 
@@ -206,22 +209,22 @@ The design's release targets are evidence bundles. They do not imply that succes
 
 | Target | Required evidence | Current interpretation |
 |---|---|---|
-| v0.1 | Loaded checkpoint, official smoke, tested verifier, recorded environment/source | Evidence exists; package currently uses version `0.1.0` |
+| v0.1 | Loaded checkpoint, official smoke, tested verifier, recorded environment/source | Evidence exists; scoped reproducibility package uses version `0.1.1` |
 | v0.2 | Full-level observations, final equivalence, leakage checks, transition analysis | Evidence and agent case review exist; timing limits remain |
 | v0.3 | Frozen grouped probes, controls, calibration, held-out metrics and uncertainty | Initial and bounded follow-up evidence exists; useful latent improvement remains unproven |
 | v0.4 | Tested frozen-prefix resume and stochastic recoverability | Not reached |
 | v0.5 | Real live interventions with strong equal-cost comparisons | Not reached |
-| v1.0 research report | Reproducible declared study, provenance, findings, uncertainty, failure analysis and limitations; optional viewer | Scoped negative report completed; formal release/reproduction gates remain open |
+| v1.0 research report | Reproducible declared study, provenance, findings, uncertainty, failure analysis and limitations; optional viewer | Scoped negative study and replay package completed; full v1.0 milestone not claimed |
 
 **Closeout tasks:**
 
 - [x] Record the manual case walkthrough, independent label/calibration audit, protected-evidence checks, and bounded follow-up results.
 - [x] Declare the current study scope and deferred milestones in the [scoped closeout](results/reports/sudoku_study_closeout.md); do not describe M0–M3 as completion of the entire roadmap.
 - [x] Consolidate the initial and follow-up findings, negative results, methods and threats to validity in the linked research reports.
-- [ ] Verify restoration from a fresh checkout with documented artifact downloads and the recorded environment; distinguish a machine snapshot from a portable dependency lock.
-- [ ] Audit report links, source/data/checkpoint hashes, licensing, source snapshots, and reproducible commands.
-- [ ] Recheck primary literature before making any publication/novelty claim.
-- [ ] Tag/package an actual release only when the declared release criteria are met. A paper submission or public hosted deployment is separate work.
+- [x] Verify restoration from a fresh checkout with documented artifact downloads and the recorded environment; distinguish a machine snapshot from a portable dependency lock. See [reproduction evidence](results/reports/clean_checkout_reproduction.md).
+- [x] Audit report links, source/data/checkpoint hashes, source snapshots, and reproducible commands; record checked licensing statements and the unselected project license in [notices](THIRD_PARTY_NOTICES.md).
+- [ ] Recheck primary literature before any future publication/novelty claim. No such claim is included in this package.
+- [x] Tag/package the scoped `0.1.1` reproducibility delivery after its declared replay criteria pass. A v1.0 research milestone, paper submission, or public hosted deployment remains separate work.
 
 A scoped negative-result report is a valid closeout route. It leaves M4–M7 explicitly deferred rather than marking them completed or silently removing them. The current results do not justify a deployment-ready protection system.
 
@@ -234,4 +237,4 @@ A scoped negative-result report is a valid closeout route. It leaves M4–M7 exp
 - Keep weights, datasets, private data, secrets, and large activation dumps outside normal Git commits. Record necessary artifacts through hashes and manifests.
 - Prioritize measured correctness and cost over UI or larger models. No fixed calendar dates or compute estimates are asserted without a scoped experiment plan.
 
-**Current decision:** the bounded M3 follow-up and scoped negative-result closeout are complete. Stop the current representation search. A new M3 study, an independently motivated M4 recoverability study, or formal software-release work requires a separately selected scope and its prerequisites. No later research phase has started, and the full roadmap remains preserved.
+**Current decision:** the bounded M3 follow-up, negative-result closeout, and scoped reproducibility delivery are complete. Stop the current representation search. A new M3 study, an independently motivated M4 recoverability study, or a publication effort requires a separately selected scope and its prerequisites. No later research phase has started, and the full roadmap remains preserved.
