@@ -1,0 +1,1561 @@
+{
+  "schema_version": "1.0",
+  "run_id": "20261023T121711278798Z-m3-audit",
+  "mode": "m3-audit",
+  "status": "passed",
+  "started_utc": "2026-10-23T12:17:11.278798+00:00",
+  "command": [
+    "C:\\Users\\Admin\\Documents\\Projects\\Concept-Firewall\\.venv\\Scripts\\python.exe",
+    "-m",
+    "concept_firewall",
+    "audit",
+    "--protocol",
+    "configs/m3_followup.json"
+  ],
+  "code_revision": "c1a3ef8097122737ceef3bd774e35e04d01c8fae",
+  "source_tree_sha256": "5f6f7fd443ce1aa975930f2d55650a263c9bb31c13aaf75124cae87e71fc7667",
+  "source_snapshot": "results/source_snapshots/5f6f7fd443ce1aa975930f2d55650a263c9bb31c13aaf75124cae87e71fc7667.zip",
+  "source_snapshot_sha256": "2ee7870ba154092c2a4b004448be0fc18996458504f4dd1f3aa3c28e3a30aec7",
+  "upstream_commit": "c70274273f489abc73832b2b98584a8483b6b203",
+  "configuration": {
+    "protocol": {
+      "protocol_version": 1,
+      "scope": "Bounded exploratory M3 diagnostic follow-up; not a new untouched-test result",
+      "parent_collection": "results/manifests/20261021T015216719695Z-collection.json",
+      "parent_probes": "results/manifests/20261021T015457393177Z-probes.json",
+      "parent_splits": "results/manifests/20261021T015457393177Z-probes-splits.json",
+      "primary_level": 6,
+      "secondary_level": 11,
+      "development_partitions": [
+        "train",
+        "validation",
+        "calibration"
+      ],
+      "excluded_partition": "test",
+      "outer_folds": 4,
+      "inner_folds": 2,
+      "fold_seed": 20261023,
+      "regularization_C": [
+        0.01,
+        0.1
+      ],
+      "solver": "liblinear",
+      "max_iter": 2000,
+      "selection_metric": "inner grouped cross-validation mean log loss",
+      "new_representations": [
+        "row_projection",
+        "cell_projection"
+      ],
+      "projection_dimension": 256,
+      "row_projection_seed": 1261,
+      "cell_projection_seed": 1262,
+      "projection_distribution": "fixed independent Rademacher signs divided by sqrt(output dimension); no fitted projection",
+      "feature_positions": "81 cell positions in the 89-token full prefix latent; eight row separator positions excluded from spatial variants",
+      "cheap_controls": [
+        "decoded",
+        "input_decoded"
+      ],
+      "cheap_control_selection": "choose family and C using inner folds within each outer training partition",
+      "models": [
+        "prevalence",
+        "decoded",
+        "input_decoded",
+        "mean_only",
+        "row_only",
+        "cell_only",
+        "selected_cheap",
+        "selected_cheap_mean",
+        "selected_cheap_row",
+        "selected_cheap_cell"
+      ],
+      "primary_comparisons": [
+        "selected_cheap_row minus selected_cheap",
+        "selected_cheap_cell minus selected_cheap"
+      ],
+      "calibration_policy": "new exploratory discrimination uses uncalibrated raw margins; no test-driven recalibration or sign inversion",
+      "bootstrap_replicates": 500,
+      "bootstrap_seed": 1263,
+      "primary_interval_coverage": 0.975,
+      "interval_limitations": "paired puzzle-cluster percentile intervals conditional on fitted cross-validation models; models not refitted in bootstrap; exploratory selection and fold uncertainty not fully represented",
+      "candidate_minimum_auroc": 0.65,
+      "candidate_minimum_auroc_lift": 0.03,
+      "candidate_minimum_positive_folds": 3,
+      "promotion_requires_fresh_confirmation": true,
+      "no_fresh_data_policy": "finish exploratory diagnostics, preserve negative result, and keep M4-M7 gated; do not relabel exposed puzzles or symmetry transforms as fresh",
+      "maximum_feature_capture_seconds": 300,
+      "maximum_fitting_seconds": 900,
+      "hardware_policy": "existing local GPU for prefix reconstruction only; one CPU thread for fitting; no paid compute or new checkpoint downloads",
+      "manual_review": "agent case walkthrough with raw input/output and independent constraint witnesses; not a human annotation study",
+      "stopping_rule": "evaluate exactly these two spatial variants at the two declared levels once; no extra seeds, levels, models, or hyperparameters selected from results"
+    },
+    "protocol_sha256": "1314336c897c82ef75c52e98526e87af653a535281ff827492cb2bae913f587d"
+  },
+  "environment": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "torch": "2.11.0+cu128",
+      "numpy": "2.5.4",
+      "omegaconf": "2.3.1",
+      "hydra-core": "1.3.7",
+      "transformers": "5.20.2",
+      "pyarrow": "26.0.0",
+      "scikit-learn": "1.9.1"
+    },
+    "torch_cuda": "12.8",
+    "cuda_available": true,
+    "gpu": "NVIDIA GeForce RTX 5060",
+    "gpu_memory_bytes": 8546484224
+  },
+  "claims": "Research measurements only; no intervention or safety effectiveness established.",
+  "parent_sha256": {
+    "results\\manifests\\20261021T015216719695Z-collection.json": "d840813433b83c79402694e261d1334719fa722bae76f1023dcfba62ec79ae08",
+    "results\\manifests\\20261021T015457393177Z-probes.json": "5eea44ab62547f49c910b1a03cdc2d1042c2cf70e3e6c70103bef4ccbac107cc",
+    "results\\manifests\\20261021T015457393177Z-probes-splits.json": "a7ea547f8f2d525e6c4dde703f48d11f86c11c8d212bd537f7e4448821bbb20a",
+    "configs\\probe_protocol.json": "b48cddf3dae79c5b7741088a0eed9239221f63f6aedbaeeb11360cfc39314c45",
+    "results\\probes\\20261021T015457393177Z-probes\\level-01-codes.json": "e5241de8ae4961075cf511fe2da5745a14a9f739925ce1f0c9511abac90ab2cf",
+    "results\\probes\\20261021T015457393177Z-probes\\level-01-decoded.json": "6a53e1ef0f414b1e501b03c5df457ed101818ee274681a2e9a174ee5386c1d46",
+    "results\\probes\\20261021T015457393177Z-probes\\level-01-input.json": "22589429fc9c02509341e9f233cdb9d3c256b913dc3a897897589d8debe61607",
+    "results\\probes\\20261021T015457393177Z-probes\\level-01-input_decoded.json": "a4374998da211e2cb93a6ae42e4b35a9b9cc6b0edd1b431cb1be42af4a1cf75f",
+    "results\\probes\\20261021T015457393177Z-probes\\level-01-input_decoded_latent.json": "77db2aa6ebe97839a49d4910f66c32f7ac38d10b5f3bda397982ab020c53166b",
+    "results\\probes\\20261021T015457393177Z-probes\\level-01-latent.json": "b7e675c02010b184ebfe5d31fc18944bbfb5bd32e7e292b9223f035f0b63424a",
+    "results\\probes\\20261021T015457393177Z-probes\\level-01-shuffled_latent.json": "656dc29657aca75ea14cd3d17403d18037800b40e1a7bf7b14bf29b2afbbad1c",
+    "results\\probes\\20261021T015457393177Z-probes\\level-01-test_predictions.json": "c980b54c822f836cc118442935714bdbbbb1bc0075b9d814f40033ce4b5324ad",
+    "results\\probes\\20261021T015457393177Z-probes\\level-02-codes.json": "32622cd479fea462dc01c639315353feb4176bd60a0ee503f07c15940a20b572",
+    "results\\probes\\20261021T015457393177Z-probes\\level-02-decoded.json": "5ee24909ecbce3986c54a104a6b0633f5abbf63211b5badd80d7c539a3fdc856",
+    "results\\probes\\20261021T015457393177Z-probes\\level-02-input.json": "80f663fc2f0e550fdbf0445e63eb863f49e388591af440a28f1a60d35cd7b2df",
+    "results\\probes\\20261021T015457393177Z-probes\\level-02-input_decoded.json": "b1bf7baf4b13c238aef18726e88e7f10356c3fe683b24e0cf7e7e568ef314144",
+    "results\\probes\\20261021T015457393177Z-probes\\level-02-input_decoded_latent.json": "52df2ec18bc455bd9bde7a33263dcd15eff859e25e83f648ed38e4b6da95e122",
+    "results\\probes\\20261021T015457393177Z-probes\\level-02-latent.json": "10076a4d6055b08895999f4a45063234554a4f90e4f7779a6d0ea93bea61572a",
+    "results\\probes\\20261021T015457393177Z-probes\\level-02-shuffled_latent.json": "1628c47df2cba298dc6d9a5aaba436d88c0d01a22f0be02f86a1a46c5882a746",
+    "results\\probes\\20261021T015457393177Z-probes\\level-02-test_predictions.json": "c438b5b2db7d86a59cca5b581cc9cbb70cd61f5f15bb4373d4d597d989be9f8e",
+    "results\\probes\\20261021T015457393177Z-probes\\level-03-codes.json": "a5ad9550906161f9e8f10863fb6e8523b34ae76eec0eef354922445d83d22a8a",
+    "results\\probes\\20261021T015457393177Z-probes\\level-03-decoded.json": "a3f2f4ec6cf167eef3a9cea2e2f822a5d40c862667fbc654ab619beb15436f00",
+    "results\\probes\\20261021T015457393177Z-probes\\level-03-input.json": "a0a8bc07a6014cd210328448b20bf7392bce0da1073504ede01865ff512065cf",
+    "results\\probes\\20261021T015457393177Z-probes\\level-03-input_decoded.json": "a8020c297fec9fd71f19788ac2ce91e98d3f5bcec61e14326477ab23626bf069",
+    "results\\probes\\20261021T015457393177Z-probes\\level-03-input_decoded_latent.json": "d4e6449989a96685c8135182682bc8daeacf78ac3881f04efcfce44941b16cc4",
+    "results\\probes\\20261021T015457393177Z-probes\\level-03-latent.json": "a41ab6e9196dd294dce74eb66b006c9f4b2c610ddf6d044169a96d96611b7a3d",
+    "results\\probes\\20261021T015457393177Z-probes\\level-03-shuffled_latent.json": "d324c66826012f1ce79a080ed5c3cf079bba70559c66f50faa4ced80b4330cc3",
+    "results\\probes\\20261021T015457393177Z-probes\\level-03-test_predictions.json": "067961f2de5651c3a6b9edbac1175a6925be5d246213adb36d173029a83707e1",
+    "results\\probes\\20261021T015457393177Z-probes\\level-04-codes.json": "87d30486272c0e8729acdd9ca903f89889bc8fcd1c01855f57128d31ed9c5bf7",
+    "results\\probes\\20261021T015457393177Z-probes\\level-04-decoded.json": "9c6d0c58bf180b4312c9d3143bb3354c2414b8e9095eebbf0a2992429c7af3d7",
+    "results\\probes\\20261021T015457393177Z-probes\\level-04-input.json": "9ca6564a35d6ebf3b87544be26092699e4eba969f3180063bee8609259e8ba31",
+    "results\\probes\\20261021T015457393177Z-probes\\level-04-input_decoded.json": "5b822427b060dda5f4bba3d48385966c3b7d66036c04f1f68da6889b2cc746cc",
+    "results\\probes\\20261021T015457393177Z-probes\\level-04-input_decoded_latent.json": "97ec9bdd6726373cafd5d5246b44789f1cecbbb6ea819526e39a9ad780da0c5f",
+    "results\\probes\\20261021T015457393177Z-probes\\level-04-latent.json": "87195f3329dd1f54908e5182e408cdd17c34e2806add7b8ab32d5c2a37ba7c2b",
+    "results\\probes\\20261021T015457393177Z-probes\\level-04-shuffled_latent.json": "1371ef714a315d7cd42686ae43d5f133b1a7344867c82488a853494269a89f08",
+    "results\\probes\\20261021T015457393177Z-probes\\level-04-test_predictions.json": "752b289b36ceb0a19a688007e3befa3e917c19dcf201b7a6aec10d35c796d004",
+    "results\\probes\\20261021T015457393177Z-probes\\level-05-codes.json": "2184fbdd717d0e2d71c6310fa7a1f40b40219e933ca7735104211d1b3e7d5fd8",
+    "results\\probes\\20261021T015457393177Z-probes\\level-05-decoded.json": "7d0ede5fc01d3a8906dfdf6eb319e41f303e83082686b53eb5af7f5a6cabbcc7",
+    "results\\probes\\20261021T015457393177Z-probes\\level-05-input.json": "4d4606c07e6813f4b072e27ce93e545678d806d81bc1fddf2daedac88c0bbc9f",
+    "results\\probes\\20261021T015457393177Z-probes\\level-05-input_decoded.json": "bd8341c86d7f17d17d6b6f61728a87e645bcf91051ac4c09a35ba1440dbb358f",
+    "results\\probes\\20261021T015457393177Z-probes\\level-05-input_decoded_latent.json": "26c1d917baca10bc6d777aca5924511d77394173844999b35d8063919293624f",
+    "results\\probes\\20261021T015457393177Z-probes\\level-05-latent.json": "b7c3705f0273597a7ee0533a16a9e2a8142b7c1e5f6112fffebc2dbe37b2b2dc",
+    "results\\probes\\20261021T015457393177Z-probes\\level-05-shuffled_latent.json": "654c1cbd60c5a987dc95b6d0281878eb1617f636541d6443b192ac6d511e69ec",
+    "results\\probes\\20261021T015457393177Z-probes\\level-05-test_predictions.json": "8f2c81890a238bea949855ef729a3c5842d3a7367f4768fb1a466cd34d1dae82",
+    "results\\probes\\20261021T015457393177Z-probes\\level-06-codes.json": "cc580e131aef367d26efa2348a0fabb72749cc3ce5917baefb0a90d419c31dd9",
+    "results\\probes\\20261021T015457393177Z-probes\\level-06-decoded.json": "67add6e538bd7199d897e79ca34b29dfe48aeeaa1b9941e63ac45ba7c34a7ff0",
+    "results\\probes\\20261021T015457393177Z-probes\\level-06-input.json": "86715f1e6fe56c3267b7635bc91039fc196b1fcab881da4e736d1290c94477a9",
+    "results\\probes\\20261021T015457393177Z-probes\\level-06-input_decoded.json": "85f951616202bb805c388a562452550d13caa623e5ced743568e05505bd14db7",
+    "results\\probes\\20261021T015457393177Z-probes\\level-06-input_decoded_latent.json": "ccfb81e80069f353b319640763c06e7e3ac930f9c2d35ac67ede9accf08bdcb1",
+    "results\\probes\\20261021T015457393177Z-probes\\level-06-latent.json": "de9bec3cc015990c530ff9cc0b1ec2f92310d84e5629855861cd9b2b733bf5f3",
+    "results\\probes\\20261021T015457393177Z-probes\\level-06-shuffled_latent.json": "c551780df340595323d9db94b8ee6b50b072874ff3c4c0ec8fdd16ae240e02ba",
+    "results\\probes\\20261021T015457393177Z-probes\\level-06-test_predictions.json": "e4965819b2335e46a63eb3c7ec397f1118ef10a8ca279dc3feac39d631553448",
+    "results\\probes\\20261021T015457393177Z-probes\\level-07-codes.json": "d4f70a1cb40aa770f1f423ac6c1b9f7d71d7c3c9f6dda5af4c7f9356837be7c7",
+    "results\\probes\\20261021T015457393177Z-probes\\level-07-decoded.json": "7ba84c34f947515f0520e19963960e24fed50d1ceb966fc9875034acca1cac0a",
+    "results\\probes\\20261021T015457393177Z-probes\\level-07-input.json": "52735270aed959499ed21d9d0923d5364f47666041badc83a131e29e4dd2ed0d",
+    "results\\probes\\20261021T015457393177Z-probes\\level-07-input_decoded.json": "8334387b36a8ba9a2998638d5aee5a5a72f23413c4bd8cf8b2b65e2e5b98f1fb",
+    "results\\probes\\20261021T015457393177Z-probes\\level-07-input_decoded_latent.json": "d697ff03e08ce37c508d3b08b87fd0142277a8f172d3181525602ae437d09a95",
+    "results\\probes\\20261021T015457393177Z-probes\\level-07-latent.json": "ea615b74cd2d425acc29f7b0633b8af2c2281f167df5f601eaf92977698023bd",
+    "results\\probes\\20261021T015457393177Z-probes\\level-07-shuffled_latent.json": "516e5988ab37de0c8b9e469546f8d927fde81fd7faf44614fb74f42364c4df6e",
+    "results\\probes\\20261021T015457393177Z-probes\\level-07-test_predictions.json": "b1ba82d4b591eb74c72448f8cc9f37f445de8be14c7d9abeeee62221ae287948",
+    "results\\probes\\20261021T015457393177Z-probes\\level-08-codes.json": "6c29e31123c1bca67f7954896289b03acb59510fddf41042fa5cbc3431f69728",
+    "results\\probes\\20261021T015457393177Z-probes\\level-08-decoded.json": "74cacbd8e1153097c07104106b13652c8bec7b927589177d90ee57e3651c0671",
+    "results\\probes\\20261021T015457393177Z-probes\\level-08-input.json": "1b6db1fc08cf98d769ca15e1934bff20254d044b107aefaa3a5256e6848644fe",
+    "results\\probes\\20261021T015457393177Z-probes\\level-08-input_decoded.json": "d047ce61c40dea34ddde41fc83b9c9c36f8d091c31b7b906eff28799bd14fe4e",
+    "results\\probes\\20261021T015457393177Z-probes\\level-08-input_decoded_latent.json": "88242035a31eb164aac77337bea1dd473fdc209d1b71818e625a0a162a3a9708",
+    "results\\probes\\20261021T015457393177Z-probes\\level-08-latent.json": "f07242e5de70b87c93b5fc4eae61685fb83f8ffc1a84b272f9140cb6c071550e",
+    "results\\probes\\20261021T015457393177Z-probes\\level-08-shuffled_latent.json": "d9396b88867c149537c7d4e9d36e1f6bc9815029dbbfabb011cf9415e436f781",
+    "results\\probes\\20261021T015457393177Z-probes\\level-08-test_predictions.json": "f51a80dcc06783761dee4f95aaf855ae402d89a8d914c7da4560a714ef583f1b",
+    "results\\probes\\20261021T015457393177Z-probes\\level-09-codes.json": "6f3f2071c0e7aac60279e58ab45962d6e17800f3dfa3e5d0c1e6d4ca414ffeff",
+    "results\\probes\\20261021T015457393177Z-probes\\level-09-decoded.json": "96ddd56b8f22246ad19e1ea8e371996bbaafe61967758729a0ed1bea7c2eda37",
+    "results\\probes\\20261021T015457393177Z-probes\\level-09-input.json": "0ee147a87fc04604ed39a2987e3e4edab50950c2ef31100c0fada72a18c36169",
+    "results\\probes\\20261021T015457393177Z-probes\\level-09-input_decoded.json": "ba48d7ab2cb9d164083e53038a966c4ffba279380129efbc8fcb8c876ddc3330",
+    "results\\probes\\20261021T015457393177Z-probes\\level-09-input_decoded_latent.json": "84feb9d7389e49944050664eac614ff1eee5f47f84f16392d7100ce02a46d46a",
+    "results\\probes\\20261021T015457393177Z-probes\\level-09-latent.json": "6f3c980dd69b7bc3f4c4f98dc37bffafc5b219168171c1852736b00fc169fa0c",
+    "results\\probes\\20261021T015457393177Z-probes\\level-09-shuffled_latent.json": "b14fd2332bc90376d68e7cd13e9f8a7ff0dc1aa023e29e9ab3ce466ae304ea2c",
+    "results\\probes\\20261021T015457393177Z-probes\\level-09-test_predictions.json": "94c1d6418bace3372836b1532065d641645fcc2c58528deddf9e9d857e55cbff",
+    "results\\probes\\20261021T015457393177Z-probes\\level-10-codes.json": "4bc973885df827895f825cdb9a2a1d16f2886020ae7faf5d0d5bbb98668b28c1",
+    "results\\probes\\20261021T015457393177Z-probes\\level-10-decoded.json": "5ea984b6573b933a366122f70c73607609f48902e273e1a6441a0b3d3198fcfa",
+    "results\\probes\\20261021T015457393177Z-probes\\level-10-input.json": "a14c72f86408602d864245eb6efabc8219c2f0f6d03443909151aafa92b6b4cf",
+    "results\\probes\\20261021T015457393177Z-probes\\level-10-input_decoded.json": "df99af07d77fddbb2ea91d32675ca26ad499db570427a52992c4cba24abcc665",
+    "results\\probes\\20261021T015457393177Z-probes\\level-10-input_decoded_latent.json": "eb90e3757a051d68332fc629be31613e087b046fd1d05805676f4e3944553664",
+    "results\\probes\\20261021T015457393177Z-probes\\level-10-latent.json": "f629ee6d5a85df867d43e760d4d5bd7edf7b494e11de05516295b8e527e6dc61",
+    "results\\probes\\20261021T015457393177Z-probes\\level-10-shuffled_latent.json": "8140c2d6f37dd47d325bdd67958d9360239fb1e71ad4b503aed0879f35afe729",
+    "results\\probes\\20261021T015457393177Z-probes\\level-10-test_predictions.json": "7f57f5f30855ef7812c6208606a7d69b6bec0afccd3bd8269ae87df85e11fd35",
+    "results\\probes\\20261021T015457393177Z-probes\\level-11-codes.json": "0d5ddaeedadae963c7693cf4a305b74ccb6cee9313dcb3903beb70f9695f23cc",
+    "results\\probes\\20261021T015457393177Z-probes\\level-11-decoded.json": "b4f3ba4ef31c2334d972f9f28fafd59c60e83fcee05e7597ac0d6379e4580ddb",
+    "results\\probes\\20261021T015457393177Z-probes\\level-11-input.json": "27796839db79074b38712cc110afad6fea113f76e667a8847ca670bfd2b2d555",
+    "results\\probes\\20261021T015457393177Z-probes\\level-11-input_decoded.json": "b176bb2d2d07aafe499a4afe552ce7eed340e69e7038fc3f2fca2544c73055bb",
+    "results\\probes\\20261021T015457393177Z-probes\\level-11-input_decoded_latent.json": "6568118b6f0b186f4241b7588cc618dea38c775930cfb63ea7bcac920121bb86",
+    "results\\probes\\20261021T015457393177Z-probes\\level-11-latent.json": "338d1ca0dfcf8c9ea34f82e2ccc25a0a75c0ce07db9a9b6727cf8485f4b3eccb",
+    "results\\probes\\20261021T015457393177Z-probes\\level-11-shuffled_latent.json": "37aa8cab437cddd651ed63c5c7b40d21eff240c53f71ebb1c0fa97d684afc89a",
+    "results\\probes\\20261021T015457393177Z-probes\\level-11-test_predictions.json": "6eac35de86573eab55f18b8a8db0079cad8e3e7dc08f9b697038b17a596b453e",
+    "results\\probes\\20261021T015457393177Z-probes\\level-12-codes.json": "c7bda9edc27778ab46d991ce89ee197acf44266ac1a1473512831ca013f8e20d",
+    "results\\probes\\20261021T015457393177Z-probes\\level-12-decoded.json": "423eeec98e51218bb6fedcf68a798bd4b66c42d4d27105621494fa6b7c36def0",
+    "results\\probes\\20261021T015457393177Z-probes\\level-12-input.json": "a715624ea7f2e2159712eae06b2b5ac7f279caf808c23e1ef4fe54555b778d18",
+    "results\\probes\\20261021T015457393177Z-probes\\level-12-input_decoded.json": "fe36283ecbacb09968b98f72d6748a8c3fe8f7c71b258c8ffa908bf008824be7",
+    "results\\probes\\20261021T015457393177Z-probes\\level-12-input_decoded_latent.json": "78229990e8a9535b53548d9945994cceddb31966270afe4869058ff44b4d20fd",
+    "results\\probes\\20261021T015457393177Z-probes\\level-12-latent.json": "77261d858cb8f4f7d360829870f64f3983e2f8f8e709832f822c0f03d4d9d815",
+    "results\\probes\\20261021T015457393177Z-probes\\level-12-shuffled_latent.json": "c41a373e161082de20a95ebfd450f18df4718a7a765422c7a310e013cc674cd5",
+    "results\\probes\\20261021T015457393177Z-probes\\level-12-test_predictions.json": "52dc5bce4965f5ed2d010dfa1abf81ff2eafb421997809bf40ee263b5ef595e4",
+    "results\\trajectories\\20261021T015216719695Z-collection\\levels.jsonl": "6a9339988abcb825dbd8a0a08e11544239846fcc91e9f2007279d6f473933cd5",
+    "results\\trajectories\\20261021T015216719695Z-collection\\outcomes.jsonl": "e327c17a998a43005e7fa0ac78c90fddf432807e07e1c89288c495b73035daa1"
+  },
+  "label_audit": {
+    "records": 24000,
+    "malformed_records": 8,
+    "level_1_valid": 0,
+    "level_2_valid": 0,
+    "level_3_valid": 0,
+    "level_4_valid": 0,
+    "level_5_valid": 0,
+    "level_6_valid": 0,
+    "level_7_valid": 0,
+    "level_8_valid": 0,
+    "level_9_valid": 0,
+    "level_10_valid": 0,
+    "level_11_valid": 0,
+    "level_12_valid": 1725
+  },
+  "final_failures": 275,
+  "calibration": {
+    "6:input": {
+      "calibration_slope": 0.10566499725782083,
+      "ranking_reversed": false,
+      "partitions": {
+        "train": {
+          "raw_auroc": 0.9958761578479889,
+          "calibrated_auroc": 0.9958761578479889,
+          "calibrated_log_loss": 0.39134057923173987
+        },
+        "validation": {
+          "raw_auroc": 0.569106590004423,
+          "calibrated_auroc": 0.569106590004423,
+          "calibrated_log_loss": 0.35582464980203193
+        },
+        "calibration": {
+          "raw_auroc": 0.5209517045454546,
+          "calibrated_auroc": 0.5209517045454546,
+          "calibrated_log_loss": 0.4162537168806503
+        },
+        "test": {
+          "raw_auroc": 0.4053142624571196,
+          "calibrated_auroc": 0.4053142624571196,
+          "calibrated_log_loss": 0.3787467752791444
+        }
+      }
+    },
+    "6:decoded": {
+      "calibration_slope": -1.2966742377725724,
+      "ranking_reversed": true,
+      "partitions": {
+        "train": {
+          "raw_auroc": 0.5557472084760818,
+          "calibrated_auroc": 0.4442527915239183,
+          "calibrated_log_loss": 0.4354322055207277
+        },
+        "validation": {
+          "raw_auroc": 0.40844758956214067,
+          "calibrated_auroc": 0.5915524104378594,
+          "calibrated_log_loss": 0.3536553902272388
+        },
+        "calibration": {
+          "raw_auroc": 0.42626953125,
+          "calibrated_auroc": 0.57373046875,
+          "calibrated_log_loss": 0.41123949070208793
+        },
+        "test": {
+          "raw_auroc": 0.5856735856735856,
+          "calibrated_auroc": 0.41432641432641426,
+          "calibrated_log_loss": 0.39318686892348187
+        }
+      }
+    },
+    "6:latent": {
+      "calibration_slope": 0.3122001895686341,
+      "ranking_reversed": false,
+      "partitions": {
+        "train": {
+          "raw_auroc": 0.6536686334221545,
+          "calibrated_auroc": 0.6536686334221545,
+          "calibrated_log_loss": 0.41109013915482184
+        },
+        "validation": {
+          "raw_auroc": 0.5291906236178682,
+          "calibrated_auroc": 0.5291906236178682,
+          "calibrated_log_loss": 0.3584802602409065
+        },
+        "calibration": {
+          "raw_auroc": 0.5263671875,
+          "calibrated_auroc": 0.5263671875,
+          "calibrated_log_loss": 0.4157742260078721
+        },
+        "test": {
+          "raw_auroc": 0.49938949938949945,
+          "calibrated_auroc": 0.49938949938949945,
+          "calibrated_log_loss": 0.37522037444570167
+        }
+      }
+    },
+    "6:input_decoded": {
+      "calibration_slope": 0.09370022390835091,
+      "ranking_reversed": false,
+      "partitions": {
+        "train": {
+          "raw_auroc": 0.9963202639258977,
+          "calibrated_auroc": 0.9963202639258977,
+          "calibrated_log_loss": 0.39431032679874306
+        },
+        "validation": {
+          "raw_auroc": 0.566452896948253,
+          "calibrated_auroc": 0.566452896948253,
+          "calibrated_log_loss": 0.3561246764847913
+        },
+        "calibration": {
+          "raw_auroc": 0.5174893465909091,
+          "calibrated_auroc": 0.5174893465909091,
+          "calibrated_log_loss": 0.41638806468674516
+        },
+        "test": {
+          "raw_auroc": 0.4151985580557009,
+          "calibrated_auroc": 0.4151985580557009,
+          "calibrated_log_loss": 0.3779002461141907
+        }
+      }
+    },
+    "6:input_decoded_latent": {
+      "calibration_slope": 0.15908701899186867,
+      "ranking_reversed": false,
+      "partitions": {
+        "train": {
+          "raw_auroc": 0.9970498667681766,
+          "calibrated_auroc": 0.9970498667681766,
+          "calibrated_log_loss": 0.3761142729439463
+        },
+        "validation": {
+          "raw_auroc": 0.5787262273330385,
+          "calibrated_auroc": 0.5787262273330385,
+          "calibrated_log_loss": 0.35459855469786844
+        },
+        "calibration": {
+          "raw_auroc": 0.5404829545454546,
+          "calibrated_auroc": 0.5404829545454546,
+          "calibrated_log_loss": 0.415280187185347
+        },
+        "test": {
+          "raw_auroc": 0.4074074074074074,
+          "calibrated_auroc": 0.4074074074074074,
+          "calibrated_log_loss": 0.38155433635948277
+        }
+      }
+    },
+    "6:codes": {
+      "calibration_slope": 0.27418163125016765,
+      "ranking_reversed": false,
+      "partitions": {
+        "train": {
+          "raw_auroc": 0.6026440172566934,
+          "calibrated_auroc": 0.6026440172566934,
+          "calibrated_log_loss": 0.416147652088487
+        },
+        "validation": {
+          "raw_auroc": 0.49800973020787265,
+          "calibrated_auroc": 0.49800973020787265,
+          "calibrated_log_loss": 0.35831946730203057
+        },
+        "calibration": {
+          "raw_auroc": 0.5138494318181819,
+          "calibrated_auroc": 0.5138494318181819,
+          "calibrated_log_loss": 0.41637290820901324
+        },
+        "test": {
+          "raw_auroc": 0.5287516716088145,
+          "calibrated_auroc": 0.5287516716088145,
+          "calibrated_log_loss": 0.3741708693443534
+        }
+      }
+    },
+    "6:shuffled_latent": {
+      "calibration_slope": 0.1043536641299041,
+      "ranking_reversed": false,
+      "partitions": {
+        "train": {
+          "raw_auroc": 0.46566901408450706,
+          "calibrated_auroc": 0.46566901408450706,
+          "calibrated_log_loss": 0.4197082139815632
+        },
+        "validation": {
+          "raw_auroc": 0.48252985404688187,
+          "calibrated_auroc": 0.48252985404688187,
+          "calibrated_log_loss": 0.3586535464947916
+        },
+        "calibration": {
+          "raw_auroc": 0.5393288352272727,
+          "calibrated_auroc": 0.5393288352272727,
+          "calibrated_log_loss": 0.4168140917327415
+        },
+        "test": {
+          "raw_auroc": 0.5335775335775336,
+          "calibrated_auroc": 0.5335775335775336,
+          "calibrated_log_loss": 0.37338258733452756
+        }
+      }
+    },
+    "11:input": {
+      "calibration_slope": 0.10566499725782083,
+      "ranking_reversed": false,
+      "partitions": {
+        "train": {
+          "raw_auroc": 0.9958761578479889,
+          "calibrated_auroc": 0.9958761578479889,
+          "calibrated_log_loss": 0.39134057923173987
+        },
+        "validation": {
+          "raw_auroc": 0.569106590004423,
+          "calibrated_auroc": 0.569106590004423,
+          "calibrated_log_loss": 0.35582464980203193
+        },
+        "calibration": {
+          "raw_auroc": 0.5209517045454546,
+          "calibrated_auroc": 0.5209517045454546,
+          "calibrated_log_loss": 0.4162537168806503
+        },
+        "test": {
+          "raw_auroc": 0.4053142624571196,
+          "calibrated_auroc": 0.4053142624571196,
+          "calibrated_log_loss": 0.3787467752791444
+        }
+      }
+    },
+    "11:decoded": {
+      "calibration_slope": 1.4347307996037526,
+      "ranking_reversed": false,
+      "partitions": {
+        "train": {
+          "raw_auroc": 0.6914493719071183,
+          "calibrated_auroc": 0.6914493719071183,
+          "calibrated_log_loss": 0.38918993435865434
+        },
+        "validation": {
+          "raw_auroc": 0.6617094206103493,
+          "calibrated_auroc": 0.6617094206103493,
+          "calibrated_log_loss": 0.3461727768400023
+        },
+        "calibration": {
+          "raw_auroc": 0.71923828125,
+          "calibrated_auroc": 0.71923828125,
+          "calibrated_log_loss": 0.37403815625617276
+        },
+        "test": {
+          "raw_auroc": 0.7007384150241294,
+          "calibrated_auroc": 0.7007384150241294,
+          "calibrated_log_loss": 0.3483745189032406
+        }
+      }
+    },
+    "11:latent": {
+      "calibration_slope": 0.5696909748068109,
+      "ranking_reversed": false,
+      "partitions": {
+        "train": {
+          "raw_auroc": 0.6633834538764116,
+          "calibrated_auroc": 0.6633834538764116,
+          "calibrated_log_loss": 0.4051431949026952
+        },
+        "validation": {
+          "raw_auroc": 0.43830163644405135,
+          "calibrated_auroc": 0.43830163644405135,
+          "calibrated_log_loss": 0.36534069323668317
+        },
+        "calibration": {
+          "raw_auroc": 0.5684481534090909,
+          "calibrated_auroc": 0.5684481534090909,
+          "calibrated_log_loss": 0.4139236696389594
+        },
+        "test": {
+          "raw_auroc": 0.5245653817082387,
+          "calibrated_auroc": 0.5245653817082387,
+          "calibrated_log_loss": 0.3752976987937736
+        }
+      }
+    },
+    "11:input_decoded": {
+      "calibration_slope": 0.2220611472632504,
+      "ranking_reversed": false,
+      "partitions": {
+        "train": {
+          "raw_auroc": 0.9964074990483441,
+          "calibrated_auroc": 0.9964074990483441,
+          "calibrated_log_loss": 0.3607363989756054
+        },
+        "validation": {
+          "raw_auroc": 0.6078062804068997,
+          "calibrated_auroc": 0.6078062804068997,
+          "calibrated_log_loss": 0.352105442965493
+        },
+        "calibration": {
+          "raw_auroc": 0.5467862215909091,
+          "calibrated_auroc": 0.5467862215909091,
+          "calibrated_log_loss": 0.41411845599146174
+        },
+        "test": {
+          "raw_auroc": 0.4371184371184371,
+          "calibrated_auroc": 0.4371184371184371,
+          "calibrated_log_loss": 0.3825196450417953
+        }
+      }
+    },
+    "11:input_decoded_latent": {
+      "calibration_slope": 0.30801079529017034,
+      "ranking_reversed": false,
+      "partitions": {
+        "train": {
+          "raw_auroc": 0.9980015226494099,
+          "calibrated_auroc": 0.9980015226494099,
+          "calibrated_log_loss": 0.33701680845979853
+        },
+        "validation": {
+          "raw_auroc": 0.6060371517027863,
+          "calibrated_auroc": 0.6060371517027863,
+          "calibrated_log_loss": 0.35124999235254867
+        },
+        "calibration": {
+          "raw_auroc": 0.5824751420454546,
+          "calibrated_auroc": 0.5824751420454546,
+          "calibrated_log_loss": 0.4109599791961038
+        },
+        "test": {
+          "raw_auroc": 0.42845514274085705,
+          "calibrated_auroc": 0.42845514274085705,
+          "calibrated_log_loss": 0.38763246584991345
+        }
+      }
+    },
+    "11:codes": {
+      "calibration_slope": 0.5273769850093,
+      "ranking_reversed": false,
+      "partitions": {
+        "train": {
+          "raw_auroc": 0.5958396777058749,
+          "calibrated_auroc": 0.5958396777058749,
+          "calibrated_log_loss": 0.4136944569583974
+        },
+        "validation": {
+          "raw_auroc": 0.5628040689960194,
+          "calibrated_auroc": 0.5628040689960194,
+          "calibrated_log_loss": 0.3556157663048394
+        },
+        "calibration": {
+          "raw_auroc": 0.5458984375,
+          "calibrated_auroc": 0.5458984375,
+          "calibrated_log_loss": 0.415073995839112
+        },
+        "test": {
+          "raw_auroc": 0.5020059305773591,
+          "calibrated_auroc": 0.5020059305773591,
+          "calibrated_log_loss": 0.3752336721180303
+        }
+      }
+    },
+    "11:shuffled_latent": {
+      "calibration_slope": -0.2979173001925665,
+      "ranking_reversed": true,
+      "partitions": {
+        "train": {
+          "raw_auroc": 0.4760817155183352,
+          "calibrated_auroc": 0.5239182844816648,
+          "calibrated_log_loss": 0.41929083495262864
+        },
+        "validation": {
+          "raw_auroc": 0.4791021671826625,
+          "calibrated_auroc": 0.5208978328173375,
+          "calibrated_log_loss": 0.3583569294853753
+        },
+        "calibration": {
+          "raw_auroc": 0.49458451704545453,
+          "calibrated_auroc": 0.5054154829545454,
+          "calibrated_log_loss": 0.4162230789850016
+        },
+        "test": {
+          "raw_auroc": 0.5101459387173674,
+          "calibrated_auroc": 0.48985406128263265,
+          "calibrated_log_loss": 0.3740252313557437
+        }
+      }
+    },
+    "12:input": {
+      "calibration_slope": 0.10566499725782083,
+      "ranking_reversed": false,
+      "partitions": {
+        "train": {
+          "raw_auroc": 0.9958761578479889,
+          "calibrated_auroc": 0.9958761578479889,
+          "calibrated_log_loss": 0.39134057923173987
+        },
+        "validation": {
+          "raw_auroc": 0.569106590004423,
+          "calibrated_auroc": 0.569106590004423,
+          "calibrated_log_loss": 0.35582464980203193
+        },
+        "calibration": {
+          "raw_auroc": 0.5209517045454546,
+          "calibrated_auroc": 0.5209517045454546,
+          "calibrated_log_loss": 0.4162537168806503
+        },
+        "test": {
+          "raw_auroc": 0.4053142624571196,
+          "calibrated_auroc": 0.4053142624571196,
+          "calibrated_log_loss": 0.3787467752791444
+        }
+      }
+    },
+    "12:decoded": {
+      "calibration_slope": 2.044900460121109,
+      "ranking_reversed": false,
+      "partitions": {
+        "train": {
+          "raw_auroc": 1.0,
+          "calibrated_auroc": 1.0,
+          "calibrated_log_loss": 9.630805521259916e-06
+        },
+        "validation": {
+          "raw_auroc": 1.0,
+          "calibrated_auroc": 1.0,
+          "calibrated_log_loss": 1.0192536698967813e-05
+        },
+        "calibration": {
+          "raw_auroc": 1.0,
+          "calibrated_auroc": 1.0,
+          "calibrated_log_loss": 9.884077984446118e-06
+        },
+        "test": {
+          "raw_auroc": 1.0,
+          "calibrated_auroc": 1.0,
+          "calibrated_log_loss": 9.501445355109427e-06
+        }
+      }
+    },
+    "12:latent": {
+      "calibration_slope": 0.7925795493115171,
+      "ranking_reversed": false,
+      "partitions": {
+        "train": {
+          "raw_auroc": 0.6661273950006344,
+          "calibrated_auroc": 0.6661273950006344,
+          "calibrated_log_loss": 0.4000254282436325
+        },
+        "validation": {
+          "raw_auroc": 0.4401813356921716,
+          "calibrated_auroc": 0.4401813356921716,
+          "calibrated_log_loss": 0.3688741721450835
+        },
+        "calibration": {
+          "raw_auroc": 0.5982776988636364,
+          "calibrated_auroc": 0.5982776988636364,
+          "calibrated_log_loss": 0.4106429755769769
+        },
+        "test": {
+          "raw_auroc": 0.5185766614338043,
+          "calibrated_auroc": 0.5185766614338043,
+          "calibrated_log_loss": 0.3773909033586654
+        }
+      }
+    },
+    "12:input_decoded": {
+      "calibration_slope": 2.2628378367756383,
+      "ranking_reversed": false,
+      "partitions": {
+        "train": {
+          "raw_auroc": 1.0,
+          "calibrated_auroc": 1.0,
+          "calibrated_log_loss": 3.284574494492663e-06
+        },
+        "validation": {
+          "raw_auroc": 1.0,
+          "calibrated_auroc": 1.0,
+          "calibrated_log_loss": 1.7703731778067975e-05
+        },
+        "calibration": {
+          "raw_auroc": 1.0,
+          "calibrated_auroc": 1.0,
+          "calibrated_log_loss": 1.8156628456881316e-05
+        },
+        "test": {
+          "raw_auroc": 1.0,
+          "calibrated_auroc": 1.0,
+          "calibrated_log_loss": 2.6265388168648124e-05
+        }
+      }
+    },
+    "12:input_decoded_latent": {
+      "calibration_slope": 2.280835419159684,
+      "ranking_reversed": false,
+      "partitions": {
+        "train": {
+          "raw_auroc": 1.0,
+          "calibrated_auroc": 1.0,
+          "calibrated_log_loss": 2.9494210970537763e-06
+        },
+        "validation": {
+          "raw_auroc": 1.0,
+          "calibrated_auroc": 1.0,
+          "calibrated_log_loss": 1.708796415793773e-05
+        },
+        "calibration": {
+          "raw_auroc": 1.0,
+          "calibrated_auroc": 1.0,
+          "calibrated_log_loss": 1.913539008897092e-05
+        },
+        "test": {
+          "raw_auroc": 1.0,
+          "calibrated_auroc": 1.0,
+          "calibrated_log_loss": 2.2042519695292954e-05
+        }
+      }
+    },
+    "12:codes": {
+      "calibration_slope": 1.128002043426481,
+      "ranking_reversed": false,
+      "partitions": {
+        "train": {
+          "raw_auroc": 0.5880797170409846,
+          "calibrated_auroc": 0.5880797170409846,
+          "calibrated_log_loss": 0.4085345635297173
+        },
+        "validation": {
+          "raw_auroc": 0.6455108359133127,
+          "calibrated_auroc": 0.6455108359133127,
+          "calibrated_log_loss": 0.3458925445334482
+        },
+        "calibration": {
+          "raw_auroc": 0.6106622869318182,
+          "calibrated_auroc": 0.6106622869318182,
+          "calibrated_log_loss": 0.40607642732286336
+        },
+        "test": {
+          "raw_auroc": 0.5264259549973835,
+          "calibrated_auroc": 0.5264259549973835,
+          "calibrated_log_loss": 0.3747114535024524
+        }
+      }
+    },
+    "12:shuffled_latent": {
+      "calibration_slope": 0.5034755942208206,
+      "ranking_reversed": false,
+      "partitions": {
+        "train": {
+          "raw_auroc": 0.48511451592437504,
+          "calibrated_auroc": 0.48511451592437504,
+          "calibrated_log_loss": 0.42355872664630456
+        },
+        "validation": {
+          "raw_auroc": 0.47865988500663426,
+          "calibrated_auroc": 0.47865988500663426,
+          "calibrated_log_loss": 0.36468360689425566
+        },
+        "calibration": {
+          "raw_auroc": 0.5552201704545454,
+          "calibrated_auroc": 0.5552201704545454,
+          "calibrated_log_loss": 0.41409595457327586
+        },
+        "test": {
+          "raw_auroc": 0.4871794871794871,
+          "calibrated_auroc": 0.4871794871794871,
+          "calibrated_log_loss": 0.3855180021948507
+        }
+      }
+    }
+  },
+  "manual_cases": {
+    "intermediate": {
+      "puzzle_id": "65ba81b5b983dbfb5143472178bd02077fd9c9ae7123ba4cc55532f9bb3f27be",
+      "trajectory_id": "20261021T015216719695Z-collection:0",
+      "level": 6,
+      "puzzle": "_216_7_85|76____2__|__3__27__|_523_____|_________|8_67_____|2___84_36|6_81__4__|_4__9___7",
+      "output": "117624988|442355561|535686964|656562111|194972628|323339149|229573786|686683454|443483216",
+      "inspection": {
+        "valid": false,
+        "malformed": false,
+        "blank_count": 0,
+        "changed_clues": [
+          {
+            "row": 1,
+            "column": 2,
+            "clue": 2,
+            "output": 1
+          },
+          {
+            "row": 1,
+            "column": 3,
+            "clue": 1,
+            "output": 7
+          },
+          {
+            "row": 1,
+            "column": 6,
+            "clue": 7,
+            "output": 4
+          },
+          {
+            "row": 1,
+            "column": 9,
+            "clue": 5,
+            "output": 8
+          },
+          {
+            "row": 2,
+            "column": 1,
+            "clue": 7,
+            "output": 4
+          },
+          {
+            "row": 2,
+            "column": 2,
+            "clue": 6,
+            "output": 4
+          },
+          {
+            "row": 2,
+            "column": 7,
+            "clue": 2,
+            "output": 5
+          },
+          {
+            "row": 3,
+            "column": 3,
+            "clue": 3,
+            "output": 5
+          },
+          {
+            "row": 3,
+            "column": 6,
+            "clue": 2,
+            "output": 6
+          },
+          {
+            "row": 3,
+            "column": 7,
+            "clue": 7,
+            "output": 9
+          },
+          {
+            "row": 4,
+            "column": 3,
+            "clue": 2,
+            "output": 6
+          },
+          {
+            "row": 4,
+            "column": 4,
+            "clue": 3,
+            "output": 5
+          },
+          {
+            "row": 6,
+            "column": 1,
+            "clue": 8,
+            "output": 3
+          },
+          {
+            "row": 6,
+            "column": 3,
+            "clue": 6,
+            "output": 3
+          },
+          {
+            "row": 6,
+            "column": 4,
+            "clue": 7,
+            "output": 3
+          },
+          {
+            "row": 7,
+            "column": 5,
+            "clue": 8,
+            "output": 7
+          },
+          {
+            "row": 7,
+            "column": 6,
+            "clue": 4,
+            "output": 3
+          },
+          {
+            "row": 7,
+            "column": 8,
+            "clue": 3,
+            "output": 8
+          },
+          {
+            "row": 8,
+            "column": 3,
+            "clue": 8,
+            "output": 6
+          },
+          {
+            "row": 8,
+            "column": 4,
+            "clue": 1,
+            "output": 6
+          },
+          {
+            "row": 9,
+            "column": 5,
+            "clue": 9,
+            "output": 8
+          },
+          {
+            "row": 9,
+            "column": 9,
+            "clue": 7,
+            "output": 6
+          }
+        ],
+        "conflict_witnesses": [
+          {
+            "unit": "row 1",
+            "values": [
+              1,
+              1,
+              7,
+              6,
+              2,
+              4,
+              9,
+              8,
+              8
+            ],
+            "duplicate_digits": [
+              1,
+              8
+            ]
+          },
+          {
+            "unit": "row 2",
+            "values": [
+              4,
+              4,
+              2,
+              3,
+              5,
+              5,
+              5,
+              6,
+              1
+            ],
+            "duplicate_digits": [
+              4,
+              5
+            ]
+          },
+          {
+            "unit": "row 3",
+            "values": [
+              5,
+              3,
+              5,
+              6,
+              8,
+              6,
+              9,
+              6,
+              4
+            ],
+            "duplicate_digits": [
+              5,
+              6
+            ]
+          },
+          {
+            "unit": "row 4",
+            "values": [
+              6,
+              5,
+              6,
+              5,
+              6,
+              2,
+              1,
+              1,
+              1
+            ],
+            "duplicate_digits": [
+              1,
+              5,
+              6
+            ]
+          },
+          {
+            "unit": "row 5",
+            "values": [
+              1,
+              9,
+              4,
+              9,
+              7,
+              2,
+              6,
+              2,
+              8
+            ],
+            "duplicate_digits": [
+              2,
+              9
+            ]
+          },
+          {
+            "unit": "row 6",
+            "values": [
+              3,
+              2,
+              3,
+              3,
+              3,
+              9,
+              1,
+              4,
+              9
+            ],
+            "duplicate_digits": [
+              3,
+              9
+            ]
+          },
+          {
+            "unit": "row 7",
+            "values": [
+              2,
+              2,
+              9,
+              5,
+              7,
+              3,
+              7,
+              8,
+              6
+            ],
+            "duplicate_digits": [
+              2,
+              7
+            ]
+          },
+          {
+            "unit": "row 8",
+            "values": [
+              6,
+              8,
+              6,
+              6,
+              8,
+              3,
+              4,
+              5,
+              4
+            ],
+            "duplicate_digits": [
+              4,
+              6,
+              8
+            ]
+          },
+          {
+            "unit": "row 9",
+            "values": [
+              4,
+              4,
+              3,
+              4,
+              8,
+              3,
+              2,
+              1,
+              6
+            ],
+            "duplicate_digits": [
+              3,
+              4
+            ]
+          },
+          {
+            "unit": "column 1",
+            "values": [
+              1,
+              4,
+              5,
+              6,
+              1,
+              3,
+              2,
+              6,
+              4
+            ],
+            "duplicate_digits": [
+              1,
+              4,
+              6
+            ]
+          },
+          {
+            "unit": "column 2",
+            "values": [
+              1,
+              4,
+              3,
+              5,
+              9,
+              2,
+              2,
+              8,
+              4
+            ],
+            "duplicate_digits": [
+              2,
+              4
+            ]
+          },
+          {
+            "unit": "column 3",
+            "values": [
+              7,
+              2,
+              5,
+              6,
+              4,
+              3,
+              9,
+              6,
+              3
+            ],
+            "duplicate_digits": [
+              3,
+              6
+            ]
+          },
+          {
+            "unit": "column 4",
+            "values": [
+              6,
+              3,
+              6,
+              5,
+              9,
+              3,
+              5,
+              6,
+              4
+            ],
+            "duplicate_digits": [
+              3,
+              5,
+              6
+            ]
+          },
+          {
+            "unit": "column 5",
+            "values": [
+              2,
+              5,
+              8,
+              6,
+              7,
+              3,
+              7,
+              8,
+              8
+            ],
+            "duplicate_digits": [
+              7,
+              8
+            ]
+          },
+          {
+            "unit": "column 6",
+            "values": [
+              4,
+              5,
+              6,
+              2,
+              2,
+              9,
+              3,
+              3,
+              3
+            ],
+            "duplicate_digits": [
+              2,
+              3
+            ]
+          },
+          {
+            "unit": "column 7",
+            "values": [
+              9,
+              5,
+              9,
+              1,
+              6,
+              1,
+              7,
+              4,
+              2
+            ],
+            "duplicate_digits": [
+              1,
+              9
+            ]
+          },
+          {
+            "unit": "column 8",
+            "values": [
+              8,
+              6,
+              6,
+              1,
+              2,
+              4,
+              8,
+              5,
+              1
+            ],
+            "duplicate_digits": [
+              1,
+              6,
+              8
+            ]
+          },
+          {
+            "unit": "column 9",
+            "values": [
+              8,
+              1,
+              4,
+              1,
+              8,
+              9,
+              6,
+              4,
+              6
+            ],
+            "duplicate_digits": [
+              1,
+              4,
+              6,
+              8
+            ]
+          },
+          {
+            "unit": "box 1,1",
+            "values": [
+              1,
+              1,
+              7,
+              4,
+              4,
+              2,
+              5,
+              3,
+              5
+            ],
+            "duplicate_digits": [
+              1,
+              4,
+              5
+            ]
+          },
+          {
+            "unit": "box 1,2",
+            "values": [
+              6,
+              2,
+              4,
+              3,
+              5,
+              5,
+              6,
+              8,
+              6
+            ],
+            "duplicate_digits": [
+              5,
+              6
+            ]
+          },
+          {
+            "unit": "box 1,3",
+            "values": [
+              9,
+              8,
+              8,
+              5,
+              6,
+              1,
+              9,
+              6,
+              4
+            ],
+            "duplicate_digits": [
+              6,
+              8,
+              9
+            ]
+          },
+          {
+            "unit": "box 2,1",
+            "values": [
+              6,
+              5,
+              6,
+              1,
+              9,
+              4,
+              3,
+              2,
+              3
+            ],
+            "duplicate_digits": [
+              3,
+              6
+            ]
+          },
+          {
+            "unit": "box 2,2",
+            "values": [
+              5,
+              6,
+              2,
+              9,
+              7,
+              2,
+              3,
+              3,
+              9
+            ],
+            "duplicate_digits": [
+              2,
+              3,
+              9
+            ]
+          },
+          {
+            "unit": "box 2,3",
+            "values": [
+              1,
+              1,
+              1,
+              6,
+              2,
+              8,
+              1,
+              4,
+              9
+            ],
+            "duplicate_digits": [
+              1
+            ]
+          },
+          {
+            "unit": "box 3,1",
+            "values": [
+              2,
+              2,
+              9,
+              6,
+              8,
+              6,
+              4,
+              4,
+              3
+            ],
+            "duplicate_digits": [
+              2,
+              4,
+              6
+            ]
+          },
+          {
+            "unit": "box 3,2",
+            "values": [
+              5,
+              7,
+              3,
+              6,
+              8,
+              3,
+              4,
+              8,
+              3
+            ],
+            "duplicate_digits": [
+              3,
+              8
+            ]
+          },
+          {
+            "unit": "box 3,3",
+            "values": [
+              7,
+              8,
+              6,
+              4,
+              5,
+              4,
+              2,
+              1,
+              6
+            ],
+            "duplicate_digits": [
+              4,
+              6
+            ]
+          }
+        ]
+      }
+    },
+    "final_success": {
+      "puzzle_id": "65ba81b5b983dbfb5143472178bd02077fd9c9ae7123ba4cc55532f9bb3f27be",
+      "trajectory_id": "20261021T015216719695Z-collection:0",
+      "level": 12,
+      "puzzle": "_216_7_85|76____2__|__3__27__|_523_____|_________|8_67_____|2___84_36|6_81__4__|_4__9___7",
+      "output": "921647385|764835291|583912764|452369178|179458623|836721549|217584936|698173452|345296817",
+      "inspection": {
+        "valid": true,
+        "malformed": false,
+        "blank_count": 0,
+        "changed_clues": [],
+        "conflict_witnesses": []
+      }
+    },
+    "final_failure": {
+      "puzzle_id": "80887d82a1e3b0258cb9b1f8cafc90d60d444cf504c7d3a1aa9fb076ca97aed3",
+      "trajectory_id": "20261021T015216719695Z-collection:6",
+      "level": 12,
+      "puzzle": "__58__72_|____319_6|_71___38_|_1_____65|_9_______|5___84_9_|_83__951_|____1___8|1_____67_",
+      "output": "935846721|842731956|671992384|418273865|396155247|527684193|783469512|269517438|154328679",
+      "inspection": {
+        "valid": false,
+        "malformed": false,
+        "blank_count": 0,
+        "changed_clues": [],
+        "conflict_witnesses": [
+          {
+            "unit": "row 3",
+            "values": [
+              6,
+              7,
+              1,
+              9,
+              9,
+              2,
+              3,
+              8,
+              4
+            ],
+            "duplicate_digits": [
+              9
+            ]
+          },
+          {
+            "unit": "row 4",
+            "values": [
+              4,
+              1,
+              8,
+              2,
+              7,
+              3,
+              8,
+              6,
+              5
+            ],
+            "duplicate_digits": [
+              8
+            ]
+          },
+          {
+            "unit": "row 5",
+            "values": [
+              3,
+              9,
+              6,
+              1,
+              5,
+              5,
+              2,
+              4,
+              7
+            ],
+            "duplicate_digits": [
+              5
+            ]
+          },
+          {
+            "unit": "box 1,2",
+            "values": [
+              8,
+              4,
+              6,
+              7,
+              3,
+              1,
+              9,
+              9,
+              2
+            ],
+            "duplicate_digits": [
+              9
+            ]
+          },
+          {
+            "unit": "box 2,2",
+            "values": [
+              2,
+              7,
+              3,
+              1,
+              5,
+              5,
+              6,
+              8,
+              4
+            ],
+            "duplicate_digits": [
+              5
+            ]
+          }
+        ]
+      }
+    },
+    "malformed": {
+      "puzzle_id": "a5271ebdddbecf2f10e36c8fb0a1778c08e4fdc1a4b636237e92c3fe3964922c",
+      "trajectory_id": "20261021T015216719695Z-collection:1130",
+      "level": 3,
+      "puzzle": "_168__7_9|__7_____3|8__9__52_|___5_19_4|_2___9___|_____7___|1___9523_|___1_84__|___4_261_",
+      "output": "28363373373333333337643333283736333433383643538337333334316748633332373333263687336333338",
+      "inspection": {
+        "valid": false,
+        "malformed": true,
+        "blank_count": null,
+        "changed_clues": [],
+        "conflict_witnesses": []
+      }
+    }
+  },
+  "limited_symmetry_duplicate_groups": [],
+  "symmetry_limitations": "digit renaming and transpose only; no full row/column/band/stack isomorphism audit",
+  "development_directory": "results\\probes\\20261023T121711278798Z-m3-audit",
+  "development_sha256": "fe3abe0f545f88bb6c4c33677a0f94916270a3f89f62c69b692a5b4e5ff2105e",
+  "development_puzzles": 1600,
+  "excluded_original_test_puzzles": 400,
+  "original_artifacts_unchanged": true
+}

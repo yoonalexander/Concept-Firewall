@@ -4,9 +4,13 @@ Research tools for asking whether a frozen Next-Concept Modeling hierarchy predi
 
 The supplied [design](Concept_Firewall_Design_Document.md) remains canonical. The [review](docs/design_review.md) identifies scientific limitations and implementation decisions. Only recorded runs establish a release gate; unit-test fixtures are not model results.
 
+See [ROADMAP.md](ROADMAP.md) for every project phase, the M0–M7 milestone mapping, current status, deliverables, and evidence gates.
+
 The released evaluator has now run on all 2,000 hard-Sudoku puzzles: **1,725 solved (86.25%)**. Corrected full-prefix collection produced **24,000 records**, with every final output matching the official baseline. See [baseline evidence](results/reports/baseline_reproduction.md) and [trajectory analysis](results/reports/level_trajectory_analysis.md). A reconstruction error found during review is documented transparently; initial native-length reports are superseded.
 
-**Initial M0–M3 result:** the prespecified level-6 pooled-latent increment is **−0.0078 AUROC (95% interval −0.0368 to +0.0193)**, so useful incremental prediction was not demonstrated. See [probe evaluation](results/reports/probe_evaluation.md). The implementation passes **74 tests and 119 subtests**; saved probes reproduce all 400 held-out predictions for each of five audited primary-level families. Later phases remain gated.
+**Initial M0–M3 result:** the prespecified level-6 pooled-latent increment is **−0.0078 AUROC (95% interval −0.0368 to +0.0193)**, so useful incremental prediction was not demonstrated. See [probe evaluation](results/reports/probe_evaluation.md). The initial verification passed **74 tests and 119 subtests**; saved probes reproduce all 400 held-out predictions for each of five audited primary-level families. Later phases remain gated.
+
+**October 23 follow-up:** independent label checking and agent case review passed. Two fixed spatial variants were tested on **1,600 development puzzles**, excluding all 400 original test puzzles. Neither met the primary continuation criteria. The bounded Sudoku study is [closed with a negative report](results/reports/sudoku_study_closeout.md); see [audit and follow-up results](results/reports/m3_followup_evaluation.md). Current verification passes **87 tests and 119 subtests**. This is not fresh confirmatory evidence or completion of the later roadmap.
 
 ## Setup
 
@@ -36,6 +40,16 @@ The CUDA wheel command is the one selected for this machine. Choose a supported 
 .\.venv\Scripts\python.exe -m concept_firewall train --manifest results/manifests/FULL-collection.json --protocol configs/probe_protocol.json
 .\.venv\Scripts\python.exe -m pytest
 ```
+
+To reproduce the completed bounded diagnostic study:
+
+```powershell
+.\.venv\Scripts\python.exe -m concept_firewall audit --protocol configs/m3_followup.json
+# Substitute the audit manifest printed above:
+.\.venv\Scripts\python.exe -m concept_firewall followup --audit-manifest results/manifests/AUDIT.json --protocol configs/m3_followup.json
+```
+
+The follow-up consumes the locally retained original trajectory/probe artifacts, whose hashes are checked by the audit. On another machine, restore those ignored artifacts from a verified copy or reproduce the original collection and probes; this is not a download-only shortcut. Old run manifests retain their exact commands and source snapshots.
 
 The 32-input smoke configuration reduces batch size from the released 128 to 8 for local memory. It is operational validation, not a statistical accuracy estimate. Baseline executes the actual official evaluator and keeps its logs. Collection requires a successful baseline with the same configuration and verifies every final board against that run. It preserves all 12 levels, code prefixes, pooled tokenizer latents, features and current correctness; final outcome labels are separate.
 

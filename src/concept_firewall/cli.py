@@ -27,6 +27,11 @@ def main(argv: list[str] | None = None) -> int:
     probes = commands.add_parser("train", help="Fit frozen grouped probes after real collection/equivalence gates")
     probes.add_argument("--manifest", type=Path, required=True)
     probes.add_argument("--protocol", type=Path, default=Path("configs/probe_protocol.json"))
+    audit = commands.add_parser("audit", help="Independently audit old M3 labels, calibration and development boundaries")
+    audit.add_argument("--protocol", type=Path, default=Path("configs/m3_followup.json"))
+    followup = commands.add_parser("followup", help="Evaluate exactly two exploratory spatial representations on development puzzles only")
+    followup.add_argument("--audit-manifest", type=Path, required=True)
+    followup.add_argument("--protocol", type=Path, default=Path("configs/m3_followup.json"))
     args = parser.parse_args(argv)
     root = args.root.resolve()
     try:
@@ -54,6 +59,12 @@ def main(argv: list[str] | None = None) -> int:
         elif args.command == "train":
             from .training import train_probes
             print(train_probes(root, (root / args.manifest).resolve(), (root / args.protocol).resolve()))
+        elif args.command == "audit":
+            from .diagnostics import run_audit
+            print(run_audit(root, (root / args.protocol).resolve()))
+        elif args.command == "followup":
+            from .followup import run_followup
+            print(run_followup(root, (root / args.audit_manifest).resolve(), (root / args.protocol).resolve()))
     except (ValueError, RuntimeError, OSError, ImportError) as error:
         print(f"error: {error}", file=sys.stderr)
         return 2

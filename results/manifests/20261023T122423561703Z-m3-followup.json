@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0",
+  "run_id": "20261023T122423561703Z-m3-followup",
+  "mode": "m3-followup",
+  "status": "failed",
+  "started_utc": "2026-10-23T12:24:23.561703+00:00",
+  "command": [
+    "C:\\Users\\Admin\\Documents\\Projects\\Concept-Firewall\\.venv\\Scripts\\python.exe",
+    "-m",
+    "concept_firewall",
+    "followup",
+    "--audit-manifest",
+    "results/manifests/20261023T121711278798Z-m3-audit.json",
+    "--protocol",
+    "configs/m3_followup.json"
+  ],
+  "code_revision": "c1a3ef8097122737ceef3bd774e35e04d01c8fae",
+  "source_tree_sha256": "5c4d60146ebed702ef6052a58aaf9b4c8891112dcf7ef26aca99d1c474e19194",
+  "source_snapshot": "results/source_snapshots/5c4d60146ebed702ef6052a58aaf9b4c8891112dcf7ef26aca99d1c474e19194.zip",
+  "source_snapshot_sha256": "edfbbcffe9e44962ca4bc02194d0f6ed0e6ab86f0952252204ab3767f67fb509",
+  "upstream_commit": "c70274273f489abc73832b2b98584a8483b6b203",
+  "configuration": {
+    "protocol": {
+      "protocol_version": 1,
+      "scope": "Bounded exploratory M3 diagnostic follow-up; not a new untouched-test result",
+      "parent_collection": "results/manifests/20261021T015216719695Z-collection.json",
+      "parent_probes": "results/manifests/20261021T015457393177Z-probes.json",
+      "parent_splits": "results/manifests/20261021T015457393177Z-probes-splits.json",
+      "primary_level": 6,
+      "secondary_level": 11,
+      "development_partitions": [
+        "train",
+        "validation",
+        "calibration"
+      ],
+      "excluded_partition": "test",
+      "outer_folds": 4,
+      "inner_folds": 2,
+      "fold_seed": 20261023,
+      "regularization_C": [
+        0.01,
+        0.1
+      ],
+      "solver": "liblinear",
+      "max_iter": 2000,
+      "selection_metric": "inner grouped cross-validation mean log loss",
+      "new_representations": [
+        "row_projection",
+        "cell_projection"
+      ],
+      "projection_dimension": 256,
+      "row_projection_seed": 1261,
+      "cell_projection_seed": 1262,
+      "projection_distribution": "fixed independent Rademacher signs divided by sqrt(output dimension); no fitted projection",
+      "feature_positions": "81 cell positions in the 89-token full prefix latent; eight row separator positions excluded from spatial variants",
+      "cheap_controls": [
+        "decoded",
+        "input_decoded"
+      ],
+      "cheap_control_selection": "choose family and C using inner folds within each outer training partition",
+      "models": [
+        "prevalence",
+        "decoded",
+        "input_decoded",
+        "mean_only",
+        "row_only",
+        "cell_only",
+        "selected_cheap",
+        "selected_cheap_mean",
+        "selected_cheap_row",
+        "selected_cheap_cell"
+      ],
+      "primary_comparisons": [
+        "selected_cheap_row minus selected_cheap",
+        "selected_cheap_cell minus selected_cheap"
+      ],
+      "calibration_policy": "new exploratory discrimination uses uncalibrated raw margins; no test-driven recalibration or sign inversion",
+      "bootstrap_replicates": 500,
+      "bootstrap_seed": 1263,
+      "primary_interval_coverage": 0.975,
+      "interval_limitations": "paired puzzle-cluster percentile intervals conditional on fitted cross-validation models; models not refitted in bootstrap; exploratory selection and fold uncertainty not fully represented",
+      "candidate_minimum_auroc": 0.65,
+      "candidate_minimum_auroc_lift": 0.03,
+      "candidate_minimum_positive_folds": 3,
+      "promotion_requires_fresh_confirmation": true,
+      "no_fresh_data_policy": "finish exploratory diagnostics, preserve negative result, and keep M4-M7 gated; do not relabel exposed puzzles or symmetry transforms as fresh",
+      "maximum_feature_capture_seconds": 300,
+      "maximum_fitting_seconds": 900,
+      "hardware_policy": "existing local GPU for prefix reconstruction only; one CPU thread for fitting; no paid compute or new checkpoint downloads",
+      "manual_review": "agent case walkthrough with raw input/output and independent constraint witnesses; not a human annotation study",
+      "stopping_rule": "evaluate exactly these two spatial variants at the two declared levels once; no extra seeds, levels, models, or hyperparameters selected from results"
+    },
+    "protocol_sha256": "1314336c897c82ef75c52e98526e87af653a535281ff827492cb2bae913f587d",
+    "audit_manifest": "results\\manifests\\20261023T121711278798Z-m3-audit.json",
+    "audit_sha256": "303aa88521f4b522c8222a205292c2b426c69a2dab4329c2a85dd866d318993f"
+  },
+  "environment": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "torch": "2.11.0+cu128",
+      "numpy": "2.5.4",
+      "omegaconf": "2.3.1",
+      "hydra-core": "1.3.7",
+      "transformers": "5.20.2",
+      "pyarrow": "26.0.0",
+      "scikit-learn": "1.9.1"
+    },
+    "torch_cuda": "12.8",
+    "cuda_available": true,
+    "gpu": "NVIDIA GeForce RTX 5060",
+    "gpu_memory_bytes": 8546484224
+  },
+  "claims": "Research measurements only; no intervention or safety effectiveness established.",
+  "aggregation": "sample-weighted mean of outer-fold AUROCs is primary; pooled out-of-fold AUROC is descriptive secondary",
+  "fresh_confirmation_available": false,
+  "error": "ValueError: Prefix decoding differs from the audited current board"
+}

@@ -1,0 +1,15 @@
+{
+  "checked_on": "2026-10-23",
+  "repository": "hazyresearch/ncm-datasets",
+  "revision": "6580ba41a4b0a976dde876fbe84d25327617b0e6",
+  "listing_url": "https://huggingface.co/api/datasets/hazyresearch/ncm-datasets/tree/6580ba41a4b0a976dde876fbe84d25327617b0e6/sudoku/hard",
+  "dataset_card_url": "https://huggingface.co/datasets/hazyresearch/ncm-datasets/blob/6580ba41a4b0a976dde876fbe84d25327617b0e6/README.md",
+  "files": [
+    {"path": "sudoku/hard/puzzles.pickle", "bytes": 372063},
+    {"path": "sudoku/hard/solutions.pickle", "bytes": 364063}
+  ],
+  "local_verified_puzzles": 2000,
+  "unused_official_hard_split_available": false,
+  "scope": "Inspected official hard-Sudoku release only; this is not an exhaustive search of external puzzle datasets.",
+  "decision": "Do not buy compute or download replacement checkpoints. Run bounded exploratory development-only diagnostics. No fresh confirmation, training-disjointness or same-distribution claim is made for a newly generated or transformed puzzle."
+}
