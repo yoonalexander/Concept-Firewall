@@ -6,7 +6,7 @@ The supplied [design](Concept_Firewall_Design_Document.md) remains canonical. Th
 
 See [ROADMAP.md](ROADMAP.md) for every project phase, the M0–M7 milestone mapping, current status, deliverables, and evidence gates.
 
-The new [V2 roadmap](ROADMAP_V2.md) tests generator activations and confidence while preserving the closed study. [V2-0](docs/v2_study_contract.md) freezes its protocol, data plan, prospective sensitivity, and persistent resource limits; implementation proceeds one verified phase at a time.
+The [V2 roadmap](ROADMAP_V2.md) tests generator activations and confidence while preserving the original study. V2-0 through V2-3 are implemented: measurement passed, 8,000 new-source puzzle groups were validated, and the fixed detector comparison finished. [V2 results](results/reports/v2_detector_study.md) show useful exploratory confidence discrimination, but recall of 22.52% at 4.89% false alarms misses the frozen 40% target; the activation addition performs worse. The study stops at that gate, with 1,600 confirmation puzzles unused by the model. These experimental additions on `main` do not change the historical `0.1.1` release tag.
 
 The scoped **0.1.1 Sudoku study package** has [release notes](RELEASE_NOTES.md), a [clean-checkout reproduction guide](docs/reproduce_study.md), a checksummed retained-evidence bundle, and [source/artifact notices](THIRD_PARTY_NOTICES.md). It preserves the negative result and leaves M4–M7 deferred.
 

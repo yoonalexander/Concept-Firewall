@@ -22,6 +22,8 @@ def main(argv: list[str] | None = None) -> int:
     data.add_argument("--protocol", type=Path, default=Path("configs/v2_study.json"))
     data.add_argument("--source", type=Path, required=True)
     data.add_argument("--restore", action="store_true", help="Rehydrate frozen inputs exactly, without reselection")
+    study = commands.add_parser("v2-study", help="Run the single bounded V2 development comparison; never accesses confirmation")
+    study.add_argument("--protocol", type=Path, default=Path("configs/v2_study.json"))
     check = commands.add_parser("verify", help="Verify a Sudoku completion without ML dependencies")
     check.add_argument("--puzzle", required=True)
     check.add_argument("--board", required=True)
@@ -59,6 +61,9 @@ def main(argv: list[str] | None = None) -> int:
         elif args.command == "v2-data":
             from .v2_data import prepare_data, restore_data
             print(restore_data(root,args.source.resolve()) if args.restore else prepare_data(root, (root / args.protocol).resolve(),args.source.resolve()))
+        elif args.command == "v2-study":
+            from .v2_training import run_study
+            print(run_study(root,(root / args.protocol).resolve()))
         elif args.command == "verify":
             from dataclasses import asdict
             from .sudoku_labels import validate_sudoku

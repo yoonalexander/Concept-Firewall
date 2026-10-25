@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "study_manifest_sha256": "5e80f97339b0373d8dccc7526c3d00a3ca8ad78f318360fcb9fdd174e6e51d25",
+  "source_snapshot_matches_working_code": true,
+  "checks": {
+    "decoded": {
+      "calibration_predictions_checked": 800,
+      "refit_scaler_train_validation_only": true,
+      "operating_metrics_replayed": true
+    },
+    "input_decoded": {
+      "calibration_predictions_checked": 800,
+      "refit_scaler_train_validation_only": true,
+      "operating_metrics_replayed": true
+    },
+    "decoded_confidence": {
+      "calibration_predictions_checked": 800,
+      "refit_scaler_train_validation_only": true,
+      "operating_metrics_replayed": true
+    },
+    "input_decoded_confidence": {
+      "calibration_predictions_checked": 800,
+      "refit_scaler_train_validation_only": true,
+      "operating_metrics_replayed": true
+    },
+    "activation_candidate": {
+      "calibration_predictions_checked": 800,
+      "refit_scaler_train_validation_only": true,
+      "operating_metrics_replayed": true
+    }
+  },
+  "confirmation_loaded": false,
+  "new_fits": 0
+}

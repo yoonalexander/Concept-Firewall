@@ -1,0 +1,81 @@
+{
+  "status": "descriptive_only",
+  "population": "800 calibration puzzles, thresholds chosen on this same partition",
+  "failure_prevalence": 0.61625,
+  "raw_probability_diagnostics": {
+    "decoded": {
+      "refit_population_auroc": 0.5735029176900877,
+      "calibration_log_loss_raw_logistic": 0.668097820270377,
+      "calibration_brier_raw_logistic": 0.2373117080832402
+    },
+    "input_decoded": {
+      "refit_population_auroc": 0.7299170411152013,
+      "calibration_log_loss_raw_logistic": 0.7322681832490183,
+      "calibration_brier_raw_logistic": 0.26207742796394257
+    },
+    "decoded_confidence": {
+      "refit_population_auroc": 0.7470695507262259,
+      "calibration_log_loss_raw_logistic": 0.598289548607561,
+      "calibration_brier_raw_logistic": 0.2063048802817302
+    },
+    "input_decoded_confidence": {
+      "refit_population_auroc": 0.8123607234109307,
+      "calibration_log_loss_raw_logistic": 0.6382415824374195,
+      "calibration_brier_raw_logistic": 0.22179936509677334
+    },
+    "activation_candidate": {
+      "refit_population_auroc": 0.7789868561580398,
+      "calibration_log_loss_raw_logistic": 0.6221962451468387,
+      "calibration_brier_raw_logistic": 0.21517215927653482
+    }
+  },
+  "paired_recall_intervals": {
+    "activation_candidate minus decoded": {
+      "recall_difference": 0.13793103448275862,
+      "conditional_95_interval": [
+        0.10141987829614604,
+        0.1744421906693712
+      ]
+    },
+    "activation_candidate minus input_decoded": {
+      "recall_difference": 0.11561866125760649,
+      "conditional_95_interval": [
+        0.07702839756592292,
+        0.15618661257606492
+      ]
+    },
+    "activation_candidate minus decoded_confidence": {
+      "recall_difference": -0.034482758620689655,
+      "conditional_95_interval": [
+        -0.06288032454361055,
+        -0.006085192697768763
+      ]
+    },
+    "activation_candidate minus input_decoded_confidence": {
+      "recall_difference": -0.010141987829614604,
+      "conditional_95_interval": [
+        -0.04462474645030426,
+        0.02434077079107505
+      ]
+    },
+    "decoded_confidence minus decoded": {
+      "recall_difference": 0.1724137931034483,
+      "conditional_95_interval": [
+        0.13387423935091278,
+        0.2129817444219067
+      ]
+    },
+    "decoded_confidence minus input_decoded": {
+      "recall_difference": 0.15010141987829614,
+      "conditional_95_interval": [
+        0.1075050709939148,
+        0.1947261663286004
+      ]
+    }
+  },
+  "bootstrap_replicates": 2000,
+  "seed": 20261025,
+  "new_fits": 0,
+  "confirmation_accessed": false,
+  "limits": "Conditional on fitted models and calibration-chosen thresholds; excludes selection, fitting and threshold uncertainty. Pointwise descriptive intervals, not fresh-confirmation or familywise claims; did not change candidate selection."
+}

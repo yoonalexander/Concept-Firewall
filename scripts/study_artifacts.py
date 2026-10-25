@@ -26,11 +26,11 @@ def digest(path: Path) -> str:
     return value.hexdigest()
 
 
-def inside(root: Path, name: str) -> Path:
+def inside(root: Path, name: str, directories=DIRECTORIES) -> Path:
     relative = PurePosixPath(name)
     if relative.is_absolute() or ".." in relative.parts or "\\" in name or ":" in name:
         raise ValueError(f"Unsafe archive path: {name}")
-    if not any(name.startswith(prefix + "/") for prefix in DIRECTORIES):
+    if not any(name.startswith(prefix + "/") for prefix in directories):
         raise ValueError(f"Not a declared study artifact: {name}")
     target = root.joinpath(*relative.parts).resolve()
     if not target.is_relative_to(root):
@@ -38,9 +38,9 @@ def inside(root: Path, name: str) -> Path:
     return target
 
 
-def pack(root: Path, archive: Path, inventory: Path) -> None:
+def pack(root: Path, archive: Path, inventory: Path, *, directories=DIRECTORIES) -> None:
     paths = []
-    for directory in DIRECTORIES:
+    for directory in directories:
         folder = root / directory
         if not folder.is_dir():
             raise FileNotFoundError(folder)
@@ -51,7 +51,7 @@ def pack(root: Path, archive: Path, inventory: Path) -> None:
     with zipfile.ZipFile(archive, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=6) as output:
         for path in paths:
             name = path.relative_to(root).as_posix()
-            inside(root, name)
+            inside(root, name, directories)
             info = zipfile.ZipInfo(name, date_time=(2026, 10, 23, 0, 0, 0))
             info.compress_type = zipfile.ZIP_DEFLATED
             with path.open("rb") as source, output.open(info, "w") as target:
@@ -68,7 +68,7 @@ def pack(root: Path, archive: Path, inventory: Path) -> None:
                       "bytes": record["archive_bytes"], "sha256": record["archive_sha256"]}))
 
 
-def restore(root: Path, archive: Path, inventory: Path) -> None:
+def restore(root: Path, archive: Path, inventory: Path, *, directories=DIRECTORIES) -> None:
     record = json.loads(inventory.read_text(encoding="utf-8"))
     if archive.stat().st_size != record["archive_bytes"] or digest(archive) != record["archive_sha256"]:
         raise ValueError("Archive size or SHA-256 mismatch")
@@ -80,7 +80,7 @@ def restore(root: Path, archive: Path, inventory: Path) -> None:
             raise ValueError("Archive contents do not match the inventory")
         # Validate every member and existing destination before writing anything.
         for name, entry in entries.items():
-            target = inside(root, name)
+            target = inside(root, name, directories)
             info = source.getinfo(name)
             if info.file_size != entry["bytes"]:
                 raise ValueError(f"Member size mismatch: {name}")
@@ -93,7 +93,7 @@ def restore(root: Path, archive: Path, inventory: Path) -> None:
             if target.exists() and (not target.is_file() or digest(target) != entry["sha256"]):
                 raise ValueError(f"Refusing to overwrite different existing content: {name}")
         for name, entry in entries.items():
-            target = inside(root, name)
+            target = inside(root, name, directories)
             if target.exists():
                 continue
             target.parent.mkdir(parents=True, exist_ok=True)

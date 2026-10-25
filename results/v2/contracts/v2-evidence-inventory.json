@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "scope": "V2 generator-signals-v1 closed study: cohort inputs, observed summaries, models, raw audit outcomes and consumed budget ledger",
+  "archive": "v2-generator-signals-v1-evidence.zip",
+  "archive_bytes": 13260183,
+  "archive_sha256": "621a51db0763466886a672c90591050755ea25a3d6a328d12cbb7f829eb327b7",
+  "files": [
+    {
+      "path": "data/v2/generator-signals-v1/calibration.jsonl",
+      "bytes": 215200,
+      "sha256": "4078e8c9556b7148f9836a12484a7f1c9864be25433e49e509530f02a4f7cb6f"
+    },
+    {
+      "path": "data/v2/generator-signals-v1/confirmation.jsonl",
+      "bytes": 430400,
+      "sha256": "b624e00d05b888e7b5f0ed4638a5523d6048e30db56abf0bd9f4bfb3ffbbbb5a"
+    },
+    {
+      "path": "data/v2/generator-signals-v1/train.jsonl",
+      "bytes": 1076000,
+      "sha256": "9dded4587dd33038d832f98ea5dbc64da862f00344ecb04fd30d17fe9565a48c"
+    },
+    {
+      "path": "data/v2/generator-signals-v1/validation.jsonl",
+      "bytes": 430400,
+      "sha256": "91868963746bde60024752a8ce8bd40646f387576b8f6f539e6007999018e661"
+    },
+    {
+      "path": "results/v2/features/20261025T024909530398Z-v2-pilot/pilot.npz",
+      "bytes": 134874,
+      "sha256": "b60d077e8a860b23e8cb7dff6d84250bc6391d8aca502df5c2e2d171239982f6"
+    },
+    {
+      "path": "results/v2/features/20261025T030127575557Z-v2-study/calibration.npz",
+      "bytes": 1209434,
+      "sha256": "09c67cae2de99d1f6f1a00a0259836efe91d437cf29dd576f9431f1d126f5f23"
+    },
+    {
+      "path": "results/v2/features/20261025T030127575557Z-v2-study/train.npz",
+      "bytes": 6028764,
+      "sha256": "f82d8658f7522dcf016fefae6823eef3deb43b496fa12e5c6e91dc6ea3a7dffa"
+    },
+    {
+      "path": "results/v2/features/20261025T030127575557Z-v2-study/validation.npz",
+      "bytes": 2415552,
+      "sha256": "122517b40e771b3a5ca56390c07013e8324a2671e6a859719a2a9c32cea6d336"
+    },
+    {
+      "path": "results/v2/models/20261025T030127575557Z-v2-study/activation_candidate.json",
+      "bytes": 20920,
+      "sha256": "519771924cf911f9956d0c0099683d3e255a901c81d8e0bcb58c8a0e1eeb40f0"
+    },
+    {
+      "path": "results/v2/models/20261025T030127575557Z-v2-study/decoded.json",
+      "bytes": 865,
+      "sha256": "619edc27afe4d26c629ff957b3a2dac907b8d82a01e96b656852a620c0d966bc"
+    },
+    {
+      "path": "results/v2/models/20261025T030127575557Z-v2-study/decoded_confidence.json",
+      "bytes": 1348,
+      "sha256": "d6d370c626d3bd446e1b045564cbb76fca257cf6d41b4c03bd7a222768784143"
+    },
+    {
+      "path": "results/v2/models/20261025T030127575557Z-v2-study/input_decoded.json",
+      "bytes": 63272,
+      "sha256": "1d649918422bb27ba2dae3e520ab933dda71ca630e8bd7a8fb78a2f9b3fb312d"
+    },
+    {
+      "path": "results/v2/models/20261025T030127575557Z-v2-study/input_decoded_confidence.json",
+      "bytes": 63785,
+      "sha256": "3bd7feafb145e2ac47d6541658eb41694cc555c6dbe624611a1b5f4f607e88e8"
+    },
+    {
+      "path": "results/v2/raw/20261025T030920192150Z-v2-outcome-audit/outcomes.jsonl",
+      "bytes": 7869676,
+      "sha256": "249cd99869717289f56c8f67345486955eb52f40a8728a5ab1986d78b5f19e57"
+    },
+    {
+      "path": "results/v2/runtime/generator-signals-v1.json",
+      "bytes": 415236,
+      "sha256": "8e61345d0d34a39ece864205788782ffb3ba6fdb8f7ad31b6ccec99e2bba45b5"
+    }
+  ],
+  "excluded": [
+    "official checkpoints",
+    "pinned source hard.txt blob (restore from Git source)",
+    "Python environment",
+    "confirmation model outcomes (never generated)"
+  ]
+}

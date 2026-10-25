@@ -2,7 +2,7 @@
 
 **Created:** October 24, 2026
 
-**Status:** V2-0 through V2-2 passed. Measurement and the 8,000-puzzle new-source cohort are verified; V2-3 is next. No V2 detector has been fitted or confirmed.
+**Status:** V2-0 through V2-3 implemented and evaluated. Confidence improved development discrimination, but neither candidate met the practical gate. This bounded study is closed; 1,600 confirmation puzzles remain unused by the model.
 
 **Immediate objective:** determine whether the generation transformer's internal activations and confidence provide a useful early warning of eventual Sudoku errors.
 
@@ -34,8 +34,8 @@ Activations and confidence are hypotheses to test. They are not human-readable t
 | V2-0 — Study contract | What exactly are we testing, and when do we stop? | New study selected for implementation | Passed; protocol frozen, 94 tests / 123 subtests |
 | V2-1 — Correct measurement | Can we observe activations and confidence without changing generation or seeing the future? | Frozen measurement specification and pilot budget | Passed; all 128 paired pilot generations equivalent |
 | V2-2 — Data and partitions | Can we obtain a suitable, independent project confirmation set? | Frozen source, sampling, overlap, and partition rules | Passed; 8,000 validated groups with 1,600 confirmation inputs sealed |
-| V2-3 — Bounded detector study | Do the new signals add useful prediction over strong controls? | Measurement tests and data boundaries pass | Planned |
-| V2-4 — Sealed confirmation | Does the frozen result hold on previously unused project puzzles? | One candidate and all decisions frozen | Gated |
+| V2-3 — Bounded detector study | Do the new signals add useful prediction over strong controls? | Measurement tests and data boundaries pass | Completed; no candidate passes development criteria |
+| V2-4 — Sealed confirmation | Does the frozen result hold on previously unused project puzzles? | One candidate and all decisions frozen | Not started; V2-3 gate failed, inputs/outcomes remain closed |
 | V2-5 — Live observation | Is the confirmed warning early and inexpensive in actual generation? | Predictive confirmation passes | Gated |
 | V2-6 — Recovery | Can alternative continuations improve outcomes from a fixed prefix? | Useful warning and a separately frozen recovery protocol | Gated |
 | V2-7 — Intervention | Does acting on the warning outperform equal-budget alternatives? | Validated recovery/action interface and measured costs | Gated |
@@ -54,9 +54,9 @@ Each phase ends with a report and a recorded **pass, fail, or inconclusive** dec
 - [x] Set sample sizes using a prospective power/precision analysis based on legacy development evidence. Freeze the new sample count before outcome inspection.
 - [x] Save source/checkpoint/protocol hashes, hardware assumptions, resource accounting, and the decision required to advance.
 
-**Completed evidence:** [V2-0 contract and validation](docs/v2_study_contract.md). The starting choices below are now fixed in [the executable protocol](configs/v2_study.json); the fresh source remains unresolved.
+**Completed evidence:** [V2-0 contract and validation](docs/v2_study_contract.md). The starting choices below are fixed in [the executable protocol](configs/v2_study.json). Source selection was unresolved at contract freeze and subsequently passed in V2-2.
 
-**Recommended starting choices, to be finalized before fitting**
+**Starting choices frozen before fitting**
 
 - Same pinned Sudoku checkpoint and upstream source; no larger model or model training.
 - Primary observation after hierarchy level 6 completes, before level 7 begins. A level number is not a measurement of elapsed or remaining computation.
@@ -122,13 +122,15 @@ All original 2,000 puzzles are now legacy/exposed evidence for study design. Any
 
 **Deliverables**
 
-- [ ] Apply identical puzzle-group boundaries and fitting rules to controls and the activation candidate.
-- [ ] Fit scaling and all learned transforms on training data only. Select hyperparameters on development/validation data only; set operating thresholds on a separate calibration partition.
-- [ ] Freeze a cheap-control selection rule aligned with the primary detection objective. Report every required control; do not claim superiority by comparing only against a weak selected control.
-- [ ] Use raw score ordering for primary discrimination. Specify any calibration separately; prohibit outcome-driven sign flips or recalibration on confirmation outcomes.
-- [ ] Report AUROC, precision-recall performance, recall at the declared false-alarm operating point, observed false-alarm rate, failure prevalence, and paired uncertainty.
-- [ ] Record training-versus-assessment gaps and label-shuffled diagnostics. Keep optional descriptive checks within the frozen run budget.
-- [ ] Select at most one candidate for confirmation. Freeze its model, features, threshold, source, and required control before opening confirmation results.
+- [x] Apply identical puzzle-group boundaries and fitting rules to controls and the activation candidate.
+- [x] Fit scaling and all learned transforms on training data only. Select hyperparameters on development/validation data only; set operating thresholds on a separate calibration partition. Declared final refits use training+validation only.
+- [x] Freeze a cheap-control selection rule aligned with the primary detection objective. Report every required control; do not claim superiority by comparing only against a weak selected control.
+- [x] Use raw score ordering for primary discrimination. Specify any calibration separately; prohibit outcome-driven sign flips or recalibration on confirmation outcomes.
+- [x] Report AUROC, precision-recall performance, recall at the declared false-alarm operating point, observed false-alarm rate, failure prevalence, and paired uncertainty.
+- [x] Record training-versus-assessment gaps and label-shuffled diagnostics. Keep optional descriptive checks within the frozen run budget.
+- [x] Apply the at-most-one-candidate rule: neither qualifies, so no candidate is frozen and confirmation stays closed.
+
+**Completed evidence:** [V2-3 results, audits, and scoped closeout](results/reports/v2_detector_study.md). Confidence catches 22.52% of calibration mistakes at 4.89% false alarms; the target is 40%. Activations catch 19.07% and do not improve on the confidence control. All 16 fits are consumed. These are development results, not confirmed unseen-population performance.
 
 Confidence alone may win. That would support a cheaper confidence-based monitor, not a claim that activations add information. The protocol must declare this possible fallback in advance, including its comparator and confirmation rule; it must not silently create a second post-hoc hypothesis.
 
@@ -144,7 +146,7 @@ Confidence alone may win. That would support a cheaper confidence-based monitor,
 - [ ] Retain all evaluated puzzles and failures, including inconvenient cases. Publish negative and inconclusive outcomes alongside successful checks.
 - [ ] Record a decision for predictive usefulness, distinct from online cost, recovery, or production safety.
 
-**Proposed practical targets, subject to V2-0 feasibility/power checks**
+**Practical targets frozen in V2-0; not met in V2-3**
 
 | Measure at the primary early observation | Proposed target |
 |---|---|
@@ -153,7 +155,7 @@ Confidence alone may win. That would support a cheaper confidence-based monitor,
 | Recall improvement over the required cheap comparator | At least 10 percentage points, with a positive lower bound on the paired 95% interval |
 | Additional metrics | Report AUROC, precision-recall, calibration where applicable, and uncertainty; do not substitute a secondary metric for a failed primary target |
 
-These are planning targets, not achieved results or an already registered protocol. Finalize them once in V2-0 using a prospective sample-size rationale. The chosen candidate must satisfy its declared comparator rule; a confidence-only winner cannot establish incremental activation value.
+These targets were frozen in V2-0 with the prospective rationale. They are not achieved results and cannot be lowered after the V2-3 outcome. A chosen candidate would have to satisfy its declared comparator rule; a confidence-only winner could not establish incremental activation value.
 
 **Gate:** the fixed confirmation criteria pass with sufficient precision. A failure closes the current detector hypothesis. Further representation searches require a new question, protocol, and independent confirmation plan.
 
@@ -213,9 +215,9 @@ This phase starts only after the useful-warning and observation gates pass and a
 
 A scoped closeout may occur after any failed gate. It does not mark conditional phases complete or erase them from the roadmap.
 
-## 12. Proposed budget for the initial V2 detector study
+## 12. Frozen budget for the initial V2 detector study
 
-These are resource ceilings to freeze in V2-0, not runtime estimates or authorization to run work now. They apply collectively through V2-5. Recovery, intervention, and task transfer each require a separately declared budget.
+These resource ceilings were frozen in V2-0 and apply collectively through V2-5. They are not runtime estimates. Recovery, intervention, and task transfer would each require a separately declared budget. Remaining GPU capacity does not authorize further model searches after a failed gate.
 
 | Resource | Proposed limit or rule |
 |---|---|
@@ -234,6 +236,6 @@ Check feasibility before committing to sample sizes and model selection. If the 
 
 ## 13. Immediate next deliverable
 
-**V2-3: the one bounded detector comparison**, following the completed [data validation](results/reports/v2_data_validation.md). Keep the 1,600 confirmation inputs and outcomes outside this phase.
+**Current study closed at V2-3.** The [report](results/reports/v2_detector_study.md) preserves the confidence finding, practical failure, resource accounting, and reproduction limits. Keep the 1,600 confirmation inputs/outcomes outside further model work under this study.
 
-Commit and push after each completed phase, as requested. No fresh-data claim, successful detector, recovery benefit, or live compute saving is established yet. Later phases advance only when their gates pass.
+Commit and push after each completed phase, as requested. V2-4 through V2-7 are not started; task transfer, viewer, and formal release remain conditional. No confirmed useful detector, recovery benefit, or live compute saving is established. Further research requires a newly selected study rather than changing this one's frozen criteria.
