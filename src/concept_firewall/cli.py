@@ -14,6 +14,8 @@ def main(argv: list[str] | None = None) -> int:
     commands = parser.add_subparsers(dest="command", required=True)
     commands.add_parser("doctor", help="Inspect environment, CUDA and upstream revision without downloads")
     commands.add_parser("download", help="Download only pinned, hash-checked hard-Sudoku artifacts (~164 MB)")
+    contract = commands.add_parser("v2-contract", help="Freeze V2 protocol and CPU-only prospective design calculation; no model runs")
+    contract.add_argument("--protocol", type=Path, default=Path("configs/v2_study.json"))
     check = commands.add_parser("verify", help="Verify a Sudoku completion without ML dependencies")
     check.add_argument("--puzzle", required=True)
     check.add_argument("--board", required=True)
@@ -42,6 +44,9 @@ def main(argv: list[str] | None = None) -> int:
         elif args.command == "download":
             from .artifacts import download
             print(json.dumps(download(root), indent=2))
+        elif args.command == "v2-contract":
+            from .v2_protocol import freeze_contract
+            print(freeze_contract(root, (root / args.protocol).resolve()))
         elif args.command == "verify":
             from dataclasses import asdict
             from .sudoku_labels import validate_sudoku

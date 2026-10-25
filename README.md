@@ -6,6 +6,8 @@ The supplied [design](Concept_Firewall_Design_Document.md) remains canonical. Th
 
 See [ROADMAP.md](ROADMAP.md) for every project phase, the M0–M7 milestone mapping, current status, deliverables, and evidence gates.
 
+The new [V2 roadmap](ROADMAP_V2.md) tests generator activations and confidence while preserving the closed study. [V2-0](docs/v2_study_contract.md) freezes its protocol, data plan, prospective sensitivity, and persistent resource limits; implementation proceeds one verified phase at a time.
+
 The scoped **0.1.1 Sudoku study package** has [release notes](RELEASE_NOTES.md), a [clean-checkout reproduction guide](docs/reproduce_study.md), a checksummed retained-evidence bundle, and [source/artifact notices](THIRD_PARTY_NOTICES.md). It preserves the negative result and leaves M4–M7 deferred.
 
 The released evaluator has now run on all 2,000 hard-Sudoku puzzles: **1,725 solved (86.25%)**. Corrected full-prefix collection produced **24,000 records**, with every final output matching the official baseline. See [baseline evidence](results/reports/baseline_reproduction.md) and [trajectory analysis](results/reports/level_trajectory_analysis.md). A reconstruction error found during review is documented transparently; initial native-length reports are superseded.
