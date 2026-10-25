@@ -2,7 +2,7 @@
 
 **Created:** October 24, 2026
 
-**Status:** Implementation authorized. V2-0 passed and its protocol is frozen; V2-1 is next. No V2 detector has been fitted or confirmed.
+**Status:** V2-0 and V2-1 passed. Protocol and measurement are verified; V2-2 data eligibility is next. No V2 detector has been fitted or confirmed.
 
 **Immediate objective:** determine whether the generation transformer's internal activations and confidence provide a useful early warning of eventual Sudoku errors.
 
@@ -32,7 +32,7 @@ Activations and confidence are hypotheses to test. They are not human-readable t
 | Phase | Question or deliverable | Entry requirement | Status |
 |---|---|---|---|
 | V2-0 — Study contract | What exactly are we testing, and when do we stop? | New study selected for implementation | Passed; protocol frozen, 94 tests / 123 subtests |
-| V2-1 — Correct measurement | Can we observe activations and confidence without changing generation or seeing the future? | Frozen measurement specification and pilot budget | Planned |
+| V2-1 — Correct measurement | Can we observe activations and confidence without changing generation or seeing the future? | Frozen measurement specification and pilot budget | Passed; all 128 paired pilot generations equivalent |
 | V2-2 — Data and partitions | Can we obtain a suitable, independent project confirmation set? | Frozen source, sampling, overlap, and partition rules | Planned; fresh source unresolved |
 | V2-3 — Bounded detector study | Do the new signals add useful prediction over strong controls? | Measurement tests and data boundaries pass | Planned |
 | V2-4 — Sealed confirmation | Does the frozen result hold on previously unused project puzzles? | One candidate and all decisions frozen | Gated |
@@ -71,14 +71,16 @@ Each phase ends with a report and a recorded **pass, fail, or inconclusive** dec
 
 **Deliverables**
 
-- [ ] Add an observational wrapper around the pinned upstream generator. Keep the upstream submodule unchanged.
-- [ ] Capture only the declared current/past activations and logits during the real generation loop. Avoid reconstructing them through a computation that attends to future codes.
-- [ ] Record when scores and activations become available relative to sampling, partial-board decoding, and completion of the current level.
-- [ ] Export detached bounded summaries, not unbounded activation dumps. Use independent randomness for any fixed projection so observation does not consume the generator's RNG stream.
-- [ ] Prove complete code-sequence and final-board equivalence between observed and unobserved runs under identical inputs, seeds, settings, and batches.
-- [ ] Test that future codes, reference solutions, final labels, and later hooks cannot change an earlier observation. Disallow fitting transforms on assessment data.
-- [ ] Test hook cleanup, repeated calls, batch identity/order, finite features, device transfer, and memory bounds.
-- [ ] Run a small operational pilot on at most 128 declared legacy development puzzles. Count all instrumented/control generation work against the budget.
+- [x] Add an observational wrapper around the pinned upstream generator. Keep the upstream submodule unchanged.
+- [x] Capture only the declared current/past activations and logits during the real generation loop. Avoid reconstructing them through a computation that attends to future codes.
+- [x] Record when scores and activations become available relative to sampling, partial-board decoding, and completion of the current level.
+- [x] Export detached bounded summaries, not unbounded activation dumps. Use independent randomness for any fixed projection so observation does not consume the generator's RNG stream.
+- [x] Prove complete code-sequence and final-board equivalence between observed and unobserved runs under identical inputs, seeds, settings, and batches.
+- [x] Test that future codes, reference solutions, final labels, and later hooks cannot change an earlier observation. Disallow fitting transforms on assessment data.
+- [x] Test hook cleanup, repeated calls, batch identity/order, finite features, device transfer, and memory bounds.
+- [x] Run a small operational pilot on at most 128 declared legacy development puzzles. Count all instrumented/control generation work against the budget.
+
+**Completed evidence:** [V2-1 measurement validation](results/reports/v2_measurement_validation.md), with 99 passing tests / 123 subtests and exact paired equivalence on all 128 pilot puzzles. No detector performance claim follows from this gate.
 
 **Gate:** exact generation equivalence, decision-time boundaries, and bounded capture pass. Failed equivalence is an engineering failure to fix before interpreting detector scores.
 
@@ -230,6 +232,6 @@ Check feasibility before committing to sample sizes and model selection. If the 
 
 ## 13. Immediate next deliverable
 
-**V2-1: a verified observation path**, following the completed [V2-0 contract](docs/v2_study_contract.md).
+**V2-2: data source eligibility and frozen partitions**, following the completed [measurement validation](results/reports/v2_measurement_validation.md).
 
 Commit and push after each completed phase, as requested. No fresh-data claim, successful detector, recovery benefit, or live compute saving is established yet. Later phases advance only when their gates pass.

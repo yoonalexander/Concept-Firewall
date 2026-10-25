@@ -1,0 +1,252 @@
+{
+  "schema_version": "1.0",
+  "run_id": "20261025T024909530398Z-v2-pilot",
+  "mode": "v2-pilot",
+  "status": "passed",
+  "started_utc": "2026-10-25T02:49:09.530398+00:00",
+  "command": [
+    "C:\\Users\\Admin\\Documents\\Projects\\Concept-Firewall\\.venv\\Scripts\\python.exe",
+    "-m",
+    "concept_firewall",
+    "v2-pilot"
+  ],
+  "code_revision": "87dcafc27d97905d5f8a0744f6923aa798cc7e4e",
+  "source_tree_sha256": "7bfacb26b38800adee86ad74c8f4a46b9eb725fc5068087873df1fa7f3fdc051",
+  "source_snapshot": "results/source_snapshots/7bfacb26b38800adee86ad74c8f4a46b9eb725fc5068087873df1fa7f3fdc051.zip",
+  "source_snapshot_sha256": "38bc422f0c62f5d11b98110818c79669d130e09407c794be56e225834d41bb5f",
+  "upstream_commit": "c70274273f489abc73832b2b98584a8483b6b203",
+  "configuration": {
+    "protocol_sha256": "d7a98159ab20b1f92d1d019d8f3d7009afae2107b06953e76639e53b7f2e0cf3",
+    "scope": "operational equivalence, not detector fitting"
+  },
+  "environment": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "torch": "2.11.0+cu128",
+      "numpy": "2.5.4",
+      "omegaconf": "2.3.1",
+      "hydra-core": "1.3.7",
+      "transformers": "5.20.2",
+      "pyarrow": "26.0.0",
+      "scikit-learn": "1.9.1"
+    },
+    "torch_cuda": "12.8",
+    "cuda_available": true,
+    "gpu": "NVIDIA GeForce RTX 5060",
+    "gpu_memory_bytes": 8546484224
+  },
+  "claims": "Research measurements only; no intervention or safety effectiveness established.",
+  "puzzles": 128,
+  "all_codes_equal": true,
+  "all_final_boards_equal": true,
+  "all_prefixes_equal": true,
+  "callback_batches": 16,
+  "observation_level": 6,
+  "feature_file": "results/v2/features/20261025T024909530398Z-v2-pilot/pilot.npz",
+  "features_sha256": "b60d077e8a860b23e8cb7dff6d84250bc6391d8aca502df5c2e2d171239982f6",
+  "projection_sha256": "35756c1a10fe0eee1324a2962c339a2aa2a2b6a7c67be721d8b170555efdcfc0",
+  "generated_codes_sha256": "a30dda89f403d24969cd01971d3c3db851aec884a252fe1f6d9d583b02b44caf",
+  "probe_fits": 0,
+  "new_confirmation_data": false,
+  "budget": {
+    "protocol_sha256": "d7a98159ab20b1f92d1d019d8f3d7009afae2107b06953e76639e53b7f2e0cf3",
+    "limits": {
+      "gpu_seconds": 3600,
+      "cpu_fit_seconds": 900,
+      "fit_jobs": 16,
+      "pilot_puzzles": 128,
+      "new_puzzles": 8000,
+      "feature_bytes": 2147483648
+    },
+    "used": {
+      "gpu_seconds": 5.615618400042877,
+      "cpu_fit_seconds": 0,
+      "fit_jobs": 0,
+      "pilot_puzzles": 128,
+      "new_puzzles": 0,
+      "feature_bytes": 134874
+    },
+    "active": null,
+    "events": [
+      {
+        "name": "load existing checkpoints",
+        "timed_resource": "gpu_seconds",
+        "charges": {},
+        "started_utc": "2026-10-25T02:49:09.623426+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.8436253999825567
+      },
+      {
+        "name": "pilot batch 0",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "pilot_puzzles": 8
+        },
+        "started_utc": "2026-10-25T02:49:10.682965+00:00",
+        "status": "passed",
+        "elapsed_seconds": 1.0761299000005238
+      },
+      {
+        "name": "pilot batch 8",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "pilot_puzzles": 8
+        },
+        "started_utc": "2026-10-25T02:49:11.774538+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.2471590000204742
+      },
+      {
+        "name": "pilot batch 16",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "pilot_puzzles": 8
+        },
+        "started_utc": "2026-10-25T02:49:12.036588+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.24870560003910214
+      },
+      {
+        "name": "pilot batch 24",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "pilot_puzzles": 8
+        },
+        "started_utc": "2026-10-25T02:49:12.300586+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.2469365000142716
+      },
+      {
+        "name": "pilot batch 32",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "pilot_puzzles": 8
+        },
+        "started_utc": "2026-10-25T02:49:12.562745+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.24816049996297807
+      },
+      {
+        "name": "pilot batch 40",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "pilot_puzzles": 8
+        },
+        "started_utc": "2026-10-25T02:49:12.825287+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.24485090002417564
+      },
+      {
+        "name": "pilot batch 48",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "pilot_puzzles": 8
+        },
+        "started_utc": "2026-10-25T02:49:13.088286+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.24635410000337288
+      },
+      {
+        "name": "pilot batch 56",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "pilot_puzzles": 8
+        },
+        "started_utc": "2026-10-25T02:49:13.349288+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.2448879000148736
+      },
+      {
+        "name": "pilot batch 64",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "pilot_puzzles": 8
+        },
+        "started_utc": "2026-10-25T02:49:13.609930+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.24823359999572858
+      },
+      {
+        "name": "pilot batch 72",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "pilot_puzzles": 8
+        },
+        "started_utc": "2026-10-25T02:49:13.874929+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.2516089999699034
+      },
+      {
+        "name": "pilot batch 80",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "pilot_puzzles": 8
+        },
+        "started_utc": "2026-10-25T02:49:14.142929+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.2484790000016801
+      },
+      {
+        "name": "pilot batch 88",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "pilot_puzzles": 8
+        },
+        "started_utc": "2026-10-25T02:49:14.407930+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.2428415000322275
+      },
+      {
+        "name": "pilot batch 96",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "pilot_puzzles": 8
+        },
+        "started_utc": "2026-10-25T02:49:14.666543+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.24354150000726804
+      },
+      {
+        "name": "pilot batch 104",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "pilot_puzzles": 8
+        },
+        "started_utc": "2026-10-25T02:49:14.925546+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.24274960003094748
+      },
+      {
+        "name": "pilot batch 112",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "pilot_puzzles": 8
+        },
+        "started_utc": "2026-10-25T02:49:15.184543+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.2429583999910392
+      },
+      {
+        "name": "pilot batch 120",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "pilot_puzzles": 8
+        },
+        "started_utc": "2026-10-25T02:49:15.443545+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.24839599995175377
+      },
+      {
+        "name": "retain bounded pilot summaries",
+        "timed_resource": null,
+        "charges": {
+          "feature_bytes": 134874
+        },
+        "started_utc": "2026-10-25T02:49:15.715363+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.00093479995848611
+      }
+    ]
+  }
+}

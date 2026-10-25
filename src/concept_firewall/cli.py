@@ -16,6 +16,8 @@ def main(argv: list[str] | None = None) -> int:
     commands.add_parser("download", help="Download only pinned, hash-checked hard-Sudoku artifacts (~164 MB)")
     contract = commands.add_parser("v2-contract", help="Freeze V2 protocol and CPU-only prospective design calculation; no model runs")
     contract.add_argument("--protocol", type=Path, default=Path("configs/v2_study.json"))
+    pilot = commands.add_parser("v2-pilot", help="Verify observed/control generation on frozen legacy pilot identities")
+    pilot.add_argument("--protocol", type=Path, default=Path("configs/v2_study.json"))
     check = commands.add_parser("verify", help="Verify a Sudoku completion without ML dependencies")
     check.add_argument("--puzzle", required=True)
     check.add_argument("--board", required=True)
@@ -47,6 +49,9 @@ def main(argv: list[str] | None = None) -> int:
         elif args.command == "v2-contract":
             from .v2_protocol import freeze_contract
             print(freeze_contract(root, (root / args.protocol).resolve()))
+        elif args.command == "v2-pilot":
+            from .v2_observer import run_pilot
+            print(run_pilot(root, (root / args.protocol).resolve()))
         elif args.command == "verify":
             from dataclasses import asdict
             from .sudoku_labels import validate_sudoku
