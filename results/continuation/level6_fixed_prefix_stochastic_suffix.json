@@ -1,0 +1,65 @@
+{
+  "policy": "level6_fixed_prefix_stochastic_suffix",
+  "statistics": {
+    "puzzles": 1600,
+    "original_solved": 590,
+    "original_failures": 1010,
+    "retry_budget": 272,
+    "all_failures_recovered_by_potential_retry": 63,
+    "confidence_recovered": 9,
+    "confidence_solved": 599,
+    "confidence_accuracy": 0.374375,
+    "confidence_selected_failure_recovery": 0.0371900826446281,
+    "all_failure_recovery": 0.062376237623762376,
+    "random_all": {
+      "realized_recovered": 17,
+      "expected_recovered": 10.71,
+      "solved": 607
+    },
+    "verifier_first": {
+      "realized_recovered": 19,
+      "expected_recovered": 16.966336633663367,
+      "solved": 609
+    },
+    "accuracy_advantage_vs_expected": {
+      "random_all": -0.0010687500000000005,
+      "verifier_first": -0.004978960396039605
+    },
+    "paired_97_5_percent_intervals": {
+      "random_all": [
+        -0.0045633203125,
+        0.0030117382812500006
+      ],
+      "verifier_first": [
+        -0.008879709497233627,
+        -0.0008041083603295884
+      ]
+    },
+    "service_budget": {
+      "milliseconds": 327233.04959999997,
+      "worst_observed_retry_ms": 336.0418,
+      "plain_mean_ms": 137.80460499999998,
+      "monitored_mean_ms": 147.39354999999998,
+      "confidence_retry_slots": 272,
+      "random_retry_slots": 317,
+      "verifier_retry_slots": 317,
+      "random_all_recovered": 18,
+      "verifier_first_recovered": 26,
+      "confidence_slot_envelope_ms": 327233.04959999997,
+      "random_slot_envelope_ms": 327012.6186,
+      "verifier_slot_envelope_ms": 327012.6186,
+      "limits": "Replay of measured sequential service demand; maximum is observed, not a guaranteed latency bound"
+    },
+    "conditions": {
+      "minimum_gain_vs_both_expected_matched_count_baselines": false,
+      "both_bonferroni_interval_lower_bounds_positive": false,
+      "wins_against_both_realized_service_budget_baselines": false
+    },
+    "gate_passed": false,
+    "unchanged_successes_preserved": true,
+    "uncertainty_scope": "Puzzle bootstrap for the fixed probe, threshold and one identity-seeded retry procedure; no refits; timing uncertainty separate"
+  },
+  "raw_file": "results/continuation/raw/level6_fixed_prefix_stochastic_suffix.jsonl",
+  "raw_sha256": "58eca229aa73ae95c3b8c92657c91d5d076d6ed30a785dfc49002720eacf4394",
+  "raw_bytes": 1691562
+}

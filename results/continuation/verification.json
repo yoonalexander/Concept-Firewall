@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "stage": "completed confidence allocation and recovery study",
+  "command": ".venv\\Scripts\\python.exe -m pytest -q --tb=short",
+  "temporary_directory": "workspace .test-tmp via TEMP and TMP",
+  "tests_passed": 116,
+  "subtests_passed": 129,
+  "pip_check": "No broken requirements found",
+  "environment_note": "Initial full-suite run hit sandbox temporary-directory access errors. The workspace-local temporary directory resolved them; no scientific rerun or altered assertion was needed.",
+  "independent_audit": "results/continuation/audit.json",
+  "model_calls_during_artifact_audit": 0
+}

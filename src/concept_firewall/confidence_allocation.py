@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import json
 import math
+import sys
 from pathlib import Path
 
 from .artifacts import sha256_file, verified_artifacts
@@ -178,6 +179,7 @@ def run_confirmation(root):
     ledger = BudgetLedger(root/BASE/'runtime/ledger.json', frozen['protocol_sha256'], p['limits'])
     manifest = new_manifest(root, 'allocation-confirmation', {'protocol_sha256': frozen['protocol_sha256'],
                              'old_study_reopened': False, 'new_fits': 0})
+    manifest['command'] = [sys.executable, str(root/'scripts/confidence_allocation.py'), 'confirm']
     save_manifest(root, manifest)
     write_json(target, {'status': 'running', 'run_manifest': manifest['run_id']})
     try:

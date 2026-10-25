@@ -1,0 +1,6 @@
+{
+  "status": "passed",
+  "puzzles": 32,
+  "all_codes_equal_to_unobserved_and_frozen": true,
+  "prefix_attention_recomputed": true
+}

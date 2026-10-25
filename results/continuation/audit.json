@@ -1,0 +1,74 @@
+{
+  "status": "passed",
+  "baseline_outcomes_checked": 1600,
+  "policies": [
+    {
+      "policy": "level6_fixed_prefix_stochastic_suffix",
+      "outcomes_checked": 1600,
+      "rescues": 63,
+      "selected_rescues": 9,
+      "fixed_prefixes_checked": 1600,
+      "baseline_expectations_and_realizations_match": true
+    },
+    {
+      "policy": "full_stochastic_restart",
+      "outcomes_checked": 1600,
+      "rescues": 105,
+      "selected_rescues": 21,
+      "fixed_prefixes_checked": 0,
+      "baseline_expectations_and_realizations_match": true
+    }
+  ],
+  "frozen_probe_decisions_checked": 1600,
+  "original_V2_artifacts_and_ledger_unchanged": true,
+  "protocol_sha256": "51e8b95d81d045a36a700087216049acfe0e789e36533c8c5a5ed8dde9aa6635",
+  "command_records": [
+    {
+      "run_manifest": "results/manifests/20261025T210517126329Z-allocation-confirmation.json",
+      "manifest_sha256": "0a0460e04d1370abe3e5408eadc9130b025f4bb8e688d600003a6a8d07385fbd",
+      "recorded_helper_command": [
+        "C:\\Users\\Admin\\Documents\\Projects\\Concept-Firewall\\.venv\\Scripts\\python.exe",
+        "-m",
+        "concept_firewall",
+        "confirm"
+      ],
+      "actual_script_command": [
+        "C:\\Users\\Admin\\Documents\\Projects\\Concept-Firewall\\.venv\\Scripts\\python.exe",
+        "scripts/confidence_allocation.py",
+        "confirm"
+      ],
+      "note": "Shared manifest helper assumed module CLI; actual execution used the script. Original manifest preserved."
+    },
+    {
+      "run_manifest": "results/manifests/20261025T210919147195Z-allocation-recovery.json",
+      "manifest_sha256": "8d5ffa43cbdf8b0fe3818b7fc6defdc3bcd7954725d4a6afecf04a4dd5f201ff",
+      "recorded_helper_command": [
+        "C:\\Users\\Admin\\Documents\\Projects\\Concept-Firewall\\.venv\\Scripts\\python.exe",
+        "-m",
+        "concept_firewall",
+        "recover"
+      ],
+      "actual_script_command": [
+        "C:\\Users\\Admin\\Documents\\Projects\\Concept-Firewall\\.venv\\Scripts\\python.exe",
+        "scripts/confidence_allocation.py",
+        "recover"
+      ],
+      "note": "Shared manifest helper assumed module CLI; actual execution used the script. Original manifest preserved."
+    }
+  ],
+  "audit_script_sha256": "206eebb2c26d1da67187184f14b1649b5be83152155c4d9159a788fa3e3f1472",
+  "audit_command": [
+    "C:\\Users\\Admin\\Documents\\Projects\\Concept-Firewall\\.venv\\Scripts\\python.exe",
+    "scripts/audit_confidence_allocation.py",
+    "--root",
+    "C:\\Users\\Admin\\Documents\\Projects\\Concept-Firewall"
+  ],
+  "budget": {
+    "gpu_seconds": 510.3234955990338,
+    "fit_jobs": 0,
+    "model_puzzles": 4936,
+    "feature_bytes": 5952740
+  },
+  "new_model_calls": 0,
+  "new_fits": 0
+}

@@ -1,0 +1,96 @@
+{
+  "status": "completed",
+  "batch_size": 1,
+  "pairs": [
+    {
+      "plain_ms": 134.9587,
+      "monitored_ms": 144.6528
+    },
+    {
+      "monitored_ms": 143.9444,
+      "plain_ms": 154.4681
+    },
+    {
+      "plain_ms": 148.7555,
+      "monitored_ms": 172.7612
+    },
+    {
+      "monitored_ms": 141.4973,
+      "plain_ms": 136.5306
+    },
+    {
+      "plain_ms": 133.889,
+      "monitored_ms": 150.6906
+    },
+    {
+      "monitored_ms": 169.8368,
+      "plain_ms": 142.9661
+    },
+    {
+      "plain_ms": 161.4621,
+      "monitored_ms": 171.309
+    },
+    {
+      "monitored_ms": 143.5383,
+      "plain_ms": 128.6837
+    },
+    {
+      "plain_ms": 132.8334,
+      "monitored_ms": 145.1447
+    },
+    {
+      "monitored_ms": 144.5632,
+      "plain_ms": 131.0303
+    },
+    {
+      "plain_ms": 133.4293,
+      "monitored_ms": 136.4904
+    },
+    {
+      "monitored_ms": 143.1172,
+      "plain_ms": 138.6224
+    },
+    {
+      "plain_ms": 147.649,
+      "monitored_ms": 144.0373
+    },
+    {
+      "monitored_ms": 150.0836,
+      "plain_ms": 142.6879
+    },
+    {
+      "plain_ms": 136.5185,
+      "monitored_ms": 143.8304
+    },
+    {
+      "monitored_ms": 160.9032,
+      "plain_ms": 142.9208
+    },
+    {
+      "plain_ms": 129.437,
+      "monitored_ms": 138.2295
+    },
+    {
+      "monitored_ms": 133.3231,
+      "plain_ms": 125.7108
+    },
+    {
+      "plain_ms": 127.0609,
+      "monitored_ms": 136.0685
+    },
+    {
+      "monitored_ms": 133.8495,
+      "plain_ms": 126.478
+    }
+  ],
+  "plain_mean_ms": 137.80460499999998,
+  "monitored_mean_ms": 147.39354999999998,
+  "mean_overhead_ms": 9.588944999999995,
+  "mean_overhead_fraction": 0.06958363256438349,
+  "paired_overhead_95_interval_ms": [
+    5.961002249999999,
+    13.234850999999995
+  ],
+  "scope": "Synchronized full generation, final decoding and exact verification; monitor also reconstructs/decodes current prefix and scores before future levels",
+  "population": "Eight already exposed calibration inputs, 20 alternated paired trials; hardware/session specific, not a production benchmark"
+}

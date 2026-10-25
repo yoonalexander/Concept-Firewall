@@ -1,15 +1,28 @@
 import json
 from pathlib import Path
 import unittest
+import tempfile
+from unittest.mock import patch
 
 import numpy as np
 
-from concept_firewall.confidence_allocation import ConfidenceMonitor, confirmation_statistics, wilson_upper
+from concept_firewall.confidence_allocation import BASE, ConfidenceMonitor, confirmation_statistics, run_confirmation, wilson_upper
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
 class AllocationStatisticsTests(unittest.TestCase):
+    def test_consumed_confirmation_refuses_before_any_model_load(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root/BASE).mkdir(parents=True)
+            (root/BASE/'confirmation.json').write_text('{"status":"completed"}')
+            with patch('concept_firewall.confidence_allocation.require_frozen', return_value=({}, {})), \
+                 patch('concept_firewall.upstream_adapter.NCMAdapter.load') as load:
+                with self.assertRaisesRegex(ValueError, 'already attempted'):
+                    run_confirmation(root)
+                load.assert_not_called()
+
     def test_enrichment_screen_has_no_recall_redefinition(self):
         p = json.loads((ROOT/'configs/confidence_allocation.json').read_text())
         y = np.array([1]*1000+[0]*600)
