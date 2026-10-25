@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "source_revision": "139e066c5c298ac1cc73610be79b2736aa2773ac",
+  "source_archive_sha256": "8d82454c4bfef48e5bffc8ab403b57645852fc745c0dbc73b7349b0d1ec5b44c",
+  "closeout_additions_sha256": {
+    "results/continuation/evidence_inventory.json": "10c54a4b941d2fd4bcf04bcb9684a2ac55853ceccfef8a0faf0ce0d8962a5279",
+    "scripts/confidence_allocation_evidence.py": "00d625a1c6a754a71904ee8790b454b88d6d5bc50b3d9cb3c22233aa24b52e5e"
+  },
+  "evidence_archive_sha256": "389d68a440e388c70af4a034c39d95c4cfd887d80be8899f9287a48ca2951764",
+  "restored_files": 7,
+  "restored_twice_without_conflict": true,
+  "all_member_hashes_verified": true,
+  "imported_source_path": "C:\\Users\\Admin\\Documents\\Projects\\Concept-Firewall\\.tmp\\allocation-replay-8b0657329cb9\\checkout\\src\\concept_firewall\\__init__.py",
+  "checkout": "C:\\Users\\Admin\\Documents\\Projects\\Concept-Firewall\\.tmp\\allocation-replay-8b0657329cb9\\checkout",
+  "baseline_outcomes_checked": 1600,
+  "retry_outcomes_checked": 3200,
+  "exact_fallback_outcomes_checked": 6400,
+  "new_model_calls": 0,
+  "new_fits": 0,
+  "environment_boundary": "Clean committed scientific source and restored evidence, using the existing research dependency environment; not a fresh environment build or a new scientific experiment",
+  "verification_script_sha256": "b869ad9859c48a37cef63228b6e61de777cfef37e5ccba19ce4c0d543d79245b"
+}

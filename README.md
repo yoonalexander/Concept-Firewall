@@ -18,7 +18,9 @@ The released evaluator has now run on all 2,000 hard-Sudoku puzzles: **1,725 sol
 
 **Initial M0–M3 result:** the prespecified level-6 pooled-latent increment is **−0.0078 AUROC (95% interval −0.0368 to +0.0193)**, so useful incremental prediction was not demonstrated. See [probe evaluation](results/reports/probe_evaluation.md). The initial verification passed **74 tests and 119 subtests**; saved probes reproduce all 400 held-out predictions for each of five audited primary-level families. Later phases remain gated.
 
-**October 23 follow-up:** independent label checking and agent case review passed. Two fixed spatial variants were tested on **1,600 development puzzles**, excluding all 400 original test puzzles. Neither met the primary continuation criteria. The bounded Sudoku study is [closed with a negative report](results/reports/sudoku_study_closeout.md); see [audit and follow-up results](results/reports/m3_followup_evaluation.md). Current verification passes **87 tests and 119 subtests**. This is not fresh confirmatory evidence or completion of the later roadmap.
+**October 23 follow-up:** independent label checking and agent case review passed. Two fixed spatial variants were tested on **1,600 development puzzles**, excluding all 400 original test puzzles. Neither met the primary continuation criteria. The bounded Sudoku study is [closed with a negative report](results/reports/sudoku_study_closeout.md); see [audit and follow-up results](results/reports/m3_followup_evaluation.md). That study's verification passed **87 tests and 119 subtests**. This is not fresh confirmatory evidence or completion of the later roadmap.
+
+Current follow-on verification: **121 tests and 133 subtests passed**, dependency check passed, and a clean-source evidence restoration independently rechecked all 11,200 retained baseline/retry/fallback outcomes without model calls. See the [completed follow-on closeout](results/reports/confidence_allocation_closeout.md).
 
 ## Setup
 
