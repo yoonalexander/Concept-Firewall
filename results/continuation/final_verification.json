@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "command": ".venv\\Scripts\\python.exe -m pytest -q --tb=short",
+  "temporary_directory": "workspace .test-tmp via TEMP and TMP",
+  "tests_passed": 121,
+  "subtests_passed": 133,
+  "pip_check": "No broken requirements found",
+  "independent_outcome_audit": {
+    "confirmation_baseline": 1600,
+    "stochastic_suffix_retries": 1600,
+    "full_restart_retries": 1600,
+    "exact_fallback_development": 6400,
+    "new_model_calls": 0
+  },
+  "research_model_puzzle_calls": 4936,
+  "research_gpu_assisted_elapsed_seconds": 510.3234955990338,
+  "research_fits": 0,
+  "practical_fallback_new_model_calls": 0,
+  "original_V2_study_and_consumed_ledger_preserved": true
+}

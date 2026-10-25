@@ -2,7 +2,7 @@
 
 **Created:** October 24, 2026
 
-**Status:** V2-0 through V2-3 implemented and evaluated. Confidence improved development discrimination, but neither candidate met the practical gate. This bounded study is closed; 1,600 confirmation puzzles remain unused by the model.
+**Status:** V2-0 through V2-3 implemented and evaluated. Confidence improved development discrimination, but neither candidate met the practical gate. This bounded study remains closed. Its 1,600 confirmation puzzles were unused at this study's closeout; they were subsequently consumed by the separately authorized [confidence allocation follow-on](ROADMAP_CONFIDENCE_ALLOCATION.md). No follow-on result changes the V2 gate or completes V2-4 through V2-7.
 
 **Immediate objective:** determine whether the generation transformer's internal activations and confidence provide a useful early warning of eventual Sudoku errors.
 

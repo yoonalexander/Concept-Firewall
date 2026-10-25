@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "scope": "Engineering validation on already exposed V2 train/validation/calibration inputs; no learned recovery or independent confirmation claim",
+  "source_sha256": "836c98b7fd18550c4f990adf4a7631d3e4c69c6342f17696f3d6ca5314382550",
+  "script_sha256": "767536ceca20d527fbf5b6928bd8fc6e7b292b0f1d7308ea26e0984a0a566d76",
+  "parent_audit_sha256": "90df0fe0413961337a03d3054be62df87d562f6885c488629373d2afcde8825a",
+  "parent_raw_sha256": "249cd99869717289f56c8f67345486955eb52f40a8728a5ab1986d78b5f19e57",
+  "puzzles": 6400,
+  "original_solved": 2479,
+  "combined_verified_solved": 6400,
+  "outcomes": {
+    "accepted_proposal": 2479,
+    "solved_exact": 3921
+  },
+  "search_nodes": 1008960,
+  "node_limit_per_puzzle": 100000,
+  "validation_wall_seconds": 5.827034000016283,
+  "timing_scope": "CPU fallback, exact verification and host audit/record assembly; excludes the already completed NCM generation",
+  "new_model_calls": 0,
+  "new_fits": 0,
+  "confirmation_accessed": false,
+  "raw_file": "results/continuation/raw/verified_fallback.jsonl",
+  "raw_sha256": "4937c811e9b640c3ab4d98ea79ee1aa7d6ef760298d72c477dda93bd5aca945f",
+  "raw_bytes": 1388744
+}

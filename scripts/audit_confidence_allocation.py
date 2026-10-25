@@ -12,7 +12,7 @@ import numpy as np
 from concept_firewall.artifacts import sha256_file
 from concept_firewall.confidence_allocation import BASE, PROTOCOL, confirmation_statistics, read_json, require_frozen
 from concept_firewall.decision_value import portable_scores
-from concept_firewall.diagnostics import independent_inspection
+from concept_firewall.diagnostics import independent_cells, independent_inspection
 from concept_firewall.probes import feature_vector
 from concept_firewall.representations import extract_features
 from concept_firewall.schema import LevelState, puzzle_identity
@@ -124,12 +124,36 @@ def main():
                          'manifest_sha256': sha256_file(manifest_path), 'recorded_helper_command': manifest['command'],
                          'actual_script_command': [manifest['command'][0], 'scripts/confidence_allocation.py', step],
                          'note': 'Shared manifest helper assumed module CLI; actual execution used the script. Original manifest preserved.'})
+    fallback_audit = None
+    fallback_path = root/BASE/'verified_fallback.json'
+    if fallback_path.exists():
+        fallback = read_json(fallback_path)
+        decisions = raw_rows(root, fallback)
+        parent_audit = read_json(root/'results/manifests/20261025T030920192150Z-v2-outcome-audit.json')
+        originals = raw_rows(root, {'raw_file': parent_audit['raw_file'], 'raw_sha256': parent_audit['raw_sha256']})
+        check([r['puzzle_id'] for r in decisions] == [r['puzzle_id'] for r in originals], 'Fallback development identity order differs')
+        preserved, exact = 0, 0
+        for before, after in zip(originals, decisions):
+            check(before['role'] in ('train', 'validation', 'calibration'), 'Fallback used confirmation data')
+            check(independent_inspection(before['puzzle'], after['board'])['valid'], 'Exact fallback produced invalid board')
+            if before['final_valid']:
+                check(after['status'] == 'accepted_proposal' and after['search_nodes'] == 0, 'Valid proposal not preserved')
+                check(independent_cells(before['final_board']) == independent_cells(after['board']), 'Valid proposed cells changed')
+                preserved += 1
+            else:
+                check(after['status'] == 'solved_exact' and 0 < after['search_nodes'] <= fallback['node_limit_per_puzzle'], 'Incorrect exact fallback status/cap')
+                exact += 1
+        check(preserved == fallback['original_solved'] and len(decisions) == fallback['combined_verified_solved'], 'Fallback aggregate differs')
+        check(sum(r['search_nodes'] for r in decisions) == fallback['search_nodes'], 'Fallback node accounting differs')
+        fallback_audit = {'development_outcomes_checked': len(decisions), 'valid_proposals_preserved': preserved,
+                          'exact_completions_verified': exact, 'new_model_calls': 0}
     result = {'status': 'passed', 'baseline_outcomes_checked': len(rows), 'policies': audits,
               'frozen_probe_decisions_checked': len(rows), 'original_V2_artifacts_and_ledger_unchanged': True,
               'protocol_sha256': frozen['protocol_sha256'], 'command_records': commands,
               'audit_script_sha256': sha256_file(Path(__file__)),
               'audit_command': [sys.executable, 'scripts/audit_confidence_allocation.py', '--root', str(root)],
               'budget': ledger['used'], 'new_model_calls': 0, 'new_fits': 0}
+    result['practical_fallback_audit'] = fallback_audit
     write_json(root/BASE/'audit.json', result)
     print(json.dumps(result, indent=2))
 

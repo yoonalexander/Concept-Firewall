@@ -27,6 +27,10 @@ def main(argv: list[str] | None = None) -> int:
     check = commands.add_parser("verify", help="Verify a Sudoku completion without ML dependencies")
     check.add_argument("--puzzle", required=True)
     check.add_argument("--board", required=True)
+    solve = commands.add_parser("solve", help="Keep a verified Sudoku answer or use bounded exact constraint solving; no ML dependencies")
+    solve.add_argument("--puzzle", required=True)
+    solve.add_argument("--board", help="Optional proposed completion to verify before fallback")
+    solve.add_argument("--node-limit", type=int, default=100000)
     for name in ("baseline", "collect"):
         sub = commands.add_parser(name, help="Run official baseline" if name == "baseline" else "Collect full-depth trajectories after matching baseline")
         sub.add_argument("--config", type=Path, default=Path("configs/sudoku_smoke.yaml"))
@@ -70,6 +74,12 @@ def main(argv: list[str] | None = None) -> int:
             result = validate_sudoku(args.puzzle, args.board)
             print(json.dumps(asdict(result), indent=2))
             return 0 if result.is_valid else 1
+        elif args.command == "solve":
+            from dataclasses import asdict
+            from .verified_solver import verified_completion
+            result = verified_completion(args.puzzle, args.board, node_limit=args.node_limit)
+            print(json.dumps(asdict(result), indent=2))
+            return 0 if result.verified else 1
         elif args.command in ("baseline", "collect"):
             from .runner import baseline, collect, read_configuration
             config = read_configuration(root, root / args.config)

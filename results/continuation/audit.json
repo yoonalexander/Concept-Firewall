@@ -56,7 +56,7 @@
       "note": "Shared manifest helper assumed module CLI; actual execution used the script. Original manifest preserved."
     }
   ],
-  "audit_script_sha256": "206eebb2c26d1da67187184f14b1649b5be83152155c4d9159a788fa3e3f1472",
+  "audit_script_sha256": "c46f2f148c3a7f213229e7a3a741e00ecba0a3263abfd75a8a47f079402a59dd",
   "audit_command": [
     "C:\\Users\\Admin\\Documents\\Projects\\Concept-Firewall\\.venv\\Scripts\\python.exe",
     "scripts/audit_confidence_allocation.py",
@@ -70,5 +70,11 @@
     "feature_bytes": 5952740
   },
   "new_model_calls": 0,
-  "new_fits": 0
+  "new_fits": 0,
+  "practical_fallback_audit": {
+    "development_outcomes_checked": 6400,
+    "valid_proposals_preserved": 2479,
+    "exact_completions_verified": 3921,
+    "new_model_calls": 0
+  }
 }
