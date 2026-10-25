@@ -2,7 +2,7 @@
 
 **Created:** October 24, 2026
 
-**Status:** V2-0 and V2-1 passed. Protocol and measurement are verified; V2-2 data eligibility is next. No V2 detector has been fitted or confirmed.
+**Status:** V2-0 through V2-2 passed. Measurement and the 8,000-puzzle new-source cohort are verified; V2-3 is next. No V2 detector has been fitted or confirmed.
 
 **Immediate objective:** determine whether the generation transformer's internal activations and confidence provide a useful early warning of eventual Sudoku errors.
 
@@ -33,7 +33,7 @@ Activations and confidence are hypotheses to test. They are not human-readable t
 |---|---|---|---|
 | V2-0 — Study contract | What exactly are we testing, and when do we stop? | New study selected for implementation | Passed; protocol frozen, 94 tests / 123 subtests |
 | V2-1 — Correct measurement | Can we observe activations and confidence without changing generation or seeing the future? | Frozen measurement specification and pilot budget | Passed; all 128 paired pilot generations equivalent |
-| V2-2 — Data and partitions | Can we obtain a suitable, independent project confirmation set? | Frozen source, sampling, overlap, and partition rules | Planned; fresh source unresolved |
+| V2-2 — Data and partitions | Can we obtain a suitable, independent project confirmation set? | Frozen source, sampling, overlap, and partition rules | Passed; 8,000 validated groups with 1,600 confirmation inputs sealed |
 | V2-3 — Bounded detector study | Do the new signals add useful prediction over strong controls? | Measurement tests and data boundaries pass | Planned |
 | V2-4 — Sealed confirmation | Does the frozen result hold on previously unused project puzzles? | One candidate and all decisions frozen | Gated |
 | V2-5 — Live observation | Is the confirmed warning early and inexpensive in actual generation? | Predictive confirmation passes | Gated |
@@ -90,19 +90,21 @@ Each phase ends with a report and a recorded **pass, fail, or inconclusive** dec
 
 **Deliverables**
 
-- [ ] Inventory candidate fresh Sudoku sources or a documented puzzle-generation procedure; record licensing, provenance, difficulty criteria, and exact validation.
-- [ ] Validate puzzle clues and solutions independently. Predeclare whether uniqueness is required, and verify it where required.
-- [ ] Check exact overlap and relevant Sudoku equivalences against legacy data and across new partitions. Group related puzzles together; document the canonicalization method and any unverified equivalences.
-- [ ] Freeze sampling and inclusion rules without selecting puzzles for favorable detector outcomes. Preserve natural failure prevalence and record malformed/failed runs.
-- [ ] Allocate new training/development, validation, threshold-calibration, and confirmation groups before inspecting final outcomes. Keep confirmation inputs and labels outside all selection and fitting paths.
-- [ ] Check available checkpoint-training provenance. Fresh to this project does not establish absence from checkpoint training; disclose unknown exposure.
-- [ ] Freeze the sample count and a minimum useful failure-count/precision rule. If realized confirmation evidence is too sparse, report inconclusive; do not keep adding samples until a desired result appears.
+- [x] Inventory candidate fresh Sudoku sources or a documented puzzle-generation procedure; record licensing, provenance, difficulty criteria, and exact validation.
+- [x] Validate puzzle clues and solutions independently. Predeclare whether uniqueness is required, and verify it where required.
+- [x] Check exact overlap and relevant Sudoku equivalences against legacy data and across new partitions. Group related puzzles together; document the canonicalization method and any unverified equivalences.
+- [x] Freeze sampling and inclusion rules without selecting puzzles for favorable detector outcomes. Preserve natural failure prevalence and record malformed/failed runs.
+- [x] Allocate new training/development, validation, threshold-calibration, and confirmation groups before inspecting final outcomes. Keep confirmation inputs and labels outside all selection and fitting paths.
+- [x] Check available checkpoint-training provenance. Fresh to this project does not establish absence from checkpoint training; disclose unknown exposure.
+- [x] Freeze the sample count and a minimum useful failure-count/precision rule. If realized confirmation evidence is too sparse, report inconclusive; do not keep adding samples until a desired result appears.
+
+**Completed evidence:** [V2-2 data validation](results/reports/v2_data_validation.md). Conservative invariant grouping covers standard Sudoku symmetries without claiming a full canonical form. New-source distribution and unknown checkpoint-training exposure remain explicit limitations.
 
 All original 2,000 puzzles are now legacy/exposed evidence for study design. Any V2 development reuse must be declared explicitly without rewriting their historical split membership. They cannot supply V2's fresh confirmation claim. Digit permutations, transposes, or repartitioning the same puzzles do not make them independent confirmation data.
 
 **Gate:** a suitable source and frozen partitions are documented before fitting. If fresh data cannot be obtained within budget, only a clearly labeled development feasibility study may proceed; V2-4 and later phases stay closed.
 
-**Planned outputs:** data inventory, validation/overlap report, immutable partition manifest, and a sample-size rationale. No fresh source or sample count is declared available by this roadmap.
+**Outputs:** [source review](results/v2/contracts/v2-source-review.json), [immutable data/partition manifest](results/v2/contracts/generator-signals-v1-data.json), validation report, and the V2-0 sample-size rationale. The planned count is now realized; no new-source model result is established yet.
 
 ## 6. V2-3 — Run one bounded detector comparison
 
@@ -232,6 +234,6 @@ Check feasibility before committing to sample sizes and model selection. If the 
 
 ## 13. Immediate next deliverable
 
-**V2-2: data source eligibility and frozen partitions**, following the completed [measurement validation](results/reports/v2_measurement_validation.md).
+**V2-3: the one bounded detector comparison**, following the completed [data validation](results/reports/v2_data_validation.md). Keep the 1,600 confirmation inputs and outcomes outside this phase.
 
 Commit and push after each completed phase, as requested. No fresh-data claim, successful detector, recovery benefit, or live compute saving is established yet. Later phases advance only when their gates pass.

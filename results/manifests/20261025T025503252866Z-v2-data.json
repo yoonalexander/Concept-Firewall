@@ -1,0 +1,264 @@
+{
+  "schema_version": "1.0",
+  "run_id": "20261025T025503252866Z-v2-data",
+  "mode": "v2-data",
+  "status": "passed",
+  "started_utc": "2026-10-25T02:55:03.252866+00:00",
+  "command": [
+    "C:\\Users\\Admin\\Documents\\Projects\\Concept-Firewall\\.venv\\Scripts\\python.exe",
+    "-m",
+    "concept_firewall",
+    "v2-data",
+    "--source",
+    ".tmp/v2-source-bank"
+  ],
+  "code_revision": "5447e15264e513dd739fdc4f1bd26ff5759238a4",
+  "source_tree_sha256": "3f8223af24fb0ebbcce9098f5d22f58442b8bc534d623bacdfb73f8ecf2d0a50",
+  "source_snapshot": "results/source_snapshots/3f8223af24fb0ebbcce9098f5d22f58442b8bc534d623bacdfb73f8ecf2d0a50.zip",
+  "source_snapshot_sha256": "07f4bf84ec662d633cff6b6c1ad0d383bdf9a3ec06bdfd5ba3247dae77144951",
+  "upstream_commit": "c70274273f489abc73832b2b98584a8483b6b203",
+  "configuration": {
+    "protocol_sha256": "d7a98159ab20b1f92d1d019d8f3d7009afae2107b06953e76639e53b7f2e0cf3",
+    "source_revision": "d8c8ebaee0c08c412cfba96af1923dfa61c83317",
+    "selection": "hard.txt only; sort SHA256(study_id+puzzle_id), one per conservative group; no model outcomes",
+    "validation_cap": 9000,
+    "uniqueness_node_cap": 100000,
+    "data_preparation_wall_cap_seconds": 900,
+    "networkx_version": "3.6.1"
+  },
+  "environment": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "torch": "2.11.0+cu128",
+      "numpy": "2.5.4",
+      "omegaconf": "2.3.1",
+      "hydra-core": "1.3.7",
+      "transformers": "5.20.2",
+      "pyarrow": "26.0.0",
+      "scikit-learn": "1.9.1"
+    },
+    "torch_cuda": "12.8",
+    "cuda_available": true,
+    "gpu": "NVIDIA GeForce RTX 5060",
+    "gpu_memory_bytes": 8546484224
+  },
+  "claims": "Research measurements only; no intervention or safety effectiveness established.",
+  "data_manifest": "results/v2/contracts/generator-signals-v1-data.json",
+  "new_data_ready": true,
+  "puzzles": 8000,
+  "data_manifest_sha256": "2ac122480d95ed6f48e3ee40deaa08dee7d4c04fcb014e953120e45ae4ab824b",
+  "elapsed_seconds": 33.0662774000084,
+  "model_runs": 0,
+  "probe_fits": 0,
+  "budget": {
+    "protocol_sha256": "d7a98159ab20b1f92d1d019d8f3d7009afae2107b06953e76639e53b7f2e0cf3",
+    "limits": {
+      "gpu_seconds": 3600,
+      "cpu_fit_seconds": 900,
+      "fit_jobs": 16,
+      "pilot_puzzles": 128,
+      "new_puzzles": 8000,
+      "feature_bytes": 2147483648
+    },
+    "used": {
+      "gpu_seconds": 5.615618400042877,
+      "cpu_fit_seconds": 0,
+      "fit_jobs": 0,
+      "pilot_puzzles": 128,
+      "new_puzzles": 8000,
+      "feature_bytes": 134874
+    },
+    "active": null,
+    "events": [
+      {
+        "name": "load existing checkpoints",
+        "timed_resource": "gpu_seconds",
+        "charges": {},
+        "started_utc": "2026-10-25T02:49:09.623426+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.8436253999825567
+      },
+      {
+        "name": "pilot batch 0",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "pilot_puzzles": 8
+        },
+        "started_utc": "2026-10-25T02:49:10.682965+00:00",
+        "status": "passed",
+        "elapsed_seconds": 1.0761299000005238
+      },
+      {
+        "name": "pilot batch 8",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "pilot_puzzles": 8
+        },
+        "started_utc": "2026-10-25T02:49:11.774538+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.2471590000204742
+      },
+      {
+        "name": "pilot batch 16",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "pilot_puzzles": 8
+        },
+        "started_utc": "2026-10-25T02:49:12.036588+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.24870560003910214
+      },
+      {
+        "name": "pilot batch 24",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "pilot_puzzles": 8
+        },
+        "started_utc": "2026-10-25T02:49:12.300586+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.2469365000142716
+      },
+      {
+        "name": "pilot batch 32",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "pilot_puzzles": 8
+        },
+        "started_utc": "2026-10-25T02:49:12.562745+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.24816049996297807
+      },
+      {
+        "name": "pilot batch 40",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "pilot_puzzles": 8
+        },
+        "started_utc": "2026-10-25T02:49:12.825287+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.24485090002417564
+      },
+      {
+        "name": "pilot batch 48",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "pilot_puzzles": 8
+        },
+        "started_utc": "2026-10-25T02:49:13.088286+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.24635410000337288
+      },
+      {
+        "name": "pilot batch 56",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "pilot_puzzles": 8
+        },
+        "started_utc": "2026-10-25T02:49:13.349288+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.2448879000148736
+      },
+      {
+        "name": "pilot batch 64",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "pilot_puzzles": 8
+        },
+        "started_utc": "2026-10-25T02:49:13.609930+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.24823359999572858
+      },
+      {
+        "name": "pilot batch 72",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "pilot_puzzles": 8
+        },
+        "started_utc": "2026-10-25T02:49:13.874929+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.2516089999699034
+      },
+      {
+        "name": "pilot batch 80",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "pilot_puzzles": 8
+        },
+        "started_utc": "2026-10-25T02:49:14.142929+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.2484790000016801
+      },
+      {
+        "name": "pilot batch 88",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "pilot_puzzles": 8
+        },
+        "started_utc": "2026-10-25T02:49:14.407930+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.2428415000322275
+      },
+      {
+        "name": "pilot batch 96",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "pilot_puzzles": 8
+        },
+        "started_utc": "2026-10-25T02:49:14.666543+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.24354150000726804
+      },
+      {
+        "name": "pilot batch 104",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "pilot_puzzles": 8
+        },
+        "started_utc": "2026-10-25T02:49:14.925546+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.24274960003094748
+      },
+      {
+        "name": "pilot batch 112",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "pilot_puzzles": 8
+        },
+        "started_utc": "2026-10-25T02:49:15.184543+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.2429583999910392
+      },
+      {
+        "name": "pilot batch 120",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "pilot_puzzles": 8
+        },
+        "started_utc": "2026-10-25T02:49:15.443545+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.24839599995175377
+      },
+      {
+        "name": "retain bounded pilot summaries",
+        "timed_resource": null,
+        "charges": {
+          "feature_bytes": 134874
+        },
+        "started_utc": "2026-10-25T02:49:15.715363+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.00093479995848611
+      },
+      {
+        "name": "freeze new puzzle cohort",
+        "timed_resource": null,
+        "charges": {
+          "new_puzzles": 8000
+        },
+        "started_utc": "2026-10-25T02:55:38.330027+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.06586820003576577
+      }
+    ]
+  }
+}

@@ -18,6 +18,10 @@ def main(argv: list[str] | None = None) -> int:
     contract.add_argument("--protocol", type=Path, default=Path("configs/v2_study.json"))
     pilot = commands.add_parser("v2-pilot", help="Verify observed/control generation on frozen legacy pilot identities")
     pilot.add_argument("--protocol", type=Path, default=Path("configs/v2_study.json"))
+    data = commands.add_parser("v2-data", help="Validate and partition the pinned public-domain Sudoku source without model outcomes")
+    data.add_argument("--protocol", type=Path, default=Path("configs/v2_study.json"))
+    data.add_argument("--source", type=Path, required=True)
+    data.add_argument("--restore", action="store_true", help="Rehydrate frozen inputs exactly, without reselection")
     check = commands.add_parser("verify", help="Verify a Sudoku completion without ML dependencies")
     check.add_argument("--puzzle", required=True)
     check.add_argument("--board", required=True)
@@ -52,6 +56,9 @@ def main(argv: list[str] | None = None) -> int:
         elif args.command == "v2-pilot":
             from .v2_observer import run_pilot
             print(run_pilot(root, (root / args.protocol).resolve()))
+        elif args.command == "v2-data":
+            from .v2_data import prepare_data, restore_data
+            print(restore_data(root,args.source.resolve()) if args.restore else prepare_data(root, (root / args.protocol).resolve(),args.source.resolve()))
         elif args.command == "verify":
             from dataclasses import asdict
             from .sudoku_labels import validate_sudoku

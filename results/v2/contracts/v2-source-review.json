@@ -1,0 +1,20 @@
+{
+  "official_revision": "6580ba41a4b0a976dde876fbe84d25327617b0e6",
+  "official_hard_files": [
+    "sudoku/hard/puzzles.pickle",
+    "sudoku/hard/solutions.pickle"
+  ],
+  "external_candidate_1": {
+    "source": "https://huggingface.co/datasets/certen/Sudoku-1M-Puzzles",
+    "revision": "f993a28fb8b120bd842e11700314f0f384b4c29d",
+    "card_sha256": "0e6386406153e821c258f0ee4e405fd323059ebfad275d649cb5466fa062f6d6",
+    "decision": "excluded before model outcomes: card describes a single seed-board family and random blanking; diversity/uniqueness not established for this confirmation purpose"
+  },
+  "external_candidate_2": {
+    "source": "https://github.com/grantm/sudoku-exchange-puzzle-bank",
+    "revision": "d8c8ebaee0c08c412cfba96af1923dfa61c83317",
+    "decision": "selected hard.txt subject to independent uniqueness and conservative group overlap audit; public-domain dedication"
+  },
+  "external_sources_reviewed": 2,
+  "selection_used_model_outcomes": false
+}
