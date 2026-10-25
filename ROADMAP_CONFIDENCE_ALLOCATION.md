@@ -5,7 +5,7 @@ This is a separately scoped follow-on authorized after the V2 stopping decision.
 | Step | Deliverable | Status |
 |---|---|---|
 | 1 | Saved-result value bounds and stronger-baseline check | Complete; [report](results/reports/confidence_value_check.md) |
-| 2 | Freeze a narrower allocation protocol, then evaluate the untouched 1,600 project confirmation puzzles once | Pending |
+| 2 | Freeze a narrower allocation protocol, then evaluate the untouched 1,600 project confirmation puzzles once | Complete; [allocation screen passed](results/reports/confidence_allocation_confirmation.md), cohort now consumed |
 | 3 | If confirmed, measure monitoring cost and actual fixed-policy recovery against random-all and verifier-first under matched budgets | Pending |
 | Closeout | Verify evidence restoration, document outcomes and limits, commit and push | Pending |
 

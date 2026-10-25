@@ -1,0 +1,2088 @@
+{
+  "metrics": {
+    "puzzles": 1600,
+    "failures": 1010,
+    "successes": 590,
+    "alerts": 272,
+    "true_positives": 242,
+    "false_positives": 30,
+    "failure_prevalence": 0.63125,
+    "alert_fraction": 0.17,
+    "recall": 0.2396039603960396,
+    "fpr": 0.05084745762711865,
+    "alert_precision": 0.8897058823529411,
+    "random_expected_selected_failures": 171.7,
+    "perfect_retry_gain_ceiling": 0.15125,
+    "perfect_retry_advantage_over_random_all": 0.04393749999999999,
+    "verifier_first_expected_selected_failures": 272,
+    "selected_recovery_ratio_needed_vs_verifier_first": 1.1239669421487604,
+    "allocation_capacity_one_sided_95_lower": 0.0376630859375,
+    "enrichment_exact_p": 1.7456661491300282e-25,
+    "fpr_one_sided_95_upper": 0.0678812694970878
+  },
+  "conditions": {
+    "fixed_cohort_complete": true,
+    "outcome_counts": true,
+    "bounded_alert_budget": true,
+    "false_alarm_bound": true,
+    "potential_value_floor": true,
+    "positive_allocation_capacity_lower_bound": true
+  },
+  "gate_passed": true,
+  "claim": "Fixed alerts enrich baseline failures at limited coverage; recovery and cost advantage remain untested",
+  "status": "completed",
+  "study_id": "confidence-allocation-v1",
+  "raw_file": "results/continuation/raw/confirmation.jsonl",
+  "raw_sha256": "03aa39348c4c4013543f3fee748914fd2b90a9bb057ef64eb0f72eaf50ddd459",
+  "protocol_sha256": "51e8b95d81d045a36a700087216049acfe0e789e36533c8c5a5ed8dde9aa6635",
+  "original_40_percent_recall_gate_still_failed": true,
+  "new_fits": 0,
+  "confirmation_consumed": true,
+  "budget": {
+    "protocol_sha256": "51e8b95d81d045a36a700087216049acfe0e789e36533c8c5a5ed8dde9aa6635",
+    "limits": {
+      "gpu_seconds": 1200,
+      "fit_jobs": 0,
+      "model_puzzles": 8000,
+      "feature_bytes": 209715200
+    },
+    "used": {
+      "gpu_seconds": 31.192102799774148,
+      "fit_jobs": 0,
+      "model_puzzles": 1616,
+      "feature_bytes": 2569903
+    },
+    "active": null,
+    "events": [
+      {
+        "name": "load confirmation models",
+        "timed_resource": "gpu_seconds",
+        "charges": {},
+        "started_utc": "2026-10-25T21:05:17.434609+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.8784539999905974
+      },
+      {
+        "name": "eight exposed calibration equivalence checks",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 16
+        },
+        "started_utc": "2026-10-25T21:05:18.352577+00:00",
+        "status": "passed",
+        "elapsed_seconds": 1.1639427000191063
+      },
+      {
+        "name": "confirmation batch 0",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:19.553188+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14650589996017516
+      },
+      {
+        "name": "confirmation batch 8",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:19.717291+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14703839999856427
+      },
+      {
+        "name": "confirmation batch 16",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:19.882943+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14221730001736432
+      },
+      {
+        "name": "confirmation batch 24",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:20.045623+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14344429998891428
+      },
+      {
+        "name": "confirmation batch 32",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:20.206384+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14247610000893474
+      },
+      {
+        "name": "confirmation batch 40",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:20.367019+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14593800000147894
+      },
+      {
+        "name": "confirmation batch 48",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:20.533257+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.15920470003038645
+      },
+      {
+        "name": "confirmation batch 56",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:20.714055+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.1503231999813579
+      },
+      {
+        "name": "confirmation batch 64",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:20.881232+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14907700003823265
+      },
+      {
+        "name": "confirmation batch 72",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:21.046957+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.15446079999674112
+      },
+      {
+        "name": "confirmation batch 80",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:21.221986+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.1442113000084646
+      },
+      {
+        "name": "confirmation batch 88",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:21.384289+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.1572328000329435
+      },
+      {
+        "name": "confirmation batch 96",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:21.567438+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.18289700004970655
+      },
+      {
+        "name": "confirmation batch 104",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:21.784952+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.2195244000176899
+      },
+      {
+        "name": "confirmation batch 112",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:22.027148+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.17122590000508353
+      },
+      {
+        "name": "confirmation batch 120",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:22.222617+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.1408429999719374
+      },
+      {
+        "name": "confirmation batch 128",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:22.382341+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14156160003039986
+      },
+      {
+        "name": "confirmation batch 136",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:22.543004+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14654789998894557
+      },
+      {
+        "name": "confirmation batch 144",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:22.708938+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14412609999999404
+      },
+      {
+        "name": "confirmation batch 152",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:22.874534+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14971079997485504
+      },
+      {
+        "name": "confirmation batch 160",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:23.042762+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.1401424999930896
+      },
+      {
+        "name": "confirmation batch 168",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:23.201353+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14855879999231547
+      },
+      {
+        "name": "confirmation batch 176",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:23.367650+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.1439894000068307
+      },
+      {
+        "name": "confirmation batch 184",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:23.530899+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14392770000267774
+      },
+      {
+        "name": "confirmation batch 192",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:23.694062+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13992320001125336
+      },
+      {
+        "name": "confirmation batch 200",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:23.852942+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.1444541999953799
+      },
+      {
+        "name": "confirmation batch 208",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:24.016525+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.17356899997685105
+      },
+      {
+        "name": "confirmation batch 216",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:24.207872+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14521220000460744
+      },
+      {
+        "name": "confirmation batch 224",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:24.370896+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13976250000996515
+      },
+      {
+        "name": "confirmation batch 232",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:24.529319+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14074080000864342
+      },
+      {
+        "name": "confirmation batch 240",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:24.688164+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14377470000181347
+      },
+      {
+        "name": "confirmation batch 248",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:24.852131+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14759910001885146
+      },
+      {
+        "name": "confirmation batch 256",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:25.018001+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14615619997493923
+      },
+      {
+        "name": "confirmation batch 264",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:25.182963+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.15816989995073527
+      },
+      {
+        "name": "confirmation batch 272",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:25.363889+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14890379999997094
+      },
+      {
+        "name": "confirmation batch 280",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:25.532959+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14409290003823116
+      },
+      {
+        "name": "confirmation batch 288",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:25.697219+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14721099997404963
+      },
+      {
+        "name": "confirmation batch 296",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:25.868689+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13993199996184558
+      },
+      {
+        "name": "confirmation batch 304",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:26.028712+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.15375549998134375
+      },
+      {
+        "name": "confirmation batch 312",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:26.202311+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14716900000348687
+      },
+      {
+        "name": "confirmation batch 320",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:26.374437+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14448209997499362
+      },
+      {
+        "name": "confirmation batch 328",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:26.539042+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13976130000082776
+      },
+      {
+        "name": "confirmation batch 336",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:26.698830+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14296960004139692
+      },
+      {
+        "name": "confirmation batch 344",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:26.862956+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13972269999794662
+      },
+      {
+        "name": "confirmation batch 352",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:27.023480+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14029469998786226
+      },
+      {
+        "name": "confirmation batch 360",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:27.183137+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13783099997090176
+      },
+      {
+        "name": "confirmation batch 368",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:27.339025+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13842079997994006
+      },
+      {
+        "name": "confirmation batch 376",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:27.504181+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.1406754999770783
+      },
+      {
+        "name": "confirmation batch 384",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:27.664412+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.1403040000004694
+      },
+      {
+        "name": "confirmation batch 392",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:27.822588+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.1381734000169672
+      },
+      {
+        "name": "confirmation batch 400",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:27.978994+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13658940000459552
+      },
+      {
+        "name": "confirmation batch 408",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:28.136134+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13622049998957664
+      },
+      {
+        "name": "confirmation batch 416",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:28.292750+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13766100001521409
+      },
+      {
+        "name": "confirmation batch 424",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:28.448975+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13768039998831227
+      },
+      {
+        "name": "confirmation batch 432",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:28.605480+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.1428324999869801
+      },
+      {
+        "name": "confirmation batch 440",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:28.766617+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.15992830001050606
+      },
+      {
+        "name": "confirmation batch 448",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:28.952930+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.18237829999998212
+      },
+      {
+        "name": "confirmation batch 456",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:29.160602+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.15806360001442954
+      },
+      {
+        "name": "confirmation batch 464",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:29.339100+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.167363699991256
+      },
+      {
+        "name": "confirmation batch 472",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:29.528823+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.1549098999821581
+      },
+      {
+        "name": "confirmation batch 480",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:29.704561+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.16026330000022426
+      },
+      {
+        "name": "confirmation batch 488",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:29.884945+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14204269996844232
+      },
+      {
+        "name": "confirmation batch 496",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:30.047842+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.15504949999740347
+      },
+      {
+        "name": "confirmation batch 504",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:30.222580+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13872729998547584
+      },
+      {
+        "name": "confirmation batch 512",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:30.380289+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13917650002986193
+      },
+      {
+        "name": "confirmation batch 520",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:30.538868+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13728169997921214
+      },
+      {
+        "name": "confirmation batch 528",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:30.697605+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.15492600004654378
+      },
+      {
+        "name": "confirmation batch 536",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:30.874342+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14221989997895434
+      },
+      {
+        "name": "confirmation batch 544",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:31.036422+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13924400001997128
+      },
+      {
+        "name": "confirmation batch 552",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:31.197009+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.1366738000069745
+      },
+      {
+        "name": "confirmation batch 560",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:31.352555+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13900239998474717
+      },
+      {
+        "name": "confirmation batch 568",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:31.512286+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13778020004974678
+      },
+      {
+        "name": "confirmation batch 576",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:31.670934+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13831950002349913
+      },
+      {
+        "name": "confirmation batch 584",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:31.828220+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14021089999005198
+      },
+      {
+        "name": "confirmation batch 592",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:31.988444+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.1505728999618441
+      },
+      {
+        "name": "confirmation batch 600",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:32.159144+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13809530000435188
+      },
+      {
+        "name": "confirmation batch 608",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:32.318684+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13945180003065616
+      },
+      {
+        "name": "confirmation batch 616",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:32.478280+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14926909998757765
+      },
+      {
+        "name": "confirmation batch 624",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:32.650200+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13985749997664243
+      },
+      {
+        "name": "confirmation batch 632",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:32.810290+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13934659998631105
+      },
+      {
+        "name": "confirmation batch 640",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:32.969381+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.18885580002097413
+      },
+      {
+        "name": "confirmation batch 648",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:33.178791+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13983999995980412
+      },
+      {
+        "name": "confirmation batch 656",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:33.338825+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13949989998945966
+      },
+      {
+        "name": "confirmation batch 664",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:33.498163+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.1428707999875769
+      },
+      {
+        "name": "confirmation batch 672",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:33.661123+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13693209999473765
+      },
+      {
+        "name": "confirmation batch 680",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:33.818338+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.1433930000057444
+      },
+      {
+        "name": "confirmation batch 688",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:33.981261+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13724070001626387
+      },
+      {
+        "name": "confirmation batch 696",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:34.140605+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13698259997181594
+      },
+      {
+        "name": "confirmation batch 704",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:34.299352+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13718469999730587
+      },
+      {
+        "name": "confirmation batch 712",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:34.458876+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13702439999906346
+      },
+      {
+        "name": "confirmation batch 720",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:34.616841+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.1376091000274755
+      },
+      {
+        "name": "confirmation batch 728",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:34.775417+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.1449053999967873
+      },
+      {
+        "name": "confirmation batch 736",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:34.941110+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14003129996126518
+      },
+      {
+        "name": "confirmation batch 744",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:35.102096+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.1435531000024639
+      },
+      {
+        "name": "confirmation batch 752",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:35.266287+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14285639999434352
+      },
+      {
+        "name": "confirmation batch 760",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:35.430861+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.1397622999502346
+      },
+      {
+        "name": "confirmation batch 768",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:35.590949+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.1385034999693744
+      },
+      {
+        "name": "confirmation batch 776",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:35.750469+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13660149998031557
+      },
+      {
+        "name": "confirmation batch 784",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:35.907305+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13631719996919855
+      },
+      {
+        "name": "confirmation batch 792",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:36.063437+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.1364813999971375
+      },
+      {
+        "name": "confirmation batch 800",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:36.221580+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.1394260000088252
+      },
+      {
+        "name": "confirmation batch 808",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:36.380562+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13759110000682995
+      },
+      {
+        "name": "confirmation batch 816",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:36.538311+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.1392910999711603
+      },
+      {
+        "name": "confirmation batch 824",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:36.698235+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13900230004219338
+      },
+      {
+        "name": "confirmation batch 832",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:36.859576+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13774989999365062
+      },
+      {
+        "name": "confirmation batch 840",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:37.017293+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13648549997014925
+      },
+      {
+        "name": "confirmation batch 848",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:37.175192+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13450300000840798
+      },
+      {
+        "name": "confirmation batch 856",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:37.330146+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.1362496999790892
+      },
+      {
+        "name": "confirmation batch 864",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:37.487829+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14239499997347593
+      },
+      {
+        "name": "confirmation batch 872",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:37.651314+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14916239999001846
+      },
+      {
+        "name": "confirmation batch 880",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:37.824614+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.15543939999770373
+      },
+      {
+        "name": "confirmation batch 888",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:38.002608+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13812650000909343
+      },
+      {
+        "name": "confirmation batch 896",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:38.163420+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.135941400018055
+      },
+      {
+        "name": "confirmation batch 904",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:38.320154+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13524640002287924
+      },
+      {
+        "name": "confirmation batch 912",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:38.476703+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13588260003598407
+      },
+      {
+        "name": "confirmation batch 920",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:38.632994+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13699599995743483
+      },
+      {
+        "name": "confirmation batch 928",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:38.793064+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14449439995223656
+      },
+      {
+        "name": "confirmation batch 936",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:38.957479+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13676919997669756
+      },
+      {
+        "name": "confirmation batch 944",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:39.117419+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14045860001351684
+      },
+      {
+        "name": "confirmation batch 952",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:39.277735+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14164180000079796
+      },
+      {
+        "name": "confirmation batch 960",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:39.441452+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.137529400002677
+      },
+      {
+        "name": "confirmation batch 968",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:39.599613+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13804930000333115
+      },
+      {
+        "name": "confirmation batch 976",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:39.762252+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14008089998969808
+      },
+      {
+        "name": "confirmation batch 984",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:39.924417+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14723649999359623
+      },
+      {
+        "name": "confirmation batch 992",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:40.095051+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13795160001609474
+      },
+      {
+        "name": "confirmation batch 1000",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:40.252943+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13981990003958344
+      },
+      {
+        "name": "confirmation batch 1008",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:40.414116+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14311450003879145
+      },
+      {
+        "name": "confirmation batch 1016",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:40.579570+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.139978900027927
+      },
+      {
+        "name": "confirmation batch 1024",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:40.742799+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.1426173999789171
+      },
+      {
+        "name": "confirmation batch 1032",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:40.905445+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.1445077999960631
+      },
+      {
+        "name": "confirmation batch 1040",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:41.073574+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.15507620002608746
+      },
+      {
+        "name": "confirmation batch 1048",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:41.250892+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14663450000807643
+      },
+      {
+        "name": "confirmation batch 1056",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:41.421043+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.15346639999188483
+      },
+      {
+        "name": "confirmation batch 1064",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:41.598930+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14485949999652803
+      },
+      {
+        "name": "confirmation batch 1072",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:41.766979+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.1412461000145413
+      },
+      {
+        "name": "confirmation batch 1080",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:41.929504+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.1488616000278853
+      },
+      {
+        "name": "confirmation batch 1088",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:42.106878+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14526789996307343
+      },
+      {
+        "name": "confirmation batch 1096",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:42.275423+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.15900719998171553
+      },
+      {
+        "name": "confirmation batch 1104",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:42.463499+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.1482532000518404
+      },
+      {
+        "name": "confirmation batch 1112",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:42.639824+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.17248289997223765
+      },
+      {
+        "name": "confirmation batch 1120",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:42.835575+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.1427108999923803
+      },
+      {
+        "name": "confirmation batch 1128",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:43.002562+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14733810001052916
+      },
+      {
+        "name": "confirmation batch 1136",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:43.173347+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13988309999695048
+      },
+      {
+        "name": "confirmation batch 1144",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:43.336279+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14384920004522428
+      },
+      {
+        "name": "confirmation batch 1152",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:43.507596+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.1463153000222519
+      },
+      {
+        "name": "confirmation batch 1160",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:43.676674+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14323919999878854
+      },
+      {
+        "name": "confirmation batch 1168",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:43.843943+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14136210002470762
+      },
+      {
+        "name": "confirmation batch 1176",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:44.007882+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.1399978999979794
+      },
+      {
+        "name": "confirmation batch 1184",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:44.173508+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.136323899962008
+      },
+      {
+        "name": "confirmation batch 1192",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:44.332825+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13936209998792037
+      },
+      {
+        "name": "confirmation batch 1200",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:44.497093+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.144749499973841
+      },
+      {
+        "name": "confirmation batch 1208",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:44.664874+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14089310000417754
+      },
+      {
+        "name": "confirmation batch 1216",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:44.829299+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14966340002138168
+      },
+      {
+        "name": "confirmation batch 1224",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:45.003428+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13845510000828654
+      },
+      {
+        "name": "confirmation batch 1232",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:45.163342+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.15848799998639151
+      },
+      {
+        "name": "confirmation batch 1240",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:45.347023+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.1536564999842085
+      },
+      {
+        "name": "confirmation batch 1248",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:45.527797+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.15718569996533915
+      },
+      {
+        "name": "confirmation batch 1256",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:45.710729+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14588979998370633
+      },
+      {
+        "name": "confirmation batch 1264",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:45.880086+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.15310830000089481
+      },
+      {
+        "name": "confirmation batch 1272",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:46.055736+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14057980000507087
+      },
+      {
+        "name": "confirmation batch 1280",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:46.221201+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14594469999428838
+      },
+      {
+        "name": "confirmation batch 1288",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:46.389490+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.1427481999853626
+      },
+      {
+        "name": "confirmation batch 1296",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:46.555530+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.1697552000405267
+      },
+      {
+        "name": "confirmation batch 1304",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:46.759666+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.17406819999450818
+      },
+      {
+        "name": "confirmation batch 1312",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:46.964423+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.1758401999832131
+      },
+      {
+        "name": "confirmation batch 1320",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:47.166334+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.17272709996905178
+      },
+      {
+        "name": "confirmation batch 1328",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:47.367165+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.1557435000431724
+      },
+      {
+        "name": "confirmation batch 1336",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:47.553561+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.15977259998908266
+      },
+      {
+        "name": "confirmation batch 1344",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:47.739527+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14181509998161346
+      },
+      {
+        "name": "confirmation batch 1352",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:47.902223+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.1454786999966018
+      },
+      {
+        "name": "confirmation batch 1360",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:48.072597+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14335440000286326
+      },
+      {
+        "name": "confirmation batch 1368",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:48.239239+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14841439999872819
+      },
+      {
+        "name": "confirmation batch 1376",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:48.411264+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.15289769996888936
+      },
+      {
+        "name": "confirmation batch 1384",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:48.589156+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14888280001468956
+      },
+      {
+        "name": "confirmation batch 1392",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:48.763177+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.15287240000907332
+      },
+      {
+        "name": "confirmation batch 1400",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:48.940848+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14911490003578365
+      },
+      {
+        "name": "confirmation batch 1408",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:49.115007+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14459300000453368
+      },
+      {
+        "name": "confirmation batch 1416",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:49.283846+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14523630001349375
+      },
+      {
+        "name": "confirmation batch 1424",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:49.455359+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14791169995442033
+      },
+      {
+        "name": "confirmation batch 1432",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:49.632407+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14547940000193194
+      },
+      {
+        "name": "confirmation batch 1440",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:49.803102+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14023800002178177
+      },
+      {
+        "name": "confirmation batch 1448",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:49.971352+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14907290000701323
+      },
+      {
+        "name": "confirmation batch 1456",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:50.145106+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14850860001752153
+      },
+      {
+        "name": "confirmation batch 1464",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:50.318132+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13748239999404177
+      },
+      {
+        "name": "confirmation batch 1472",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:50.479607+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13783979997970164
+      },
+      {
+        "name": "confirmation batch 1480",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:50.640602+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14120949996868148
+      },
+      {
+        "name": "confirmation batch 1488",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:50.807552+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14191420003771782
+      },
+      {
+        "name": "confirmation batch 1496",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:50.979922+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13913580001099035
+      },
+      {
+        "name": "confirmation batch 1504",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:51.146693+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14547670003958046
+      },
+      {
+        "name": "confirmation batch 1512",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:51.323690+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14246119995368645
+      },
+      {
+        "name": "confirmation batch 1520",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:51.491350+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13861670001642779
+      },
+      {
+        "name": "confirmation batch 1528",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:51.653857+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.1388336000381969
+      },
+      {
+        "name": "confirmation batch 1536",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:51.817848+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13983680005185306
+      },
+      {
+        "name": "confirmation batch 1544",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:51.983675+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.14048949995776638
+      },
+      {
+        "name": "confirmation batch 1552",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:52.150199+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13856539997505024
+      },
+      {
+        "name": "confirmation batch 1560",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:52.314048+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.141014399996493
+      },
+      {
+        "name": "confirmation batch 1568",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:52.479195+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.13929039996583015
+      },
+      {
+        "name": "confirmation batch 1576",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:52.643676+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.15164759999606758
+      },
+      {
+        "name": "confirmation batch 1584",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:52.820763+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.1449006999609992
+      },
+      {
+        "name": "confirmation batch 1592",
+        "timed_resource": "gpu_seconds",
+        "charges": {
+          "model_puzzles": 8
+        },
+        "started_utc": "2026-10-25T21:05:52.990964+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.1427467000321485
+      },
+      {
+        "name": "retain confirmation",
+        "timed_resource": null,
+        "charges": {
+          "feature_bytes": 2569903
+        },
+        "started_utc": "2026-10-25T21:05:53.204314+00:00",
+        "status": "passed",
+        "elapsed_seconds": 0.0014878999791108072
+      }
+    ]
+  },
+  "run_manifest": "20261025T210517126329Z-allocation-confirmation"
+}
