@@ -1,0 +1,57 @@
+{
+  "study_id": "confidence-allocation-v1",
+  "question": "Can a fixed limited-coverage confidence alert allocate one retry better than random-all and verifier-first allocation?",
+  "old_study": "generator-signals-v1 remains closed and failed; this is a different allocation question",
+  "candidate": "unchanged saved decoded_confidence model and strict score > saved threshold",
+  "fits": 0,
+  "level": 6,
+  "confirmation_puzzles": 1600,
+  "batch_size": 8,
+  "bootstrap_seed": 20261025,
+  "bootstrap_draws": 10000,
+  "confirmation_gate": {
+    "minimum_per_class": 200,
+    "maximum_alert_fraction": 0.20,
+    "maximum_fpr_upper": 0.08,
+    "minimum_capacity_advantage": 0.02,
+    "primary_uncertainty": "one-sided 95% percentile multinomial puzzle bootstrap of TP/N - alert_fraction*failure_prevalence; lower > 0"
+  },
+  "capacity_floor_rationale": "2pp perfect-recovery capacity advantage over random-all would yield only 0.5pp advantage at uniform 25% recovery; this is a feasibility screen, not a measured utility claim or amended 40% recall gate",
+  "population": "fixed 1600 never model-evaluated Sudoku Exchange project confirmation groups; checkpoint training exposure unknown",
+  "recovery": {
+    "primary": "level6_fixed_prefix_stochastic_suffix",
+    "alternative": "full_stochastic_restart",
+    "alternative_trigger": "primary does not meet the actual recovery gate; evaluate the one predeclared alternative, then close",
+    "temperature": 0.5,
+    "top_k": 0,
+    "top_p": 1.0,
+    "attempts_per_puzzle_per_policy": 1,
+    "seed": 20261025,
+    "identity_rng": "first 8 hex digits of SHA256(study_id:policy:puzzle_id:seed)",
+    "retention": "keep original valid board; otherwise accept retry only if independently verified valid",
+    "replay": "generate one potential retry for every confirmation puzzle, then evaluate policy allocations using paired potential outcomes; all experimental calls charged",
+    "allocation_budget": "M = number of frozen alerts; random-all selects M puzzles, verifier-first selects M failures, each by fixed hash without retry outcomes",
+    "primary_comparison": "confidence allocation minus expected verifier-first random-failure allocation at the same M retry count",
+    "random_baseline_expectation": "exact conditional mean over uniform subsets of fixed size, plus one fixed-hash realized selection; no best random seed",
+    "minimum_accuracy_advantage": 0.005,
+    "confidence_interval": "two-sided 97.5% paired puzzle percentile bootstrap, Bonferroni for two predeclared retry policies; lower > 0 against both random-all and verifier-first",
+    "resource_gate": "common conservative sequential service-time envelope: N times mean monitored solve latency + M times the largest measured per-puzzle retry latency; each baseline gets as many worst-case retry slots as fit after N times mean plain solve latency, selecting by frozen hash without retry outcomes; confidence must still win. This is measured replay accounting, not a live hard-real-time controller",
+    "deterministic_prefix_checks": 32,
+    "fallback_on_no_benefit": "retain measured baseline results and close; no temperature/prefix/seed search"
+  },
+  "timing": {
+    "warmup_puzzles": 8,
+    "pairs": 20,
+    "batch_size": 1,
+    "order": "alternate observed/plain then plain/observed, cycling the same first 8 already exposed calibration puzzles",
+    "includes": "boundary board reconstruction, confidence summaries, CPU feature extraction and saved linear score; synchronized full generator and final decoding",
+    "claim": "hardware-specific synchronized sequential service time, no production latency or speedup claim"
+  },
+  "limits": {
+    "gpu_seconds": 1200,
+    "fit_jobs": 0,
+    "model_puzzles": 8000,
+    "feature_bytes": 209715200
+  },
+  "stopping": "one confirmation attempt; zero refits or threshold changes; incomplete/gate-failed confirmation permits only exposed-development feasibility alternative and closeout, never a fresh-confirmation claim"
+}

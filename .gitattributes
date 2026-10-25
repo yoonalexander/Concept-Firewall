@@ -1,6 +1,7 @@
 # Evidence hashes refer to bytes, including historical Windows line endings.
 results/manifests/*.json -text
 results/v2/**/*.json -text
+results/continuation/**/*.json -text
 configs/* -text
 requirements.lock -text
 *.zip binary

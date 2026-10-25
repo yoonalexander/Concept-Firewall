@@ -1,0 +1,16 @@
+{
+  "study_id": "confidence-allocation-v1",
+  "protocol_sha256": "51e8b95d81d045a36a700087216049acfe0e789e36533c8c5a5ed8dde9aa6635",
+  "parent_manifest_sha256": "5e80f97339b0373d8dccc7526c3d00a3ca8ad78f318360fcb9fdd174e6e51d25",
+  "data_manifest_sha256": "2ac122480d95ed6f48e3ee40deaa08dee7d4c04fcb014e953120e45ae4ab824b",
+  "artifact_sha256": {
+    "artifacts/sudoku-hard/generator.pt": "9e0bfe44abc1ca3930b7a63cd56cd0b9564b95e29edfe12dd0903207b89df8b8",
+    "artifacts/sudoku-hard/tokenizer.pt": "3bc6aecad8e15820f9d9bb09750e3c59bdf91ca953f1f11dbd109aaed1d80c0b",
+    "data/sudoku-hard/puzzles.pickle": "dd7b6763e5594094a1366ac8423f87fc9431056721c61df52ce3490023f17d5e",
+    "data/sudoku-hard/solutions.pickle": "b52de75f5e4642adca58b18967bcd4bbcafa699c61b21ac33ee0fd7389e0d576"
+  },
+  "probe_sha256": "d6d370c626d3bd446e1b045564cbb76fca257cf6d41b4c03bd7a222768784143",
+  "old_ledger_sha256": "8e61345d0d34a39ece864205788782ffb3ba6fdb8f7ad31b6ccec99e2bba45b5",
+  "confirmation_previously_generated": false,
+  "old_study_status": "closed; original gate failed; not amended"
+}

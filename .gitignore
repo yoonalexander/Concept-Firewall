@@ -19,4 +19,6 @@ results/v2/features/**
 results/v2/runtime/**
 results/v2/models/**
 results/v2/raw/**
+results/continuation/raw/**
+results/continuation/runtime/**
 !results/**/.gitkeep
