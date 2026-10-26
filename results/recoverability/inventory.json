@@ -1,0 +1,70 @@
+{
+  "source_revision": "a5ea81eb1e3e6085473b69cb7944a571bdee8794",
+  "source_root": "C:\\Users\\Admin\\Documents\\Projects\\Concept-Firewall",
+  "files": {
+    "results/continuation/raw/confirmation.jsonl": {
+      "bytes": 2569903,
+      "sha256": "03aa39348c4c4013543f3fee748914fd2b90a9bb057ef64eb0f72eaf50ddd459"
+    },
+    "results/continuation/raw/level6_fixed_prefix_stochastic_suffix.jsonl": {
+      "bytes": 1691562,
+      "sha256": "58eca229aa73ae95c3b8c92657c91d5d076d6ed30a785dfc49002720eacf4394"
+    },
+    "results/continuation/raw/full_stochastic_restart.jsonl": {
+      "bytes": 1691275,
+      "sha256": "8ab177697b147545f02702fd16bb5f927cc041469e99feab501ff893003c21ce"
+    },
+    "results/continuation/runtime/ledger.json": {
+      "bytes": 184522,
+      "sha256": "d73fd8373849b708bad26b2b3e725070faff6a0420fe1b1d39991bd268fede4b"
+    },
+    "results/v2/runtime/generator-signals-v1.json": {
+      "bytes": 415236,
+      "sha256": "8e61345d0d34a39ece864205788782ffb3ba6fdb8f7ad31b6ccec99e2bba45b5"
+    },
+    "configs/confidence_allocation.json": {
+      "bytes": 3992,
+      "sha256": "51e8b95d81d045a36a700087216049acfe0e789e36533c8c5a5ed8dde9aa6635"
+    },
+    "results/continuation/recovery.json": {
+      "bytes": 203015,
+      "sha256": "62e3be62b91439bf802c21d01697c7cdb8fd20e90fcb5d76692feb7f53db3e50"
+    },
+    "results/continuation/timing.json": {
+      "bytes": 2164,
+      "sha256": "783d27a0fa634011988e0d8e081d18a3ecd28464c95164da5a662f5741ac6d1b"
+    },
+    "results/continuation/probe.json": {
+      "bytes": 1348,
+      "sha256": "d6d370c626d3bd446e1b045564cbb76fca257cf6d41b4c03bd7a222768784143"
+    },
+    "results/v2/contracts/generator-signals-v1-data.json": {
+      "bytes": 1234587,
+      "sha256": "2ac122480d95ed6f48e3ee40deaa08dee7d4c04fcb014e953120e45ae4ab824b"
+    },
+    "results/reports/confidence_allocation_closeout.md": {
+      "bytes": 3853,
+      "sha256": "e96f22c4d50dbdb20f174f1b970ed4b8d24e280abf8c16c0a52b328ea48d45b4"
+    },
+    "results/reports/confidence_allocation_confirmation.md": {
+      "bytes": 2677,
+      "sha256": "a7ce6f2465a5ae108c9aa8c52aaff2a21ea92d5e70e345abe237d8c15fae932b"
+    },
+    "results/reports/confidence_allocation_recovery.md": {
+      "bytes": 5937,
+      "sha256": "06c5a358cec1c8ed2bdb8f1b6484bbc71ea3d19fa6ab7661ec00f21aa9aed92e"
+    }
+  },
+  "puzzles": 1600,
+  "groups": 1600,
+  "failures": 1010,
+  "feature_widths": {
+    "14": 1600
+  },
+  "one_retry_per_action_per_puzzle": true,
+  "all_cohorts_exposed": true,
+  "other_cohorts": "No action-specific retry labels retained; excluded from supervised recovery fitting",
+  "source_clean_top_level": true,
+  "submodule_status": "Permission denied on status; not modified",
+  "files_verified_against_existing_inventory": true
+}
