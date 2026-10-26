@@ -1,0 +1,41 @@
+name: Standalone CLI distributions
+
+on:
+  push:
+    branches: [main, codex/cli-release]
+  pull_request:
+    paths:
+      - 'src/**'
+      - 'tests/**'
+      - 'scripts/*cli*.py'
+      - 'examples/sudoku_demo.py'
+      - 'pyproject.toml'
+      - 'MANIFEST.in'
+      - 'CLI*.md'
+      - '.github/workflows/cli-release.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  distributions:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python: ['3.10', '3.12', '3.14']
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install build setuptools wheel
+      - run: python -m build --no-isolation
+      - run: python -m pip download --no-deps --dest .tmp/wheelhouse 'setuptools>=68'
+      - run: python scripts/verify_cli_release.py --wheelhouse .tmp/wheelhouse --python python
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cli-${{ matrix.os }}-py${{ matrix.python }}
+          path: dist/
