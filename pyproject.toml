@@ -4,11 +4,21 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "concept-firewall"
-version = "0.1.1"
-description = "Reproducible observational correctness research on frozen NCM hierarchies"
-readme = "README.md"
+version = "0.2.0"
+description = "Dependency-free Sudoku verification and bounded exact fallback"
+readme = "CLI_README.md"
 requires-python = ">=3.10"
 dependencies = []
+classifiers = [
+    "Environment :: Console",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Games/Entertainment :: Puzzle Games",
+]
+
+[project.urls]
+Repository = "https://github.com/yoonalexander/Concept-Firewall"
+Issues = "https://github.com/yoonalexander/Concept-Firewall/issues"
 
 [project.optional-dependencies]
 research = ["torch>=2.6", "numpy", "omegaconf", "hydra-core", "transformers>=4.51", "huggingface_hub", "regex", "sacrebleu", "rouge_score", "pyarrow", "matplotlib", "scikit-learn"]
@@ -19,6 +29,9 @@ concept-firewall = "concept_firewall.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools]
+include-package-data = false
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

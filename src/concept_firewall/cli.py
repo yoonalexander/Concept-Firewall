@@ -1,4 +1,4 @@
-"""Small explicit commands; future research gates have no pretend implementations."""
+"""Dependency-free Sudoku CLI, with legacy checkout-only research commands."""
 
 from __future__ import annotations
 
@@ -9,7 +9,13 @@ import sys
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="Concept Firewall: frozen NCM correctness research")
+    from . import __version__
+
+    parser = argparse.ArgumentParser(
+        description="Sudoku verifier and bounded exact fallback (no ML dependencies).",
+        epilog="verify and solve work standalone. Legacy research commands require the full research checkout and optional dependencies.",
+    )
+    parser.add_argument("--version", action="version", version=f"concept-firewall {__version__}")
     parser.add_argument("--root", type=Path, default=Path.cwd(), help="Project checkout (default current directory)")
     commands = parser.add_subparsers(dest="command", required=True)
     commands.add_parser("doctor", help="Inspect environment, CUDA and upstream revision without downloads")

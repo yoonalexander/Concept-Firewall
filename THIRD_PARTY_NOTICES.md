@@ -1,5 +1,12 @@
 # Source and artifact notices
 
+**CLI 0.2.0 scope:** the tested wheel and source distribution include only this
+project's Python modules and explicitly allowed CLI documentation, demo and
+verification scripts/tests. They exclude the NCM submodule, checkpoints,
+datasets and research evidence. The source-package statement below describes
+the historical 0.1.1 study delivery. No new license grant is made for original
+Concept Firewall material by this CLI packaging release.
+
 This package records a scoped research study, with no claim of novelty, production safety, or completion of M4–M7.
 
 - **NCM source:** HazyResearch/ncm at `c70274273f489abc73832b2b98584a8483b6b203`. Its MIT license, including the original copyright notice, is retained at [third_party/ncm/LICENSE](third_party/ncm/LICENSE). Source packages include this pinned source and license; Python wheels contain only the Concept Firewall package.
