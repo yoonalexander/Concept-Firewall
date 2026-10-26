@@ -6,7 +6,9 @@ Release branch: `codex/cli-release`, forked from `main` at
 `162575ef2e432cd186569b1cfef0783b63873427`.
 
 The wheel and sdist were built from the package sources committed by those two
-phases. The final delivery phase adds only this record and checksums. The GitHub
+phases. The delivery phase adds this record and checksums; a subsequent CI setup
+fix explicitly installs `setuptools>=68` because Windows Python 3.10 bundles an
+older version. No packaged files or tested assets change in these phases. The GitHub
 draft `cli-v0.2.0` targets the delivery commit on this branch; main is not merged
 or moved. Historical `RELEASE_NOTES.md` and the `sudoku-study-v0.1.1` tag
 (`e81de0a98fa55b0dbd5b59fd6703adce7a078b5d`) remain unchanged.

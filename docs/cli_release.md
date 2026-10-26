@@ -7,7 +7,7 @@ CUDA or model dependencies are needed. Run from the project root with Python
 ```console
 python -m venv .tmp/build-env
 # Activate .tmp/build-env with your platform's usual command.
-python -m pip install build setuptools wheel
+python -m pip install build "setuptools>=68" wheel
 python -m build --no-isolation
 python -m pip download --no-deps --dest .tmp/wheelhouse "setuptools>=68"
 python scripts/verify_cli_release.py --wheelhouse .tmp/wheelhouse --python python
