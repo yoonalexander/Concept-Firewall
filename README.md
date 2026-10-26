@@ -1,5 +1,12 @@
 # Concept Firewall
 
+**Installable Sudoku CLI 0.2.0:** see [installation, commands, JSON fields and
+exit codes](CLI_README.md), the [runnable demo](examples/sudoku_demo.py), and
+[CLI release notes](CLI_RELEASE_NOTES.md). `verify` and `solve` need only Python
+3.10+ and the wheel; no Torch, CUDA, models or research data. The historical
+0.1.1 study package below remains preserved. The exact fallback is a classical
+Sudoku utility, not a successful learned firewall.
+
 Research tools for asking whether a frozen Next-Concept Modeling hierarchy predicts eventual Sudoku errors. This is an experiment in structural correctness, not a production safety system.
 
 The supplied [design](Concept_Firewall_Design_Document.md) remains canonical. The [review](docs/design_review.md) identifies scientific limitations and implementation decisions. Only recorded runs establish a release gate; unit-test fixtures are not model results.

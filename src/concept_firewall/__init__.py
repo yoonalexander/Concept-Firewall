@@ -1,3 +1,3 @@
-"""Concept Firewall research tools. Importing this package never loads a model."""
+"""Sudoku verification, exact fallback, and historical research tools."""
 
-__version__ = "0.1.1"
+__version__ = "0.2.0"

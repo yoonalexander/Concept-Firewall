@@ -1,0 +1,7 @@
+# Explicit release allowlist: never include research data, evidence or weights.
+global-exclude *
+include pyproject.toml MANIFEST.in CLI_README.md CLI_RELEASE_NOTES.md THIRD_PARTY_NOTICES.md
+recursive-include src/concept_firewall *.py
+include examples/sudoku_demo.py
+include scripts/test_installed_cli.py scripts/verify_cli_release.py
+include tests/test_sudoku_labels.py tests/test_verified_solver.py
