@@ -1,0 +1,300 @@
+{
+  "study_id": "recoverability-exploration-v1",
+  "status": "completed",
+  "protocol_sha256": "43e1a38b30acbca38d00b493c963af25107925cce719330971e1c7053dfac949",
+  "limits": {
+    "fit_jobs": 40,
+    "cpu_seconds": 600,
+    "wall_seconds": 1200,
+    "threads": 1,
+    "new_model_outputs": 0,
+    "paid_compute": 0
+  },
+  "fit_jobs": 40,
+  "cpu_seconds": 7.578125,
+  "wall_seconds": 8.39100000000326,
+  "new_model_outputs": 0,
+  "paid_compute": 0,
+  "events": [
+    {
+      "action": "level6_fixed_prefix_stochastic_suffix",
+      "model": "input_logistic",
+      "fold": 0,
+      "status": "completed",
+      "cpu_seconds": 0.171875
+    },
+    {
+      "action": "level6_fixed_prefix_stochastic_suffix",
+      "model": "input_logistic",
+      "fold": 1,
+      "status": "completed",
+      "cpu_seconds": 0.0
+    },
+    {
+      "action": "level6_fixed_prefix_stochastic_suffix",
+      "model": "input_logistic",
+      "fold": 2,
+      "status": "completed",
+      "cpu_seconds": 0.0
+    },
+    {
+      "action": "level6_fixed_prefix_stochastic_suffix",
+      "model": "input_logistic",
+      "fold": 3,
+      "status": "completed",
+      "cpu_seconds": 0.0
+    },
+    {
+      "action": "level6_fixed_prefix_stochastic_suffix",
+      "model": "input_logistic",
+      "fold": 4,
+      "status": "completed",
+      "cpu_seconds": 0.0
+    },
+    {
+      "action": "level6_fixed_prefix_stochastic_suffix",
+      "model": "decoded_logistic",
+      "fold": 0,
+      "status": "completed",
+      "cpu_seconds": 0.0
+    },
+    {
+      "action": "level6_fixed_prefix_stochastic_suffix",
+      "model": "decoded_logistic",
+      "fold": 1,
+      "status": "completed",
+      "cpu_seconds": 0.0
+    },
+    {
+      "action": "level6_fixed_prefix_stochastic_suffix",
+      "model": "decoded_logistic",
+      "fold": 2,
+      "status": "completed",
+      "cpu_seconds": 0.0
+    },
+    {
+      "action": "level6_fixed_prefix_stochastic_suffix",
+      "model": "decoded_logistic",
+      "fold": 3,
+      "status": "completed",
+      "cpu_seconds": 0.015625
+    },
+    {
+      "action": "level6_fixed_prefix_stochastic_suffix",
+      "model": "decoded_logistic",
+      "fold": 4,
+      "status": "completed",
+      "cpu_seconds": 0.0
+    },
+    {
+      "action": "level6_fixed_prefix_stochastic_suffix",
+      "model": "combined_logistic",
+      "fold": 0,
+      "status": "completed",
+      "cpu_seconds": 0.015625
+    },
+    {
+      "action": "level6_fixed_prefix_stochastic_suffix",
+      "model": "combined_logistic",
+      "fold": 1,
+      "status": "completed",
+      "cpu_seconds": 0.015625
+    },
+    {
+      "action": "level6_fixed_prefix_stochastic_suffix",
+      "model": "combined_logistic",
+      "fold": 2,
+      "status": "completed",
+      "cpu_seconds": 0.0
+    },
+    {
+      "action": "level6_fixed_prefix_stochastic_suffix",
+      "model": "combined_logistic",
+      "fold": 3,
+      "status": "completed",
+      "cpu_seconds": 0.0
+    },
+    {
+      "action": "level6_fixed_prefix_stochastic_suffix",
+      "model": "combined_logistic",
+      "fold": 4,
+      "status": "completed",
+      "cpu_seconds": 0.0
+    },
+    {
+      "action": "level6_fixed_prefix_stochastic_suffix",
+      "model": "combined_histogram",
+      "fold": 0,
+      "status": "completed",
+      "cpu_seconds": 0.0625
+    },
+    {
+      "action": "level6_fixed_prefix_stochastic_suffix",
+      "model": "combined_histogram",
+      "fold": 1,
+      "status": "completed",
+      "cpu_seconds": 0.0625
+    },
+    {
+      "action": "level6_fixed_prefix_stochastic_suffix",
+      "model": "combined_histogram",
+      "fold": 2,
+      "status": "completed",
+      "cpu_seconds": 0.0625
+    },
+    {
+      "action": "level6_fixed_prefix_stochastic_suffix",
+      "model": "combined_histogram",
+      "fold": 3,
+      "status": "completed",
+      "cpu_seconds": 0.0625
+    },
+    {
+      "action": "level6_fixed_prefix_stochastic_suffix",
+      "model": "combined_histogram",
+      "fold": 4,
+      "status": "completed",
+      "cpu_seconds": 0.0625
+    },
+    {
+      "action": "full_stochastic_restart",
+      "model": "input_logistic",
+      "fold": 0,
+      "status": "completed",
+      "cpu_seconds": 0.0
+    },
+    {
+      "action": "full_stochastic_restart",
+      "model": "input_logistic",
+      "fold": 1,
+      "status": "completed",
+      "cpu_seconds": 0.0
+    },
+    {
+      "action": "full_stochastic_restart",
+      "model": "input_logistic",
+      "fold": 2,
+      "status": "completed",
+      "cpu_seconds": 0.0
+    },
+    {
+      "action": "full_stochastic_restart",
+      "model": "input_logistic",
+      "fold": 3,
+      "status": "completed",
+      "cpu_seconds": 0.0
+    },
+    {
+      "action": "full_stochastic_restart",
+      "model": "input_logistic",
+      "fold": 4,
+      "status": "completed",
+      "cpu_seconds": 0.015625
+    },
+    {
+      "action": "full_stochastic_restart",
+      "model": "decoded_logistic",
+      "fold": 0,
+      "status": "completed",
+      "cpu_seconds": 0.0
+    },
+    {
+      "action": "full_stochastic_restart",
+      "model": "decoded_logistic",
+      "fold": 1,
+      "status": "completed",
+      "cpu_seconds": 0.015625
+    },
+    {
+      "action": "full_stochastic_restart",
+      "model": "decoded_logistic",
+      "fold": 2,
+      "status": "completed",
+      "cpu_seconds": 0.0
+    },
+    {
+      "action": "full_stochastic_restart",
+      "model": "decoded_logistic",
+      "fold": 3,
+      "status": "completed",
+      "cpu_seconds": 0.0
+    },
+    {
+      "action": "full_stochastic_restart",
+      "model": "decoded_logistic",
+      "fold": 4,
+      "status": "completed",
+      "cpu_seconds": 0.0
+    },
+    {
+      "action": "full_stochastic_restart",
+      "model": "combined_logistic",
+      "fold": 0,
+      "status": "completed",
+      "cpu_seconds": 0.0
+    },
+    {
+      "action": "full_stochastic_restart",
+      "model": "combined_logistic",
+      "fold": 1,
+      "status": "completed",
+      "cpu_seconds": 0.015625
+    },
+    {
+      "action": "full_stochastic_restart",
+      "model": "combined_logistic",
+      "fold": 2,
+      "status": "completed",
+      "cpu_seconds": 0.0
+    },
+    {
+      "action": "full_stochastic_restart",
+      "model": "combined_logistic",
+      "fold": 3,
+      "status": "completed",
+      "cpu_seconds": 0.015625
+    },
+    {
+      "action": "full_stochastic_restart",
+      "model": "combined_logistic",
+      "fold": 4,
+      "status": "completed",
+      "cpu_seconds": 0.0
+    },
+    {
+      "action": "full_stochastic_restart",
+      "model": "combined_histogram",
+      "fold": 0,
+      "status": "completed",
+      "cpu_seconds": 0.046875
+    },
+    {
+      "action": "full_stochastic_restart",
+      "model": "combined_histogram",
+      "fold": 1,
+      "status": "completed",
+      "cpu_seconds": 0.0625
+    },
+    {
+      "action": "full_stochastic_restart",
+      "model": "combined_histogram",
+      "fold": 2,
+      "status": "completed",
+      "cpu_seconds": 0.0625
+    },
+    {
+      "action": "full_stochastic_restart",
+      "model": "combined_histogram",
+      "fold": 3,
+      "status": "completed",
+      "cpu_seconds": 0.046875
+    },
+    {
+      "action": "full_stochastic_restart",
+      "model": "combined_histogram",
+      "fold": 4,
+      "status": "completed",
+      "cpu_seconds": 0.046875
+    }
+  ]
+}
