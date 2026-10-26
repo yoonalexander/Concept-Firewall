@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "new_fits": 0,
+  "new_model_outputs": 0,
+  "actions": [
+    {
+      "action": "level6_fixed_prefix_stochastic_suffix",
+      "potential_rescues": 63,
+      "original_alert_rescues": 9,
+      "ranked_policy_budget_checks": 30
+    },
+    {
+      "action": "full_stochastic_restart",
+      "potential_rescues": 105,
+      "original_alert_rescues": 21,
+      "ranked_policy_budget_checks": 30
+    }
+  ],
+  "protected_source_hashes_unchanged": true,
+  "train_only_scaler_means_verified": true,
+  "fold_identity_verified": true,
+  "cpu_seconds": 0.921875,
+  "wall_seconds": 0.9689999999827705,
+  "analysis_plus_audit_cpu_seconds": 8.5,
+  "uncertainty": "Intervals retain their conditional fixed-OOF-score scope; this audit replays point estimates, not additional statistical fits"
+}

@@ -1,0 +1,11 @@
+{
+  "protocol_sha256": "43e1a38b30acbca38d00b493c963af25107925cce719330971e1c7053dfac949",
+  "inventory_sha256": "67acd5b9daf0ee057bba24837b86bee0a819520c80ea3ae5904deaecc681a312",
+  "results_sha256": "4274bc720894751d1e72c8ec557d3bd39682d972af22db99e7e9aa58c1afb028",
+  "predictions_sha256": "cab2f7aa7532e3c5a9f810665c692c660ed0452c0947aa321835ed741de22cad",
+  "implementation_sha256": "9a568cfbc5d7c3f792492a2fdcfbe9a05c9c0fef2fcca3c5797ee0eef74893f0",
+  "source_root": "C:\\Users\\Admin\\Documents\\Projects\\Concept-Firewall",
+  "command": "python scripts/analyze_recoverability.py --source-root SOURCE_CHECKOUT",
+  "research_fits": 40,
+  "protected_sources_unchanged": true
+}

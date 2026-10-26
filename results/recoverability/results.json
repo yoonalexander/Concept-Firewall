@@ -1,0 +1,4325 @@
+{
+  "study_id": "recoverability-exploration-v1",
+  "protocol_sha256": "43e1a38b30acbca38d00b493c963af25107925cce719330971e1c7053dfac949",
+  "inventory_sha256": "67acd5b9daf0ee057bba24837b86bee0a819520c80ea3ae5904deaecc681a312",
+  "source_commit": "f58300e9ca0bd6801855696f186fb303cb7e21c9",
+  "all_cohorts_exposed": true,
+  "independent_confirmation": false,
+  "puzzles": 1600,
+  "original_failures": 1010,
+  "features": [
+    "decoded.box_conflicts",
+    "decoded.clue_violations",
+    "decoded.column_conflicts",
+    "decoded.complete",
+    "decoded.current_valid",
+    "decoded.filled_cells",
+    "decoded.malformed",
+    "decoded.row_conflicts",
+    "mean_normalized_entropy",
+    "max_normalized_entropy",
+    "mean_top_two_probability_margin",
+    "minimum_top_two_probability_margin",
+    "mean_selected_code_log_probability",
+    "minimum_selected_code_log_probability",
+    "clue_count",
+    "row_clue_min",
+    "row_clue_max",
+    "column_clue_min",
+    "column_clue_max",
+    "prefix_entropy",
+    "prefix_unique_fraction"
+  ],
+  "actions": {
+    "level6_fixed_prefix_stochastic_suffix": {
+      "potential_rescues": 63,
+      "prevalence": 0.062376237623762376,
+      "models": {
+        "hash_random": {
+          "auroc": 0.40145153450327686,
+          "average_precision": 0.049794184655293186,
+          "budgets": [
+            {
+              "budget": 68,
+              "rescues": 2,
+              "rescues_per_retry": 0.029411764705882353,
+              "uniform_expected": 4.241584158415842,
+              "gain_rescues": -2.241584158415842,
+              "gain_accuracy_pp": -0.1400990099009901,
+              "gain_rescues_95": [
+                -4.673393128432862,
+                0.9109725421263181
+              ],
+              "gain_rescues_97_5": [
+                -4.941015074488055,
+                1.4401911067806386
+              ],
+              "gain_accuracy_pp_95": [
+                -0.29208707052705385,
+                0.05693578388289488
+              ],
+              "fold_rescues": [
+                0,
+                1,
+                0,
+                1,
+                0
+              ],
+              "service": {
+                "monitor_charged": false,
+                "policy_slots": 113,
+                "random_slots": 113,
+                "policy_rescues": 2,
+                "uniform_expected": 7.048514851485148,
+                "gain_rescues": -5.048514851485148,
+                "gain_rescues_95": [
+                  -7.814014325397736,
+                  -1.738238605781409
+                ],
+                "envelope_ms": 258680.52239999996,
+                "timing_only_gain_rescues_95": [
+                  -6.171287128712871,
+                  -3.925742574257426
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -16.998781132936507
+              },
+              "uniform_allocation_95_range": [
+                1.0,
+                8.0
+              ]
+            },
+            {
+              "budget": 136,
+              "rescues": 3,
+              "rescues_per_retry": 0.022058823529411766,
+              "uniform_expected": 8.483168316831684,
+              "gain_rescues": -5.483168316831684,
+              "gain_accuracy_pp": -0.3426980198019802,
+              "gain_rescues_95": [
+                -8.858073227302848,
+                -1.636942847368873
+              ],
+              "gain_rescues_97_5": [
+                -9.26909562943683,
+                -1.0317106784766343
+              ],
+              "gain_accuracy_pp_95": [
+                -0.553629576706428,
+                -0.10230892796055456
+              ],
+              "fold_rescues": [
+                0,
+                2,
+                0,
+                1,
+                0
+              ],
+              "service": {
+                "monitor_charged": false,
+                "policy_slots": 181,
+                "random_slots": 181,
+                "policy_rescues": 6,
+                "uniform_expected": 11.29009900990099,
+                "gain_rescues": -5.29009900990099,
+                "gain_rescues_95": [
+                  -9.820301069556866,
+                  -0.1382827834691202
+                ],
+                "envelope_ms": 281531.3648,
+                "timing_only_gain_rescues_95": [
+                  -6.412871287128713,
+                  -4.167326732673267
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -17.812215648809524
+              },
+              "uniform_allocation_95_range": [
+                4.0,
+                14.0
+              ]
+            },
+            {
+              "budget": 272,
+              "rescues": 9,
+              "rescues_per_retry": 0.03308823529411765,
+              "uniform_expected": 16.966336633663367,
+              "gain_rescues": -7.966336633663367,
+              "gain_accuracy_pp": -0.49789603960396045,
+              "gain_rescues_95": [
+                -13.546837756237089,
+                -1.981817374153773
+              ],
+              "gain_rescues_97_5": [
+                -14.378788348907577,
+                -1.0815799895418323
+              ],
+              "gain_accuracy_pp_95": [
+                -0.8466773597648181,
+                -0.12386358588461083
+              ],
+              "fold_rescues": [
+                0,
+                3,
+                3,
+                1,
+                2
+              ],
+              "service": {
+                "monitor_charged": false,
+                "policy_slots": 317,
+                "random_slots": 317,
+                "policy_rescues": 12,
+                "uniform_expected": 19.77326732673267,
+                "gain_rescues": -7.773267326732672,
+                "gain_rescues_95": [
+                  -14.120472943330727,
+                  -1.202788350185223
+                ],
+                "envelope_ms": 327233.04959999997,
+                "timing_only_gain_rescues_95": [
+                  -8.896039603960396,
+                  -6.650495049504951
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -26.17325567261905
+              },
+              "uniform_allocation_95_range": [
+                11.0,
+                24.0
+              ]
+            }
+          ]
+        },
+        "failure_risk_high": {
+          "auroc": 0.39540068051155697,
+          "average_precision": 0.049047155820231204,
+          "budgets": [
+            {
+              "budget": 68,
+              "rescues": 2,
+              "rescues_per_retry": 0.029411764705882353,
+              "uniform_expected": 4.241584158415842,
+              "gain_rescues": -2.241584158415842,
+              "gain_accuracy_pp": -0.1400990099009901,
+              "gain_rescues_95": [
+                -4.645454254737714,
+                0.8214089767286621
+              ],
+              "gain_rescues_97_5": [
+                -4.911523494695684,
+                1.3279567077879142
+              ],
+              "gain_accuracy_pp_95": [
+                -0.2903408909211071,
+                0.05133806104554138
+              ],
+              "fold_rescues": [
+                0,
+                2,
+                0,
+                0,
+                0
+              ],
+              "service": {
+                "monitor_charged": true,
+                "policy_slots": 68,
+                "random_slots": 113,
+                "policy_rescues": 2,
+                "uniform_expected": 7.048514851485148,
+                "gain_rescues": -5.048514851485148,
+                "gain_rescues_95": [
+                  -7.777724701715537,
+                  -1.8406250269278177
+                ],
+                "envelope_ms": 258680.52239999996,
+                "timing_only_gain_rescues_95": [
+                  -6.171287128712871,
+                  -3.925742574257426
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -16.998781132936507
+              },
+              "uniform_allocation_95_range": [
+                1.0,
+                8.0
+              ]
+            },
+            {
+              "budget": 136,
+              "rescues": 4,
+              "rescues_per_retry": 0.029411764705882353,
+              "uniform_expected": 8.483168316831684,
+              "gain_rescues": -4.483168316831684,
+              "gain_accuracy_pp": -0.2801980198019802,
+              "gain_rescues_95": [
+                -8.143534801889519,
+                -0.3208737356990487
+              ],
+              "gain_rescues_97_5": [
+                -8.686564515200368,
+                0.3442573007742396
+              ],
+              "gain_accuracy_pp_95": [
+                -0.5089709251180949,
+                -0.020054608481190544
+              ],
+              "fold_rescues": [
+                0,
+                3,
+                0,
+                0,
+                1
+              ],
+              "service": {
+                "monitor_charged": true,
+                "policy_slots": 136,
+                "random_slots": 181,
+                "policy_rescues": 4,
+                "uniform_expected": 11.29009900990099,
+                "gain_rescues": -7.29009900990099,
+                "gain_rescues_95": [
+                  -11.277939334637963,
+                  -2.9406019746536987
+                ],
+                "envelope_ms": 281531.3648,
+                "timing_only_gain_rescues_95": [
+                  -8.412871287128713,
+                  -6.167326732673267
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -24.546386640873017
+              },
+              "uniform_allocation_95_range": [
+                4.0,
+                14.0
+              ]
+            },
+            {
+              "budget": 272,
+              "rescues": 9,
+              "rescues_per_retry": 0.03308823529411765,
+              "uniform_expected": 16.966336633663367,
+              "gain_rescues": -7.966336633663367,
+              "gain_accuracy_pp": -0.49789603960396045,
+              "gain_rescues_95": [
+                -13.633962599587788,
+                -2.197980320765504
+              ],
+              "gain_rescues_97_5": [
+                -14.466476384550708,
+                -1.346339918946293
+              ],
+              "gain_accuracy_pp_95": [
+                -0.8521226624742367,
+                -0.137373770047844
+              ],
+              "fold_rescues": [
+                2,
+                5,
+                0,
+                0,
+                2
+              ],
+              "service": {
+                "monitor_charged": true,
+                "policy_slots": 272,
+                "random_slots": 317,
+                "policy_rescues": 9,
+                "uniform_expected": 19.77326732673267,
+                "gain_rescues": -10.773267326732672,
+                "gain_rescues_95": [
+                  -16.72895083616848,
+                  -4.8582185039370085
+                ],
+                "envelope_ms": 327233.04959999997,
+                "timing_only_gain_rescues_95": [
+                  -11.896039603960396,
+                  -9.65049504950495
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -36.27451216071429
+              },
+              "uniform_allocation_95_range": [
+                11.0,
+                24.0
+              ]
+            }
+          ]
+        },
+        "failure_risk_low": {
+          "auroc": 0.6045993194884429,
+          "average_precision": 0.10952913243880932,
+          "budgets": [
+            {
+              "budget": 68,
+              "rescues": 8,
+              "rescues_per_retry": 0.11764705882352941,
+              "uniform_expected": 4.241584158415842,
+              "gain_rescues": 3.758415841584158,
+              "gain_accuracy_pp": 0.2349009900990099,
+              "gain_rescues_95": [
+                -0.8619664710590018,
+                9.065168629010152
+              ],
+              "gain_rescues_97_5": [
+                -1.3279835882727848,
+                9.835709023574394
+              ],
+              "gain_accuracy_pp_95": [
+                -0.05387290444118762,
+                0.5665730393131345
+              ],
+              "fold_rescues": [
+                4,
+                2,
+                1,
+                1,
+                0
+              ],
+              "service": {
+                "monitor_charged": true,
+                "policy_slots": 68,
+                "random_slots": 113,
+                "policy_rescues": 8,
+                "uniform_expected": 7.048514851485148,
+                "gain_rescues": 0.9514851485148519,
+                "gain_rescues_95": [
+                  -3.6152195881198237,
+                  6.166584115280203
+                ],
+                "envelope_ms": 258680.52239999996,
+                "timing_only_gain_rescues_95": [
+                  -0.171287128712871,
+                  2.074257425742574
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": 3.2037318432539683
+              },
+              "uniform_allocation_95_range": [
+                1.0,
+                8.0
+              ]
+            },
+            {
+              "budget": 136,
+              "rescues": 15,
+              "rescues_per_retry": 0.11029411764705882,
+              "uniform_expected": 8.483168316831684,
+              "gain_rescues": 6.516831683168316,
+              "gain_accuracy_pp": 0.4073019801980198,
+              "gain_rescues_95": [
+                0.2543577075098825,
+                13.354582812020045
+              ],
+              "gain_rescues_97_5": [
+                -0.474337640515805,
+                14.37069733037136
+              ],
+              "gain_accuracy_pp_95": [
+                0.015897356719367657,
+                0.8346614257512528
+              ],
+              "fold_rescues": [
+                4,
+                4,
+                2,
+                2,
+                3
+              ],
+              "service": {
+                "monitor_charged": true,
+                "policy_slots": 136,
+                "random_slots": 181,
+                "policy_rescues": 15,
+                "uniform_expected": 11.29009900990099,
+                "gain_rescues": 3.70990099009901,
+                "gain_rescues_95": [
+                  -2.468673959097687,
+                  10.398491859975737
+                ],
+                "envelope_ms": 281531.3648,
+                "timing_only_gain_rescues_95": [
+                  2.587128712871287,
+                  4.832673267326733
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": 12.491553815476193
+              },
+              "uniform_allocation_95_range": [
+                4.0,
+                14.0
+              ]
+            },
+            {
+              "budget": 272,
+              "rescues": 23,
+              "rescues_per_retry": 0.08455882352941177,
+              "uniform_expected": 16.966336633663367,
+              "gain_rescues": 6.033663366336633,
+              "gain_accuracy_pp": 0.37710396039603955,
+              "gain_rescues_95": [
+                -1.1539138943248521,
+                13.451287924404362
+              ],
+              "gain_rescues_97_5": [
+                -2.078301962148311,
+                14.440466731533142
+              ],
+              "gain_accuracy_pp_95": [
+                -0.07211961839530326,
+                0.8407054952752727
+              ],
+              "fold_rescues": [
+                5,
+                6,
+                3,
+                4,
+                5
+              ],
+              "service": {
+                "monitor_charged": true,
+                "policy_slots": 272,
+                "random_slots": 317,
+                "policy_rescues": 23,
+                "uniform_expected": 19.77326732673267,
+                "gain_rescues": 3.2267326732673283,
+                "gain_rescues_95": [
+                  -3.8993238559119834,
+                  10.453135479543926
+                ],
+                "envelope_ms": 327233.04959999997,
+                "timing_only_gain_rescues_95": [
+                  2.1039603960396036,
+                  4.349504950495049
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": 10.86468478373016
+              },
+              "uniform_allocation_95_range": [
+                11.0,
+                24.0
+              ]
+            }
+          ]
+        },
+        "clues_high": {
+          "auroc": 0.48741221233301485,
+          "average_precision": 0.05953700752229757,
+          "budgets": [
+            {
+              "budget": 68,
+              "rescues": 2,
+              "rescues_per_retry": 0.029411764705882353,
+              "uniform_expected": 4.241584158415842,
+              "gain_rescues": -2.241584158415842,
+              "gain_accuracy_pp": -0.1400990099009901,
+              "gain_rescues_95": [
+                -4.715042415930102,
+                0.8162418773929551
+              ],
+              "gain_rescues_97_5": [
+                -4.985163935624388,
+                1.3314346772219217
+              ],
+              "gain_accuracy_pp_95": [
+                -0.2946901509956314,
+                0.05101511733705969
+              ],
+              "fold_rescues": [
+                0,
+                0,
+                0,
+                0,
+                2
+              ],
+              "service": {
+                "monitor_charged": false,
+                "policy_slots": 113,
+                "random_slots": 113,
+                "policy_rescues": 7,
+                "uniform_expected": 7.048514851485148,
+                "gain_rescues": -0.048514851485148114,
+                "gain_rescues_95": [
+                  -4.555184546313797,
+                  5.182026421854005
+                ],
+                "envelope_ms": 258680.52239999996,
+                "timing_only_gain_rescues_95": [
+                  -1.171287128712871,
+                  1.0742574257425739
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -0.16335365277777647
+              },
+              "uniform_allocation_95_range": [
+                1.0,
+                8.0
+              ]
+            },
+            {
+              "budget": 136,
+              "rescues": 8,
+              "rescues_per_retry": 0.058823529411764705,
+              "uniform_expected": 8.483168316831684,
+              "gain_rescues": -0.4831683168316836,
+              "gain_accuracy_pp": -0.030198019801980225,
+              "gain_rescues_95": [
+                -5.175796507214805,
+                4.879044698193632
+              ],
+              "gain_rescues_97_5": [
+                -5.809002945583826,
+                5.718919692492909
+              ],
+              "gain_accuracy_pp_95": [
+                -0.32348728170092533,
+                0.304940293637102
+              ],
+              "fold_rescues": [
+                2,
+                2,
+                0,
+                2,
+                2
+              ],
+              "service": {
+                "monitor_charged": false,
+                "policy_slots": 181,
+                "random_slots": 181,
+                "policy_rescues": 10,
+                "uniform_expected": 11.29009900990099,
+                "gain_rescues": -1.29009900990099,
+                "gain_rescues_95": [
+                  -6.489392795273842,
+                  4.5454299103223486
+                ],
+                "envelope_ms": 281531.3648,
+                "timing_only_gain_rescues_95": [
+                  -2.412871287128713,
+                  -0.16732673267326703
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -4.343873664682537
+              },
+              "uniform_allocation_95_range": [
+                4.0,
+                14.0
+              ]
+            },
+            {
+              "budget": 272,
+              "rescues": 13,
+              "rescues_per_retry": 0.04779411764705882,
+              "uniform_expected": 16.966336633663367,
+              "gain_rescues": -3.966336633663367,
+              "gain_accuracy_pp": -0.24789603960396042,
+              "gain_rescues_95": [
+                -10.021308254935015,
+                2.286086163345489
+              ],
+              "gain_rescues_97_5": [
+                -10.794561920780307,
+                3.243510095698826
+              ],
+              "gain_accuracy_pp_95": [
+                -0.6263317659334384,
+                0.14288038520909307
+              ],
+              "fold_rescues": [
+                3,
+                3,
+                0,
+                3,
+                4
+              ],
+              "service": {
+                "monitor_charged": false,
+                "policy_slots": 317,
+                "random_slots": 317,
+                "policy_rescues": 16,
+                "uniform_expected": 19.77326732673267,
+                "gain_rescues": -3.7732673267326717,
+                "gain_rescues_95": [
+                  -10.288877252260859,
+                  3.0470242406995376
+                ],
+                "envelope_ms": 327233.04959999997,
+                "timing_only_gain_rescues_95": [
+                  -4.896039603960396,
+                  -2.6504950495049506
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -12.704913688492065
+              },
+              "uniform_allocation_95_range": [
+                11.0,
+                24.0
+              ]
+            }
+          ]
+        },
+        "current_conflicts_low": {
+          "auroc": 0.4598146192655168,
+          "average_precision": 0.05927157087099453,
+          "budgets": [
+            {
+              "budget": 68,
+              "rescues": 4,
+              "rescues_per_retry": 0.058823529411764705,
+              "uniform_expected": 4.241584158415842,
+              "gain_rescues": -0.2415841584158418,
+              "gain_accuracy_pp": -0.015099009900990112,
+              "gain_rescues_95": [
+                -3.520206824108954,
+                3.72643702555279
+              ],
+              "gain_rescues_97_5": [
+                -3.8611965045188716,
+                4.401037330316743
+              ],
+              "gain_accuracy_pp_95": [
+                -0.22001292650680962,
+                0.2329023140970494
+              ],
+              "fold_rescues": [
+                1,
+                0,
+                1,
+                1,
+                1
+              ],
+              "service": {
+                "monitor_charged": true,
+                "policy_slots": 68,
+                "random_slots": 113,
+                "policy_rescues": 4,
+                "uniform_expected": 7.048514851485148,
+                "gain_rescues": -3.048514851485148,
+                "gain_rescues_95": [
+                  -6.461661735700196,
+                  0.9254598257502424
+                ],
+                "envelope_ms": 258680.52239999996,
+                "timing_only_gain_rescues_95": [
+                  -4.171287128712871,
+                  -1.9257425742574261
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -10.264610140873017
+              },
+              "uniform_allocation_95_range": [
+                1.0,
+                8.0
+              ]
+            },
+            {
+              "budget": 136,
+              "rescues": 6,
+              "rescues_per_retry": 0.04411764705882353,
+              "uniform_expected": 8.483168316831684,
+              "gain_rescues": -2.4831683168316836,
+              "gain_accuracy_pp": -0.15519801980198022,
+              "gain_rescues_95": [
+                -6.760329218717544,
+                2.216234873927181
+              ],
+              "gain_rescues_97_5": [
+                -7.2918974024086,
+                3.0031804300030873
+              ],
+              "gain_accuracy_pp_95": [
+                -0.4225205761698465,
+                0.1385146796204488
+              ],
+              "fold_rescues": [
+                2,
+                0,
+                1,
+                1,
+                2
+              ],
+              "service": {
+                "monitor_charged": true,
+                "policy_slots": 136,
+                "random_slots": 181,
+                "policy_rescues": 6,
+                "uniform_expected": 11.29009900990099,
+                "gain_rescues": -5.29009900990099,
+                "gain_rescues_95": [
+                  -9.800036382536383,
+                  -0.4657296469003047
+                ],
+                "envelope_ms": 281531.3648,
+                "timing_only_gain_rescues_95": [
+                  -6.412871287128713,
+                  -4.167326732673267
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -17.812215648809524
+              },
+              "uniform_allocation_95_range": [
+                4.0,
+                14.0
+              ]
+            },
+            {
+              "budget": 272,
+              "rescues": 9,
+              "rescues_per_retry": 0.03308823529411765,
+              "uniform_expected": 16.966336633663367,
+              "gain_rescues": -7.966336633663367,
+              "gain_accuracy_pp": -0.49789603960396045,
+              "gain_rescues_95": [
+                -13.60883750516984,
+                -2.3220456294378957
+              ],
+              "gain_rescues_97_5": [
+                -14.325967801977324,
+                -1.3217279131628685
+              ],
+              "gain_accuracy_pp_95": [
+                -0.850552344073115,
+                -0.14512785183986848
+              ],
+              "fold_rescues": [
+                3,
+                0,
+                1,
+                1,
+                4
+              ],
+              "service": {
+                "monitor_charged": true,
+                "policy_slots": 272,
+                "random_slots": 317,
+                "policy_rescues": 9,
+                "uniform_expected": 19.77326732673267,
+                "gain_rescues": -10.773267326732672,
+                "gain_rescues_95": [
+                  -16.713818060451764,
+                  -4.955178662800615
+                ],
+                "envelope_ms": 327233.04959999997,
+                "timing_only_gain_rescues_95": [
+                  -11.896039603960396,
+                  -9.65049504950495
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -36.27451216071429
+              },
+              "uniform_allocation_95_range": [
+                11.0,
+                24.0
+              ]
+            }
+          ]
+        },
+        "entropy_low": {
+          "auroc": 0.6268081326159467,
+          "average_precision": 0.12358189158249301,
+          "budgets": [
+            {
+              "budget": 68,
+              "rescues": 12,
+              "rescues_per_retry": 0.17647058823529413,
+              "uniform_expected": 4.241584158415842,
+              "gain_rescues": 7.758415841584158,
+              "gain_accuracy_pp": 0.4849009900990099,
+              "gain_rescues_95": [
+                2.0466688022572552,
+                13.930546552203133
+              ],
+              "gain_rescues_97_5": [
+                1.3388180394229412,
+                14.997259803316075
+              ],
+              "gain_accuracy_pp_95": [
+                0.12791680014107845,
+                0.8706591595126958
+              ],
+              "fold_rescues": [
+                4,
+                3,
+                2,
+                1,
+                2
+              ],
+              "service": {
+                "monitor_charged": true,
+                "policy_slots": 68,
+                "random_slots": 113,
+                "policy_rescues": 12,
+                "uniform_expected": 7.048514851485148,
+                "gain_rescues": 4.951485148514852,
+                "gain_rescues_95": [
+                  -0.632414043525882,
+                  11.042662146649446
+                ],
+                "envelope_ms": 258680.52239999996,
+                "timing_only_gain_rescues_95": [
+                  3.828712871287129,
+                  6.074257425742574
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": 16.672073827380952
+              },
+              "uniform_allocation_95_range": [
+                1.0,
+                8.0
+              ]
+            },
+            {
+              "budget": 136,
+              "rescues": 17,
+              "rescues_per_retry": 0.125,
+              "uniform_expected": 8.483168316831684,
+              "gain_rescues": 8.516831683168316,
+              "gain_accuracy_pp": 0.5323019801980198,
+              "gain_rescues_95": [
+                1.933024836320795,
+                15.507314024390242
+              ],
+              "gain_rescues_97_5": [
+                1.074561376789522,
+                16.58328028256723
+              ],
+              "gain_accuracy_pp_95": [
+                0.1208140522700497,
+                0.9692071265243901
+              ],
+              "fold_rescues": [
+                4,
+                4,
+                3,
+                2,
+                4
+              ],
+              "service": {
+                "monitor_charged": true,
+                "policy_slots": 136,
+                "random_slots": 181,
+                "policy_rescues": 17,
+                "uniform_expected": 11.29009900990099,
+                "gain_rescues": 5.70990099009901,
+                "gain_rescues_95": [
+                  -0.7289306782906544,
+                  12.515762544014082
+                ],
+                "envelope_ms": 281531.3648,
+                "timing_only_gain_rescues_95": [
+                  4.587128712871287,
+                  6.832673267326733
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": 19.22572480753968
+              },
+              "uniform_allocation_95_range": [
+                4.0,
+                14.0
+              ]
+            },
+            {
+              "budget": 272,
+              "rescues": 24,
+              "rescues_per_retry": 0.08823529411764706,
+              "uniform_expected": 16.966336633663367,
+              "gain_rescues": 7.033663366336633,
+              "gain_accuracy_pp": 0.43960396039603955,
+              "gain_rescues_95": [
+                -0.22180142198196082,
+                14.737262771335397
+              ],
+              "gain_rescues_97_5": [
+                -1.1209687987645276,
+                15.675644431058904
+              ],
+              "gain_accuracy_pp_95": [
+                -0.013862588873872551,
+                0.9210789232084623
+              ],
+              "fold_rescues": [
+                4,
+                6,
+                4,
+                5,
+                5
+              ],
+              "service": {
+                "monitor_charged": true,
+                "policy_slots": 272,
+                "random_slots": 317,
+                "policy_rescues": 24,
+                "uniform_expected": 19.77326732673267,
+                "gain_rescues": 4.226732673267328,
+                "gain_rescues_95": [
+                  -2.9483031908330712,
+                  11.787461457106385
+                ],
+                "envelope_ms": 327233.04959999997,
+                "timing_only_gain_rescues_95": [
+                  3.1039603960396036,
+                  5.349504950495049
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": 14.231770279761907
+              },
+              "uniform_allocation_95_range": [
+                11.0,
+                24.0
+              ]
+            }
+          ]
+        },
+        "input_logistic": {
+          "auroc": 0.4670974338344982,
+          "average_precision": 0.0565944778767519,
+          "budgets": [
+            {
+              "budget": 68,
+              "rescues": 2,
+              "rescues_per_retry": 0.029411764705882353,
+              "uniform_expected": 4.241584158415842,
+              "gain_rescues": -2.241584158415842,
+              "gain_accuracy_pp": -0.1400990099009901,
+              "gain_rescues_95": [
+                -4.66443057580175,
+                0.8927439346954112
+              ],
+              "gain_rescues_97_5": [
+                -4.932806324110672,
+                1.4141822852524701
+              ],
+              "gain_accuracy_pp_95": [
+                -0.29152691098760936,
+                0.0557964959184632
+              ],
+              "fold_rescues": [
+                0,
+                1,
+                0,
+                1,
+                0
+              ],
+              "service": {
+                "monitor_charged": false,
+                "policy_slots": 113,
+                "random_slots": 113,
+                "policy_rescues": 4,
+                "uniform_expected": 7.048514851485148,
+                "gain_rescues": -3.048514851485148,
+                "gain_rescues_95": [
+                  -6.601676778462183,
+                  1.1887952827767987
+                ],
+                "envelope_ms": 258680.52239999996,
+                "timing_only_gain_rescues_95": [
+                  -4.171287128712871,
+                  -1.9257425742574261
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -10.264610140873017
+              },
+              "uniform_allocation_95_range": [
+                1.0,
+                8.0
+              ]
+            },
+            {
+              "budget": 136,
+              "rescues": 6,
+              "rescues_per_retry": 0.04411764705882353,
+              "uniform_expected": 8.483168316831684,
+              "gain_rescues": -2.4831683168316836,
+              "gain_accuracy_pp": -0.15519801980198022,
+              "gain_rescues_95": [
+                -6.71043732894713,
+                2.318882519830929
+              ],
+              "gain_rescues_97_5": [
+                -7.197159363745498,
+                3.12425053129622
+              ],
+              "gain_accuracy_pp_95": [
+                -0.4194023330591956,
+                0.14493015748943305
+              ],
+              "fold_rescues": [
+                1,
+                4,
+                0,
+                1,
+                0
+              ],
+              "service": {
+                "monitor_charged": false,
+                "policy_slots": 181,
+                "random_slots": 181,
+                "policy_rescues": 9,
+                "uniform_expected": 11.29009900990099,
+                "gain_rescues": -2.29009900990099,
+                "gain_rescues_95": [
+                  -7.430369220899815,
+                  3.2718539595783627
+                ],
+                "envelope_ms": 281531.3648,
+                "timing_only_gain_rescues_95": [
+                  -3.412871287128713,
+                  -1.167326732673267
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -7.710959160714287
+              },
+              "uniform_allocation_95_range": [
+                4.0,
+                14.0
+              ]
+            },
+            {
+              "budget": 272,
+              "rescues": 13,
+              "rescues_per_retry": 0.04779411764705882,
+              "uniform_expected": 16.966336633663367,
+              "gain_rescues": -3.966336633663367,
+              "gain_accuracy_pp": -0.24789603960396042,
+              "gain_rescues_95": [
+                -9.950847436987111,
+                2.4663400335008374
+              ],
+              "gain_rescues_97_5": [
+                -10.733748799231506,
+                3.284302103913211
+              ],
+              "gain_accuracy_pp_95": [
+                -0.6219279648116944,
+                0.15414625209380234
+              ],
+              "fold_rescues": [
+                3,
+                4,
+                1,
+                1,
+                4
+              ],
+              "service": {
+                "monitor_charged": false,
+                "policy_slots": 317,
+                "random_slots": 317,
+                "policy_rescues": 15,
+                "uniform_expected": 19.77326732673267,
+                "gain_rescues": -4.773267326732672,
+                "gain_rescues_95": [
+                  -11.062542314443329,
+                  2.012732397151896
+                ],
+                "envelope_ms": 327233.04959999997,
+                "timing_only_gain_rescues_95": [
+                  -5.896039603960396,
+                  -3.6504950495049506
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -16.071999184523808
+              },
+              "uniform_allocation_95_range": [
+                11.0,
+                24.0
+              ]
+            }
+          ]
+        },
+        "decoded_logistic": {
+          "auroc": 0.5691657866948256,
+          "average_precision": 0.07682736849159716,
+          "budgets": [
+            {
+              "budget": 68,
+              "rescues": 4,
+              "rescues_per_retry": 0.058823529411764705,
+              "uniform_expected": 4.241584158415842,
+              "gain_rescues": -0.2415841584158418,
+              "gain_accuracy_pp": -0.015099009900990112,
+              "gain_rescues_95": [
+                -3.553322426762889,
+                3.748166325099771
+              ],
+              "gain_rescues_97_5": [
+                -3.9738005643020187,
+                4.381898136809877
+              ],
+              "gain_accuracy_pp_95": [
+                -0.22208265167268057,
+                0.23426039531873566
+              ],
+              "fold_rescues": [
+                1,
+                2,
+                0,
+                0,
+                1
+              ],
+              "service": {
+                "monitor_charged": true,
+                "policy_slots": 68,
+                "random_slots": 113,
+                "policy_rescues": 4,
+                "uniform_expected": 7.048514851485148,
+                "gain_rescues": -3.048514851485148,
+                "gain_rescues_95": [
+                  -6.543365332217124,
+                  1.0001930501930474
+                ],
+                "envelope_ms": 258680.52239999996,
+                "timing_only_gain_rescues_95": [
+                  -4.171287128712871,
+                  -1.9257425742574261
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -10.264610140873017
+              },
+              "uniform_allocation_95_range": [
+                1.0,
+                8.0
+              ]
+            },
+            {
+              "budget": 136,
+              "rescues": 10,
+              "rescues_per_retry": 0.07352941176470588,
+              "uniform_expected": 8.483168316831684,
+              "gain_rescues": 1.5168316831683164,
+              "gain_accuracy_pp": 0.09480198019801979,
+              "gain_rescues_95": [
+                -3.6077688753344517,
+                7.47140834117674
+              ],
+              "gain_rescues_97_5": [
+                -4.312534636699507,
+                8.42759986878736
+              ],
+              "gain_accuracy_pp_95": [
+                -0.2254855547084032,
+                0.4669630213235462
+              ],
+              "fold_rescues": [
+                2,
+                4,
+                1,
+                0,
+                3
+              ],
+              "service": {
+                "monitor_charged": true,
+                "policy_slots": 136,
+                "random_slots": 181,
+                "policy_rescues": 10,
+                "uniform_expected": 11.29009900990099,
+                "gain_rescues": -1.29009900990099,
+                "gain_rescues_95": [
+                  -6.490951542173536,
+                  4.575342733471341
+                ],
+                "envelope_ms": 281531.3648,
+                "timing_only_gain_rescues_95": [
+                  -2.412871287128713,
+                  -0.16732673267326703
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -4.343873664682537
+              },
+              "uniform_allocation_95_range": [
+                4.0,
+                14.0
+              ]
+            },
+            {
+              "budget": 272,
+              "rescues": 22,
+              "rescues_per_retry": 0.08088235294117647,
+              "uniform_expected": 16.966336633663367,
+              "gain_rescues": 5.033663366336633,
+              "gain_accuracy_pp": 0.31460396039603955,
+              "gain_rescues_95": [
+                -1.9635293640260831,
+                12.475496421149849
+              ],
+              "gain_rescues_97_5": [
+                -2.8393406555717227,
+                13.487687010176648
+              ],
+              "gain_accuracy_pp_95": [
+                -0.1227205852516302,
+                0.7797185263218656
+              ],
+              "fold_rescues": [
+                3,
+                6,
+                4,
+                3,
+                6
+              ],
+              "service": {
+                "monitor_charged": true,
+                "policy_slots": 272,
+                "random_slots": 317,
+                "policy_rescues": 22,
+                "uniform_expected": 19.77326732673267,
+                "gain_rescues": 2.2267326732673283,
+                "gain_rescues_95": [
+                  -4.724546465483405,
+                  9.553489001833023
+                ],
+                "envelope_ms": 327233.04959999997,
+                "timing_only_gain_rescues_95": [
+                  1.1039603960396036,
+                  3.3495049504950494
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": 7.497599287698416
+              },
+              "uniform_allocation_95_range": [
+                11.0,
+                24.0
+              ]
+            }
+          ]
+        },
+        "combined_logistic": {
+          "auroc": 0.5657464675416102,
+          "average_precision": 0.07612519091251674,
+          "budgets": [
+            {
+              "budget": 68,
+              "rescues": 5,
+              "rescues_per_retry": 0.07352941176470588,
+              "uniform_expected": 4.241584158415842,
+              "gain_rescues": 0.7584158415841582,
+              "gain_accuracy_pp": 0.047400990099009895,
+              "gain_rescues_95": [
+                -2.8533934428020604,
+                5.037716866627021
+              ],
+              "gain_rescues_97_5": [
+                -3.3665984695247633,
+                5.712223343527026
+              ],
+              "gain_accuracy_pp_95": [
+                -0.17833709017512878,
+                0.31485730416418883
+              ],
+              "fold_rescues": [
+                1,
+                3,
+                0,
+                1,
+                0
+              ],
+              "service": {
+                "monitor_charged": true,
+                "policy_slots": 68,
+                "random_slots": 113,
+                "policy_rescues": 5,
+                "uniform_expected": 7.048514851485148,
+                "gain_rescues": -2.048514851485148,
+                "gain_rescues_95": [
+                  -5.846378791109215,
+                  2.251152771308801
+                ],
+                "envelope_ms": 258680.52239999996,
+                "timing_only_gain_rescues_95": [
+                  -3.171287128712871,
+                  -0.9257425742574261
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -6.897524644841269
+              },
+              "uniform_allocation_95_range": [
+                1.0,
+                8.0
+              ]
+            },
+            {
+              "budget": 136,
+              "rescues": 10,
+              "rescues_per_retry": 0.07352941176470588,
+              "uniform_expected": 8.483168316831684,
+              "gain_rescues": 1.5168316831683164,
+              "gain_accuracy_pp": 0.09480198019801979,
+              "gain_rescues_95": [
+                -3.6777769049489386,
+                7.353099682986964
+              ],
+              "gain_rescues_97_5": [
+                -4.334440457203614,
+                8.182141989642375
+              ],
+              "gain_accuracy_pp_95": [
+                -0.22986105655930866,
+                0.45956873018668526
+              ],
+              "fold_rescues": [
+                1,
+                5,
+                1,
+                2,
+                1
+              ],
+              "service": {
+                "monitor_charged": true,
+                "policy_slots": 136,
+                "random_slots": 181,
+                "policy_rescues": 10,
+                "uniform_expected": 11.29009900990099,
+                "gain_rescues": -1.29009900990099,
+                "gain_rescues_95": [
+                  -6.541199598220691,
+                  4.5043719163029845
+                ],
+                "envelope_ms": 281531.3648,
+                "timing_only_gain_rescues_95": [
+                  -2.412871287128713,
+                  -0.16732673267326703
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -4.343873664682537
+              },
+              "uniform_allocation_95_range": [
+                4.0,
+                14.0
+              ]
+            },
+            {
+              "budget": 272,
+              "rescues": 20,
+              "rescues_per_retry": 0.07352941176470588,
+              "uniform_expected": 16.966336633663367,
+              "gain_rescues": 3.033663366336633,
+              "gain_accuracy_pp": 0.18960396039603958,
+              "gain_rescues_95": [
+                -3.8201341463414624,
+                10.241499066605614
+              ],
+              "gain_rescues_97_5": [
+                -4.728901745431742,
+                11.303633747186785
+              ],
+              "gain_accuracy_pp_95": [
+                -0.23875838414634137,
+                0.640093691662851
+              ],
+              "fold_rescues": [
+                4,
+                5,
+                2,
+                5,
+                4
+              ],
+              "service": {
+                "monitor_charged": true,
+                "policy_slots": 272,
+                "random_slots": 317,
+                "policy_rescues": 20,
+                "uniform_expected": 19.77326732673267,
+                "gain_rescues": 0.22673267326732827,
+                "gain_rescues_95": [
+                  -6.66746761417468,
+                  7.304351425005724
+                ],
+                "envelope_ms": 327233.04959999997,
+                "timing_only_gain_rescues_95": [
+                  -0.8960396039603964,
+                  1.3495049504950494
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": 0.7634282956349261
+              },
+              "uniform_allocation_95_range": [
+                11.0,
+                24.0
+              ]
+            }
+          ]
+        },
+        "combined_histogram": {
+          "auroc": 0.5387439030522452,
+          "average_precision": 0.07287419039293566,
+          "budgets": [
+            {
+              "budget": 68,
+              "rescues": 4,
+              "rescues_per_retry": 0.058823529411764705,
+              "uniform_expected": 4.241584158415842,
+              "gain_rescues": -0.2415841584158418,
+              "gain_accuracy_pp": -0.015099009900990112,
+              "gain_rescues_95": [
+                -3.516148489826867,
+                3.67268709390387
+              ],
+              "gain_rescues_97_5": [
+                -3.928664346644814,
+                4.424728796844192
+              ],
+              "gain_accuracy_pp_95": [
+                -0.21975928061417918,
+                0.22954294336899186
+              ],
+              "fold_rescues": [
+                0,
+                1,
+                2,
+                0,
+                1
+              ],
+              "service": {
+                "monitor_charged": true,
+                "policy_slots": 68,
+                "random_slots": 113,
+                "policy_rescues": 4,
+                "uniform_expected": 7.048514851485148,
+                "gain_rescues": -3.048514851485148,
+                "gain_rescues_95": [
+                  -6.495959258892792,
+                  0.894756116365131
+                ],
+                "envelope_ms": 258680.52239999996,
+                "timing_only_gain_rescues_95": [
+                  -4.171287128712871,
+                  -1.9257425742574261
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -10.264610140873017
+              },
+              "uniform_allocation_95_range": [
+                1.0,
+                8.0
+              ]
+            },
+            {
+              "budget": 136,
+              "rescues": 9,
+              "rescues_per_retry": 0.0661764705882353,
+              "uniform_expected": 8.483168316831684,
+              "gain_rescues": 0.5168316831683164,
+              "gain_accuracy_pp": 0.032301980198019775,
+              "gain_rescues_95": [
+                -4.397171210803619,
+                6.075465757334284
+              ],
+              "gain_rescues_97_5": [
+                -5.066101523834329,
+                6.9720088848491155
+              ],
+              "gain_accuracy_pp_95": [
+                -0.2748232006752262,
+                0.3797166098333928
+              ],
+              "fold_rescues": [
+                0,
+                3,
+                3,
+                1,
+                2
+              ],
+              "service": {
+                "monitor_charged": true,
+                "policy_slots": 136,
+                "random_slots": 181,
+                "policy_rescues": 9,
+                "uniform_expected": 11.29009900990099,
+                "gain_rescues": -2.29009900990099,
+                "gain_rescues_95": [
+                  -7.273262872519418,
+                  3.1970069600818767
+                ],
+                "envelope_ms": 281531.3648,
+                "timing_only_gain_rescues_95": [
+                  -3.412871287128713,
+                  -1.167326732673267
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -7.710959160714287
+              },
+              "uniform_allocation_95_range": [
+                4.0,
+                14.0
+              ]
+            },
+            {
+              "budget": 272,
+              "rescues": 20,
+              "rescues_per_retry": 0.07352941176470588,
+              "uniform_expected": 16.966336633663367,
+              "gain_rescues": 3.033663366336633,
+              "gain_accuracy_pp": 0.18960396039603958,
+              "gain_rescues_95": [
+                -3.7402315634218253,
+                10.153632648049914
+              ],
+              "gain_rescues_97_5": [
+                -4.550896953849768,
+                11.206833194107137
+              ],
+              "gain_accuracy_pp_95": [
+                -0.23376447271386408,
+                0.6346020405031196
+              ],
+              "fold_rescues": [
+                5,
+                4,
+                3,
+                2,
+                6
+              ],
+              "service": {
+                "monitor_charged": true,
+                "policy_slots": 272,
+                "random_slots": 317,
+                "policy_rescues": 20,
+                "uniform_expected": 19.77326732673267,
+                "gain_rescues": 0.22673267326732827,
+                "gain_rescues_95": [
+                  -6.579992216010316,
+                  7.262489558970928
+                ],
+                "envelope_ms": 327233.04959999997,
+                "timing_only_gain_rescues_95": [
+                  -0.8960396039603964,
+                  1.3495049504950494
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": 0.7634282956349261
+              },
+              "uniform_allocation_95_range": [
+                11.0,
+                24.0
+              ]
+            }
+          ]
+        }
+      },
+      "fit_audit": {
+        "input_logistic": [
+          {
+            "fold": 0,
+            "train_rows": 806,
+            "test_rows": 204,
+            "train_rescues": 48,
+            "test_rescues": 15,
+            "disjoint_groups": true,
+            "training_mean": [
+              27.667493796526056,
+              1.2729528535980148,
+              4.750620347394541,
+              1.6997518610421836,
+              4.423076923076923
+            ]
+          },
+          {
+            "fold": 1,
+            "train_rows": 805,
+            "test_rows": 205,
+            "train_rescues": 47,
+            "test_rescues": 16,
+            "disjoint_groups": true,
+            "training_mean": [
+              27.62360248447205,
+              1.2919254658385093,
+              4.752795031055901,
+              1.7018633540372672,
+              4.395031055900621
+            ]
+          },
+          {
+            "fold": 2,
+            "train_rows": 811,
+            "test_rows": 199,
+            "train_rescues": 53,
+            "test_rescues": 10,
+            "disjoint_groups": true,
+            "training_mean": [
+              27.631319358816278,
+              1.2552404438964242,
+              4.758323057953144,
+              1.6954377311960542,
+              4.401972872996301
+            ]
+          },
+          {
+            "fold": 3,
+            "train_rows": 814,
+            "test_rows": 196,
+            "train_rescues": 56,
+            "test_rescues": 7,
+            "disjoint_groups": true,
+            "training_mean": [
+              27.665847665847664,
+              1.2874692874692875,
+              4.756756756756757,
+              1.7223587223587224,
+              4.399262899262899
+            ]
+          },
+          {
+            "fold": 4,
+            "train_rows": 804,
+            "test_rows": 206,
+            "train_rescues": 48,
+            "test_rescues": 15,
+            "disjoint_groups": true,
+            "training_mean": [
+              27.58955223880597,
+              1.2885572139303483,
+              4.7288557213930345,
+              1.685323383084577,
+              4.41044776119403
+            ]
+          }
+        ],
+        "decoded_logistic": [
+          {
+            "fold": 0,
+            "train_rows": 806,
+            "test_rows": 204,
+            "train_rescues": 48,
+            "test_rescues": 15,
+            "disjoint_groups": true,
+            "training_mean": [
+              32.140198511166254,
+              19.714640198511166,
+              25.557071960297765,
+              0.9987593052109182,
+              0.0,
+              80.92307692307692,
+              0.0,
+              34.14764267990074,
+              0.17970419436850338,
+              0.46236496806958177,
+              0.6876476441068625,
+              0.12827340524560465,
+              -0.24259407302507988,
+              -0.8013477368516011
+            ]
+          },
+          {
+            "fold": 1,
+            "train_rows": 805,
+            "test_rows": 205,
+            "train_rescues": 47,
+            "test_rescues": 16,
+            "disjoint_groups": true,
+            "training_mean": [
+              32.059627329192544,
+              19.659627329192546,
+              25.42360248447205,
+              0.9987577639751553,
+              0.0,
+              80.93788819875776,
+              0.0,
+              34.13913043478261,
+              0.181355902353614,
+              0.4655974097596192,
+              0.6846814042662982,
+              0.12958223347708306,
+              -0.2450576084370939,
+              -0.8048318411622729
+            ]
+          },
+          {
+            "fold": 2,
+            "train_rows": 811,
+            "test_rows": 199,
+            "train_rescues": 53,
+            "test_rescues": 10,
+            "disjoint_groups": true,
+            "training_mean": [
+              31.97410604192355,
+              19.678175092478423,
+              25.436498150431564,
+              0.9975339087546239,
+              0.0,
+              80.86189889025894,
+              0.0,
+              34.00123304562269,
+              0.17956997695782034,
+              0.4633902317664038,
+              0.6883608953873415,
+              0.1295218719433621,
+              -0.24173695359117225,
+              -0.8021103847960215
+            ]
+          },
+          {
+            "fold": 3,
+            "train_rows": 814,
+            "test_rows": 196,
+            "train_rescues": 56,
+            "test_rescues": 7,
+            "disjoint_groups": true,
+            "training_mean": [
+              32.056511056511056,
+              19.735872235872236,
+              25.464373464373466,
+              0.9975429975429976,
+              0.0,
+              80.86240786240786,
+              0.0,
+              34.07248157248157,
+              0.17850682123836487,
+              0.46299462916480527,
+              0.6890660877675916,
+              0.12753207988908893,
+              -0.241333876665526,
+              -0.800933757581787
+            ]
+          },
+          {
+            "fold": 4,
+            "train_rows": 804,
+            "test_rows": 206,
+            "train_rescues": 48,
+            "test_rescues": 15,
+            "disjoint_groups": true,
+            "training_mean": [
+              31.987562189054728,
+              19.686567164179106,
+              25.50995024875622,
+              0.9975124378109452,
+              0.0,
+              80.86069651741293,
+              0.0,
+              34.006218905472636,
+              0.17856717785468224,
+              0.46030331233432936,
+              0.6884688969275251,
+              0.12859079920089067,
+              -0.24098350591169884,
+              -0.7978241432328426
+            ]
+          }
+        ],
+        "combined_logistic": [
+          {
+            "fold": 0,
+            "train_rows": 806,
+            "test_rows": 204,
+            "train_rescues": 48,
+            "test_rescues": 15,
+            "disjoint_groups": true,
+            "training_mean": [
+              32.140198511166254,
+              19.714640198511166,
+              25.557071960297765,
+              0.9987593052109182,
+              0.0,
+              80.92307692307692,
+              0.0,
+              34.14764267990074,
+              0.17970419436850338,
+              0.46236496806958177,
+              0.6876476441068625,
+              0.12827340524560465,
+              -0.24259407302507988,
+              -0.8013477368516011,
+              27.667493796526056,
+              1.2729528535980148,
+              4.750620347394541,
+              1.6997518610421836,
+              4.423076923076923,
+              3.218196196139334,
+              0.3682736618220492
+            ]
+          },
+          {
+            "fold": 1,
+            "train_rows": 805,
+            "test_rows": 205,
+            "train_rescues": 47,
+            "test_rescues": 16,
+            "disjoint_groups": true,
+            "training_mean": [
+              32.059627329192544,
+              19.659627329192546,
+              25.42360248447205,
+              0.9987577639751553,
+              0.0,
+              80.93788819875776,
+              0.0,
+              34.13913043478261,
+              0.181355902353614,
+              0.4655974097596192,
+              0.6846814042662982,
+              0.12958223347708306,
+              -0.2450576084370939,
+              -0.8048318411622729,
+              27.62360248447205,
+              1.2919254658385093,
+              4.752795031055901,
+              1.7018633540372672,
+              4.395031055900621,
+              3.2183733720506718,
+              0.36922803904170376
+            ]
+          },
+          {
+            "fold": 2,
+            "train_rows": 811,
+            "test_rows": 199,
+            "train_rescues": 53,
+            "test_rescues": 10,
+            "disjoint_groups": true,
+            "training_mean": [
+              31.97410604192355,
+              19.678175092478423,
+              25.436498150431564,
+              0.9975339087546239,
+              0.0,
+              80.86189889025894,
+              0.0,
+              34.00123304562269,
+              0.17956997695782034,
+              0.4633902317664038,
+              0.6883608953873415,
+              0.1295218719433621,
+              -0.24173695359117225,
+              -0.8021103847960215,
+              27.631319358816278,
+              1.2552404438964242,
+              4.758323057953144,
+              1.6954377311960542,
+              4.401972872996301,
+              3.218346811159144,
+              0.3691386295578652
+            ]
+          },
+          {
+            "fold": 3,
+            "train_rows": 814,
+            "test_rows": 196,
+            "train_rescues": 56,
+            "test_rescues": 7,
+            "disjoint_groups": true,
+            "training_mean": [
+              32.056511056511056,
+              19.735872235872236,
+              25.464373464373466,
+              0.9975429975429976,
+              0.0,
+              80.86240786240786,
+              0.0,
+              34.07248157248157,
+              0.17850682123836487,
+              0.46299462916480527,
+              0.6890660877675916,
+              0.12753207988908893,
+              -0.241333876665526,
+              -0.800933757581787,
+              27.665847665847664,
+              1.2874692874692875,
+              4.756756756756757,
+              1.7223587223587224,
+              4.399262899262899,
+              3.216760730961235,
+              0.36862056862056863
+            ]
+          },
+          {
+            "fold": 4,
+            "train_rows": 804,
+            "test_rows": 206,
+            "train_rescues": 48,
+            "test_rescues": 15,
+            "disjoint_groups": true,
+            "training_mean": [
+              31.987562189054728,
+              19.686567164179106,
+              25.50995024875622,
+              0.9975124378109452,
+              0.0,
+              80.86069651741293,
+              0.0,
+              34.006218905472636,
+              0.17856717785468224,
+              0.46030331233432936,
+              0.6884688969275251,
+              0.12859079920089067,
+              -0.24098350591169884,
+              -0.7978241432328426,
+              27.58955223880597,
+              1.2885572139303483,
+              4.7288557213930345,
+              1.685323383084577,
+              4.41044776119403,
+              3.21786909524198,
+              0.36858564321250914
+            ]
+          }
+        ],
+        "combined_histogram": [
+          {
+            "fold": 0,
+            "train_rows": 806,
+            "test_rows": 204,
+            "train_rescues": 48,
+            "test_rescues": 15,
+            "disjoint_groups": true,
+            "training_mean": []
+          },
+          {
+            "fold": 1,
+            "train_rows": 805,
+            "test_rows": 205,
+            "train_rescues": 47,
+            "test_rescues": 16,
+            "disjoint_groups": true,
+            "training_mean": []
+          },
+          {
+            "fold": 2,
+            "train_rows": 811,
+            "test_rows": 199,
+            "train_rescues": 53,
+            "test_rescues": 10,
+            "disjoint_groups": true,
+            "training_mean": []
+          },
+          {
+            "fold": 3,
+            "train_rows": 814,
+            "test_rows": 196,
+            "train_rescues": 56,
+            "test_rescues": 7,
+            "disjoint_groups": true,
+            "training_mean": []
+          },
+          {
+            "fold": 4,
+            "train_rows": 804,
+            "test_rows": 206,
+            "train_rescues": 48,
+            "test_rescues": 15,
+            "disjoint_groups": true,
+            "training_mean": []
+          }
+        ]
+      },
+      "retry_slot_ms": 336.0418,
+      "original_confidence_alert_rescues": 9,
+      "fold_target_rates": [
+        {
+          "fold": 0,
+          "failures": 204,
+          "rescues": 15,
+          "rate": 0.07352941176470588
+        },
+        {
+          "fold": 1,
+          "failures": 205,
+          "rescues": 16,
+          "rate": 0.07804878048780488
+        },
+        {
+          "fold": 2,
+          "failures": 199,
+          "rescues": 10,
+          "rate": 0.05025125628140704
+        },
+        {
+          "fold": 3,
+          "failures": 196,
+          "rescues": 7,
+          "rate": 0.03571428571428571
+        },
+        {
+          "fold": 4,
+          "failures": 206,
+          "rescues": 15,
+          "rate": 0.07281553398058252
+        }
+      ],
+      "primary_paired_controls": {
+        "68": {
+          "hash_random": {
+            "gain_rescues": 3,
+            "gain_rescues_95": [
+              -2.0,
+              8.0
+            ]
+          },
+          "failure_risk_high": {
+            "gain_rescues": 3,
+            "gain_rescues_95": [
+              -2.0,
+              8.0
+            ]
+          },
+          "failure_risk_low": {
+            "gain_rescues": -3,
+            "gain_rescues_95": [
+              -8.0,
+              2.0
+            ]
+          },
+          "clues_high": {
+            "gain_rescues": 3,
+            "gain_rescues_95": [
+              -2.0,
+              8.0
+            ]
+          },
+          "current_conflicts_low": {
+            "gain_rescues": 1,
+            "gain_rescues_95": [
+              -5.0,
+              7.0
+            ]
+          },
+          "entropy_low": {
+            "gain_rescues": -7,
+            "gain_rescues_95": [
+              -13.0,
+              -2.0
+            ]
+          },
+          "input_logistic": {
+            "gain_rescues": 3,
+            "gain_rescues_95": [
+              -1.0,
+              8.0
+            ]
+          }
+        },
+        "136": {
+          "hash_random": {
+            "gain_rescues": 7,
+            "gain_rescues_95": [
+              0.0,
+              14.0
+            ]
+          },
+          "failure_risk_high": {
+            "gain_rescues": 6,
+            "gain_rescues_95": [
+              -1.0,
+              13.0
+            ]
+          },
+          "failure_risk_low": {
+            "gain_rescues": -5,
+            "gain_rescues_95": [
+              -11.0,
+              1.0
+            ]
+          },
+          "clues_high": {
+            "gain_rescues": 2,
+            "gain_rescues_95": [
+              -6.0,
+              10.0
+            ]
+          },
+          "current_conflicts_low": {
+            "gain_rescues": 4,
+            "gain_rescues_95": [
+              -3.0,
+              11.0
+            ]
+          },
+          "entropy_low": {
+            "gain_rescues": -7,
+            "gain_rescues_95": [
+              -14.0,
+              -1.0
+            ]
+          },
+          "input_logistic": {
+            "gain_rescues": 4,
+            "gain_rescues_95": [
+              -3.0,
+              11.0
+            ]
+          }
+        },
+        "272": {
+          "hash_random": {
+            "gain_rescues": 11,
+            "gain_rescues_95": [
+              1.0,
+              21.0
+            ]
+          },
+          "failure_risk_high": {
+            "gain_rescues": 11,
+            "gain_rescues_95": [
+              1.0,
+              22.0
+            ]
+          },
+          "failure_risk_low": {
+            "gain_rescues": -3,
+            "gain_rescues_95": [
+              -10.0,
+              3.0
+            ]
+          },
+          "clues_high": {
+            "gain_rescues": 7,
+            "gain_rescues_95": [
+              -3.0,
+              17.0
+            ]
+          },
+          "current_conflicts_low": {
+            "gain_rescues": 11,
+            "gain_rescues_95": [
+              1.0,
+              21.0
+            ]
+          },
+          "entropy_low": {
+            "gain_rescues": -4,
+            "gain_rescues_95": [
+              -12.0,
+              3.0
+            ]
+          },
+          "input_logistic": {
+            "gain_rescues": 7,
+            "gain_rescues_95": [
+              -3.0,
+              17.0
+            ]
+          }
+        }
+      },
+      "decision": "inconclusive_no_go",
+      "conditions": {
+        "gain_at_least_8_rescues": false,
+        "two_action_interval_lower_positive": false,
+        "positive_service_gain": true,
+        "beats_all_cheap_controls": false
+      }
+    },
+    "full_stochastic_restart": {
+      "potential_rescues": 105,
+      "prevalence": 0.10396039603960396,
+      "models": {
+        "hash_random": {
+          "auroc": 0.5476769271244409,
+          "average_precision": 0.12427848933703414,
+          "budgets": [
+            {
+              "budget": 68,
+              "rescues": 11,
+              "rescues_per_retry": 0.16176470588235295,
+              "uniform_expected": 7.069306930693069,
+              "gain_rescues": 3.9306930693069306,
+              "gain_accuracy_pp": 0.24566831683168316,
+              "gain_rescues_95": [
+                -1.3693298686097601,
+                9.973723224046998
+              ],
+              "gain_rescues_97_5": [
+                -2.012375755527115,
+                10.889945559288076
+              ],
+              "gain_accuracy_pp_95": [
+                -0.08558311678811001,
+                0.6233577015029373
+              ],
+              "fold_rescues": [
+                2,
+                2,
+                1,
+                3,
+                3
+              ],
+              "service": {
+                "monitor_charged": false,
+                "policy_slots": 126,
+                "random_slots": 126,
+                "policy_rescues": 18,
+                "uniform_expected": 13.099009900990099,
+                "gain_rescues": 4.900990099009901,
+                "gain_rescues_95": [
+                  -2.0,
+                  12.47178938263383
+                ],
+                "envelope_ms": 253752.07279999997,
+                "timing_only_gain_rescues_95": [
+                  2.6138613861386144,
+                  7.292079207920793
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": 7.765742678571428
+              },
+              "uniform_allocation_95_range": [
+                3.0,
+                12.0
+              ]
+            },
+            {
+              "budget": 136,
+              "rescues": 18,
+              "rescues_per_retry": 0.1323529411764706,
+              "uniform_expected": 14.138613861386139,
+              "gain_rescues": 3.8613861386138613,
+              "gain_accuracy_pp": 0.24133663366336633,
+              "gain_rescues_95": [
+                -2.960625748502989,
+                11.035908385093165
+              ],
+              "gain_rescues_97_5": [
+                -3.7896458716363033,
+                12.230850243567716
+              ],
+              "gain_accuracy_pp_95": [
+                -0.18503910928143685,
+                0.6897442740683228
+              ],
+              "fold_rescues": [
+                4,
+                2,
+                3,
+                4,
+                5
+              ],
+              "service": {
+                "monitor_charged": false,
+                "policy_slots": 194,
+                "random_slots": 194,
+                "policy_rescues": 26,
+                "uniform_expected": 20.168316831683168,
+                "gain_rescues": 5.831683168316832,
+                "gain_rescues_95": [
+                  -2.234503648952095,
+                  14.575824106941905
+                ],
+                "envelope_ms": 271674.46559999994,
+                "timing_only_gain_rescues_95": [
+                  3.544554455445546,
+                  8.222772277227723
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": 9.240449369047619
+              },
+              "uniform_allocation_95_range": [
+                8.0,
+                21.0
+              ]
+            },
+            {
+              "budget": 272,
+              "rescues": 34,
+              "rescues_per_retry": 0.125,
+              "uniform_expected": 28.277227722772277,
+              "gain_rescues": 5.7227722772277225,
+              "gain_accuracy_pp": 0.35767326732673266,
+              "gain_rescues_95": [
+                -2.916003092644884,
+                14.979445654599457
+              ],
+              "gain_rescues_97_5": [
+                -4.186560786290323,
+                16.370333902151803
+              ],
+              "gain_accuracy_pp_95": [
+                -0.18225019329030526,
+                0.9362153534124661
+              ],
+              "fold_rescues": [
+                7,
+                8,
+                5,
+                5,
+                9
+              ],
+              "service": {
+                "monitor_charged": false,
+                "policy_slots": 330,
+                "random_slots": 330,
+                "policy_rescues": 43,
+                "uniform_expected": 34.306930693069305,
+                "gain_rescues": 8.693069306930695,
+                "gain_rescues_95": [
+                  -0.6223899070807767,
+                  18.6158299334831
+                ],
+                "envelope_ms": 307519.25119999994,
+                "timing_only_gain_rescues_95": [
+                  6.405940594059409,
+                  11.084158415841586
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": 13.774388023809518
+              },
+              "uniform_allocation_95_range": [
+                20.0,
+                37.0
+              ]
+            }
+          ]
+        },
+        "failure_risk_high": {
+          "auroc": 0.4624467245461721,
+          "average_precision": 0.10029457646200368,
+          "budgets": [
+            {
+              "budget": 68,
+              "rescues": 7,
+              "rescues_per_retry": 0.10294117647058823,
+              "uniform_expected": 7.069306930693069,
+              "gain_rescues": -0.06930693069306937,
+              "gain_accuracy_pp": -0.0043316831683168355,
+              "gain_rescues_95": [
+                -4.324276763939113,
+                4.968939021133744
+              ],
+              "gain_rescues_97_5": [
+                -4.884566214786328,
+                5.839081039789457
+              ],
+              "gain_accuracy_pp_95": [
+                -0.27026729774619457,
+                0.310558688820859
+              ],
+              "fold_rescues": [
+                1,
+                2,
+                3,
+                0,
+                1
+              ],
+              "service": {
+                "monitor_charged": true,
+                "policy_slots": 68,
+                "random_slots": 126,
+                "policy_rescues": 7,
+                "uniform_expected": 13.099009900990099,
+                "gain_rescues": -6.099009900990099,
+                "gain_rescues_95": [
+                  -10.564446920522867,
+                  -0.9654372813593208
+                ],
+                "envelope_ms": 253752.07279999997,
+                "timing_only_gain_rescues_95": [
+                  -8.386138613861386,
+                  -3.707920792079207
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -9.664035333333334
+              },
+              "uniform_allocation_95_range": [
+                3.0,
+                12.0
+              ]
+            },
+            {
+              "budget": 136,
+              "rescues": 15,
+              "rescues_per_retry": 0.11029411764705882,
+              "uniform_expected": 14.138613861386139,
+              "gain_rescues": 0.8613861386138613,
+              "gain_accuracy_pp": 0.05383663366336632,
+              "gain_rescues_95": [
+                -5.466646912114483,
+                7.613556140744058
+              ],
+              "gain_rescues_97_5": [
+                -6.3303075535039035,
+                8.656744481286015
+              ],
+              "gain_accuracy_pp_95": [
+                -0.3416654320071552,
+                0.47584725879650364
+              ],
+              "fold_rescues": [
+                2,
+                4,
+                3,
+                4,
+                2
+              ],
+              "service": {
+                "monitor_charged": true,
+                "policy_slots": 136,
+                "random_slots": 194,
+                "policy_rescues": 15,
+                "uniform_expected": 20.168316831683168,
+                "gain_rescues": -5.168316831683168,
+                "gain_rescues_95": [
+                  -11.629302290696298,
+                  1.5867412899401085
+                ],
+                "envelope_ms": 271674.46559999994,
+                "timing_only_gain_rescues_95": [
+                  -7.455445544554454,
+                  -2.7772277227722775
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -8.189328642857143
+              },
+              "uniform_allocation_95_range": [
+                8.0,
+                21.0
+              ]
+            },
+            {
+              "budget": 272,
+              "rescues": 23,
+              "rescues_per_retry": 0.08455882352941177,
+              "uniform_expected": 28.277227722772277,
+              "gain_rescues": -5.2772277227722775,
+              "gain_accuracy_pp": -0.32982673267326734,
+              "gain_rescues_95": [
+                -13.1028776683087,
+                2.8446149199066895
+              ],
+              "gain_rescues_97_5": [
+                -14.252820536288526,
+                4.068422589551186
+              ],
+              "gain_accuracy_pp_95": [
+                -0.8189298542692938,
+                0.1777884324941681
+              ],
+              "fold_rescues": [
+                7,
+                5,
+                3,
+                6,
+                2
+              ],
+              "service": {
+                "monitor_charged": true,
+                "policy_slots": 272,
+                "random_slots": 330,
+                "policy_rescues": 23,
+                "uniform_expected": 34.306930693069305,
+                "gain_rescues": -11.306930693069305,
+                "gain_rescues_95": [
+                  -19.397020662533496,
+                  -3.0835612269329844
+                ],
+                "envelope_ms": 307519.25119999994,
+                "timing_only_gain_rescues_95": [
+                  -13.594059405940591,
+                  -8.915841584158414
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -17.916117452380952
+              },
+              "uniform_allocation_95_range": [
+                20.0,
+                37.0
+              ]
+            }
+          ]
+        },
+        "failure_risk_low": {
+          "auroc": 0.537553275453828,
+          "average_precision": 0.13122849166734787,
+          "budgets": [
+            {
+              "budget": 68,
+              "rescues": 10,
+              "rescues_per_retry": 0.14705882352941177,
+              "uniform_expected": 7.069306930693069,
+              "gain_rescues": 2.9306930693069306,
+              "gain_accuracy_pp": 0.18316831683168316,
+              "gain_rescues_95": [
+                -2.123583690269039,
+                8.775447842660027
+              ],
+              "gain_rescues_97_5": [
+                -2.7151442130605052,
+                9.63743012383499
+              ],
+              "gain_accuracy_pp_95": [
+                -0.13272398064181493,
+                0.5484654901662517
+              ],
+              "fold_rescues": [
+                3,
+                3,
+                0,
+                0,
+                4
+              ],
+              "service": {
+                "monitor_charged": true,
+                "policy_slots": 68,
+                "random_slots": 126,
+                "policy_rescues": 10,
+                "uniform_expected": 13.099009900990099,
+                "gain_rescues": -3.099009900990099,
+                "gain_rescues_95": [
+                  -8.255542990405369,
+                  2.676204709528852
+                ],
+                "envelope_ms": 253752.07279999997,
+                "timing_only_gain_rescues_95": [
+                  -5.386138613861386,
+                  -0.7079207920792072
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -4.910459511904762
+              },
+              "uniform_allocation_95_range": [
+                3.0,
+                12.0
+              ]
+            },
+            {
+              "budget": 136,
+              "rescues": 18,
+              "rescues_per_retry": 0.1323529411764706,
+              "uniform_expected": 14.138613861386139,
+              "gain_rescues": 3.8613861386138613,
+              "gain_accuracy_pp": 0.24133663366336633,
+              "gain_rescues_95": [
+                -2.8328788946106984,
+                11.207969281909566
+              ],
+              "gain_rescues_97_5": [
+                -3.8379132838371968,
+                12.256121591781879
+              ],
+              "gain_accuracy_pp_95": [
+                -0.17705493091316865,
+                0.7004980801193479
+              ],
+              "fold_rescues": [
+                4,
+                4,
+                4,
+                0,
+                6
+              ],
+              "service": {
+                "monitor_charged": true,
+                "policy_slots": 136,
+                "random_slots": 194,
+                "policy_rescues": 18,
+                "uniform_expected": 20.168316831683168,
+                "gain_rescues": -2.1683168316831676,
+                "gain_rescues_95": [
+                  -8.894653905364972,
+                  5.04778127683939
+                ],
+                "envelope_ms": 271674.46559999994,
+                "timing_only_gain_rescues_95": [
+                  -4.455445544554454,
+                  0.22277227722772253
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -3.4357528214285717
+              },
+              "uniform_allocation_95_range": [
+                8.0,
+                21.0
+              ]
+            },
+            {
+              "budget": 272,
+              "rescues": 34,
+              "rescues_per_retry": 0.125,
+              "uniform_expected": 28.277227722772277,
+              "gain_rescues": 5.7227722772277225,
+              "gain_accuracy_pp": 0.35767326732673266,
+              "gain_rescues_95": [
+                -2.8980692076228634,
+                14.735467563207232
+              ],
+              "gain_rescues_97_5": [
+                -4.226615084134615,
+                16.036286041122814
+              ],
+              "gain_accuracy_pp_95": [
+                -0.18112932547642896,
+                0.920966722700452
+              ],
+              "fold_rescues": [
+                5,
+                8,
+                8,
+                4,
+                9
+              ],
+              "service": {
+                "monitor_charged": true,
+                "policy_slots": 272,
+                "random_slots": 330,
+                "policy_rescues": 34,
+                "uniform_expected": 34.306930693069305,
+                "gain_rescues": -0.30693069306930454,
+                "gain_rescues_95": [
+                  -8.941606197488928,
+                  8.607673079664593
+                ],
+                "envelope_ms": 307519.25119999994,
+                "timing_only_gain_rescues_95": [
+                  -2.594059405940591,
+                  2.0841584158415856
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -0.48633944047619226
+              },
+              "uniform_allocation_95_range": [
+                20.0,
+                37.0
+              ]
+            }
+          ]
+        },
+        "clues_high": {
+          "auroc": 0.5050933964746119,
+          "average_precision": 0.10304613493186607,
+          "budgets": [
+            {
+              "budget": 68,
+              "rescues": 5,
+              "rescues_per_retry": 0.07352941176470588,
+              "uniform_expected": 7.069306930693069,
+              "gain_rescues": -2.0693069306930694,
+              "gain_accuracy_pp": -0.12933168316831684,
+              "gain_rescues_95": [
+                -5.853805734664708,
+                2.4358413944941395
+              ],
+              "gain_rescues_97_5": [
+                -6.328869450189582,
+                3.1715565410069044
+              ],
+              "gain_accuracy_pp_95": [
+                -0.36586285841654426,
+                0.15224008715588372
+              ],
+              "fold_rescues": [
+                1,
+                1,
+                0,
+                0,
+                3
+              ],
+              "service": {
+                "monitor_charged": false,
+                "policy_slots": 126,
+                "random_slots": 126,
+                "policy_rescues": 13,
+                "uniform_expected": 13.099009900990099,
+                "gain_rescues": -0.0990099009900991,
+                "gain_rescues_95": [
+                  -6.319083048125512,
+                  6.608794837839779
+                ],
+                "envelope_ms": 253752.07279999997,
+                "timing_only_gain_rescues_95": [
+                  -2.3861386138613856,
+                  2.292079207920793
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -0.1568836904761899
+              },
+              "uniform_allocation_95_range": [
+                3.0,
+                12.0
+              ]
+            },
+            {
+              "budget": 136,
+              "rescues": 14,
+              "rescues_per_retry": 0.10294117647058823,
+              "uniform_expected": 14.138613861386139,
+              "gain_rescues": -0.13861386138613874,
+              "gain_accuracy_pp": -0.008663366336633671,
+              "gain_rescues_95": [
+                -6.272836801752464,
+                6.513207995264988
+              ],
+              "gain_rescues_97_5": [
+                -7.0000373505976095,
+                7.498330118932862
+              ],
+              "gain_accuracy_pp_95": [
+                -0.392052300109529,
+                0.40707549970406176
+              ],
+              "fold_rescues": [
+                2,
+                3,
+                3,
+                3,
+                3
+              ],
+              "service": {
+                "monitor_charged": false,
+                "policy_slots": 194,
+                "random_slots": 194,
+                "policy_rescues": 23,
+                "uniform_expected": 20.168316831683168,
+                "gain_rescues": 2.8316831683168324,
+                "gain_rescues_95": [
+                  -4.80104443140441,
+                  11.229506510113927
+                ],
+                "envelope_ms": 271674.46559999994,
+                "timing_only_gain_rescues_95": [
+                  0.5445544554455459,
+                  5.2227722772277225
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": 4.486873547619048
+              },
+              "uniform_allocation_95_range": [
+                8.0,
+                21.0
+              ]
+            },
+            {
+              "budget": 272,
+              "rescues": 30,
+              "rescues_per_retry": 0.11029411764705882,
+              "uniform_expected": 28.277227722772277,
+              "gain_rescues": 1.7227722772277225,
+              "gain_accuracy_pp": 0.10767326732673264,
+              "gain_rescues_95": [
+                -6.7000247524752465,
+                10.3894351890058
+              ],
+              "gain_rescues_97_5": [
+                -7.74666883528265,
+                11.455153335790085
+              ],
+              "gain_accuracy_pp_95": [
+                -0.4187515470297029,
+                0.6493396993128625
+              ],
+              "fold_rescues": [
+                6,
+                6,
+                7,
+                5,
+                6
+              ],
+              "service": {
+                "monitor_charged": false,
+                "policy_slots": 330,
+                "random_slots": 330,
+                "policy_rescues": 36,
+                "uniform_expected": 34.306930693069305,
+                "gain_rescues": 1.6930693069306955,
+                "gain_rescues_95": [
+                  -7.209616546723068,
+                  11.004063155275968
+                ],
+                "envelope_ms": 307519.25119999994,
+                "timing_only_gain_rescues_95": [
+                  -0.594059405940591,
+                  4.084158415841586
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": 2.6827111071428558
+              },
+              "uniform_allocation_95_range": [
+                20.0,
+                37.0
+              ]
+            }
+          ]
+        },
+        "current_conflicts_low": {
+          "auroc": 0.5081557484872402,
+          "average_precision": 0.11135042946062552,
+          "budgets": [
+            {
+              "budget": 68,
+              "rescues": 11,
+              "rescues_per_retry": 0.16176470588235295,
+              "uniform_expected": 7.069306930693069,
+              "gain_rescues": 3.9306930693069306,
+              "gain_accuracy_pp": 0.24566831683168316,
+              "gain_rescues_95": [
+                -1.4610059222880245,
+                9.995096440713244
+              ],
+              "gain_rescues_97_5": [
+                -2.2046938666503872,
+                10.93498270719389
+              ],
+              "gain_accuracy_pp_95": [
+                -0.09131287014300153,
+                0.6246935275445777
+              ],
+              "fold_rescues": [
+                2,
+                2,
+                0,
+                1,
+                6
+              ],
+              "service": {
+                "monitor_charged": true,
+                "policy_slots": 68,
+                "random_slots": 126,
+                "policy_rescues": 11,
+                "uniform_expected": 13.099009900990099,
+                "gain_rescues": -2.099009900990099,
+                "gain_rescues_95": [
+                  -7.536618658906509,
+                  3.859848012956268
+                ],
+                "envelope_ms": 253752.07279999997,
+                "timing_only_gain_rescues_95": [
+                  -4.386138613861386,
+                  0.2920792079207928
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -3.3259342380952375
+              },
+              "uniform_allocation_95_range": [
+                3.0,
+                12.0
+              ]
+            },
+            {
+              "budget": 136,
+              "rescues": 19,
+              "rescues_per_retry": 0.13970588235294118,
+              "uniform_expected": 14.138613861386139,
+              "gain_rescues": 4.861386138613861,
+              "gain_accuracy_pp": 0.30383663366336633,
+              "gain_rescues_95": [
+                -2.069362698270694,
+                12.379960950521447
+              ],
+              "gain_rescues_97_5": [
+                -3.0257964101945243,
+                13.528847983871003
+              ],
+              "gain_accuracy_pp_95": [
+                -0.12933516864191838,
+                0.7737475594075904
+              ],
+              "fold_rescues": [
+                3,
+                5,
+                2,
+                2,
+                7
+              ],
+              "service": {
+                "monitor_charged": true,
+                "policy_slots": 136,
+                "random_slots": 194,
+                "policy_rescues": 19,
+                "uniform_expected": 20.168316831683168,
+                "gain_rescues": -1.1683168316831676,
+                "gain_rescues_95": [
+                  -8.132822781607924,
+                  6.320033702849907
+                ],
+                "envelope_ms": 271674.46559999994,
+                "timing_only_gain_rescues_95": [
+                  -3.455445544554454,
+                  1.2227722772277225
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -1.8512275476190478
+              },
+              "uniform_allocation_95_range": [
+                8.0,
+                21.0
+              ]
+            },
+            {
+              "budget": 272,
+              "rescues": 31,
+              "rescues_per_retry": 0.11397058823529412,
+              "uniform_expected": 28.277227722772277,
+              "gain_rescues": 2.7227722772277225,
+              "gain_accuracy_pp": 0.17017326732673266,
+              "gain_rescues_95": [
+                -5.758348792175014,
+                11.389367865254709
+              ],
+              "gain_rescues_97_5": [
+                -6.818253708694172,
+                12.747680825538804
+              ],
+              "gain_accuracy_pp_95": [
+                -0.3598967995109384,
+                0.7118354915784193
+              ],
+              "fold_rescues": [
+                5,
+                7,
+                4,
+                5,
+                10
+              ],
+              "service": {
+                "monitor_charged": true,
+                "policy_slots": 272,
+                "random_slots": 330,
+                "policy_rescues": 31,
+                "uniform_expected": 34.306930693069305,
+                "gain_rescues": -3.3069306930693045,
+                "gain_rescues_95": [
+                  -11.926340945674044,
+                  5.3391023196170355
+                ],
+                "envelope_ms": 307519.25119999994,
+                "timing_only_gain_rescues_95": [
+                  -5.594059405940591,
+                  -0.9158415841584144
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -5.239915261904759
+              },
+              "uniform_allocation_95_range": [
+                20.0,
+                37.0
+              ]
+            }
+          ]
+        },
+        "entropy_low": {
+          "auroc": 0.5533175480136807,
+          "average_precision": 0.1403519827214244,
+          "budgets": [
+            {
+              "budget": 68,
+              "rescues": 12,
+              "rescues_per_retry": 0.17647058823529413,
+              "uniform_expected": 7.069306930693069,
+              "gain_rescues": 4.930693069306931,
+              "gain_accuracy_pp": 0.30816831683168316,
+              "gain_rescues_95": [
+                -0.7186303385091463,
+                11.286939822488613
+              ],
+              "gain_rescues_97_5": [
+                -1.2740071369220716,
+                12.259104713477203
+              ],
+              "gain_accuracy_pp_95": [
+                -0.04491439615682164,
+                0.7054337389055383
+              ],
+              "fold_rescues": [
+                3,
+                2,
+                2,
+                0,
+                5
+              ],
+              "service": {
+                "monitor_charged": true,
+                "policy_slots": 68,
+                "random_slots": 126,
+                "policy_rescues": 12,
+                "uniform_expected": 13.099009900990099,
+                "gain_rescues": -1.099009900990099,
+                "gain_rescues_95": [
+                  -6.705287514561051,
+                  5.070839242966596
+                ],
+                "envelope_ms": 253752.07279999997,
+                "timing_only_gain_rescues_95": [
+                  -3.3861386138613856,
+                  1.2920792079207928
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -1.7414089642857138
+              },
+              "uniform_allocation_95_range": [
+                3.0,
+                12.0
+              ]
+            },
+            {
+              "budget": 136,
+              "rescues": 18,
+              "rescues_per_retry": 0.1323529411764706,
+              "uniform_expected": 14.138613861386139,
+              "gain_rescues": 3.8613861386138613,
+              "gain_accuracy_pp": 0.24133663366336633,
+              "gain_rescues_95": [
+                -2.858410435507831,
+                11.1218092423702
+              ],
+              "gain_rescues_97_5": [
+                -3.736146175424192,
+                12.364198931364026
+              ],
+              "gain_accuracy_pp_95": [
+                -0.17865065221923943,
+                0.6951130776481375
+              ],
+              "fold_rescues": [
+                4,
+                3,
+                5,
+                1,
+                5
+              ],
+              "service": {
+                "monitor_charged": true,
+                "policy_slots": 136,
+                "random_slots": 194,
+                "policy_rescues": 18,
+                "uniform_expected": 20.168316831683168,
+                "gain_rescues": -2.1683168316831676,
+                "gain_rescues_95": [
+                  -8.82354420388238,
+                  4.987353515624999
+                ],
+                "envelope_ms": 271674.46559999994,
+                "timing_only_gain_rescues_95": [
+                  -4.455445544554454,
+                  0.22277227722772253
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -3.4357528214285717
+              },
+              "uniform_allocation_95_range": [
+                8.0,
+                21.0
+              ]
+            },
+            {
+              "budget": 272,
+              "rescues": 38,
+              "rescues_per_retry": 0.13970588235294118,
+              "uniform_expected": 28.277227722772277,
+              "gain_rescues": 9.722772277227723,
+              "gain_accuracy_pp": 0.6076732673267327,
+              "gain_rescues_95": [
+                0.7040446908532578,
+                19.060135792479997
+              ],
+              "gain_rescues_97_5": [
+                -0.388938492063492,
+                20.441552562496277
+              ],
+              "gain_accuracy_pp_95": [
+                0.044002793178328614,
+                1.1912584870299998
+              ],
+              "fold_rescues": [
+                6,
+                9,
+                8,
+                6,
+                9
+              ],
+              "service": {
+                "monitor_charged": true,
+                "policy_slots": 272,
+                "random_slots": 330,
+                "policy_rescues": 38,
+                "uniform_expected": 34.306930693069305,
+                "gain_rescues": 3.6930693069306955,
+                "gain_rescues_95": [
+                  -5.282493810627827,
+                  12.733533949418856
+                ],
+                "envelope_ms": 307519.25119999994,
+                "timing_only_gain_rescues_95": [
+                  1.405940594059409,
+                  6.084158415841586
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": 5.851761654761904
+              },
+              "uniform_allocation_95_range": [
+                20.0,
+                37.0
+              ]
+            }
+          ]
+        },
+        "input_logistic": {
+          "auroc": 0.5036043146540384,
+          "average_precision": 0.11740677921952347,
+          "budgets": [
+            {
+              "budget": 68,
+              "rescues": 10,
+              "rescues_per_retry": 0.14705882352941177,
+              "uniform_expected": 7.069306930693069,
+              "gain_rescues": 2.9306930693069306,
+              "gain_accuracy_pp": 0.18316831683168316,
+              "gain_rescues_95": [
+                -2.3220377620936583,
+                8.859747659363608
+              ],
+              "gain_rescues_97_5": [
+                -2.9060798114609074,
+                9.630782467312521
+              ],
+              "gain_accuracy_pp_95": [
+                -0.14512736013085364,
+                0.5537342287102255
+              ],
+              "fold_rescues": [
+                3,
+                1,
+                1,
+                2,
+                3
+              ],
+              "service": {
+                "monitor_charged": false,
+                "policy_slots": 126,
+                "random_slots": 126,
+                "policy_rescues": 14,
+                "uniform_expected": 13.099009900990099,
+                "gain_rescues": 0.9009900990099009,
+                "gain_rescues_95": [
+                  -5.329373573249692,
+                  7.7634336677814915
+                ],
+                "envelope_ms": 253752.07279999997,
+                "timing_only_gain_rescues_95": [
+                  -1.3861386138613856,
+                  3.292079207920793
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": 1.4276415833333318
+              },
+              "uniform_allocation_95_range": [
+                3.0,
+                12.0
+              ]
+            },
+            {
+              "budget": 136,
+              "rescues": 15,
+              "rescues_per_retry": 0.11029411764705882,
+              "uniform_expected": 14.138613861386139,
+              "gain_rescues": 0.8613861386138613,
+              "gain_accuracy_pp": 0.05383663366336632,
+              "gain_rescues_95": [
+                -5.592365544486101,
+                7.810913758412544
+              ],
+              "gain_rescues_97_5": [
+                -6.371091636455773,
+                8.920187752525987
+              ],
+              "gain_accuracy_pp_95": [
+                -0.3495228465303813,
+                0.488182109900784
+              ],
+              "fold_rescues": [
+                5,
+                1,
+                3,
+                3,
+                3
+              ],
+              "service": {
+                "monitor_charged": false,
+                "policy_slots": 194,
+                "random_slots": 194,
+                "policy_rescues": 20,
+                "uniform_expected": 20.168316831683168,
+                "gain_rescues": -0.16831683168316758,
+                "gain_rescues_95": [
+                  -7.6251062217531285,
+                  7.586315503665487
+                ],
+                "envelope_ms": 271674.46559999994,
+                "timing_only_gain_rescues_95": [
+                  -2.455445544554454,
+                  2.2227722772277225
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -0.266702273809524
+              },
+              "uniform_allocation_95_range": [
+                8.0,
+                21.0
+              ]
+            },
+            {
+              "budget": 272,
+              "rescues": 24,
+              "rescues_per_retry": 0.08823529411764706,
+              "uniform_expected": 28.277227722772277,
+              "gain_rescues": -4.2772277227722775,
+              "gain_accuracy_pp": -0.26732673267326734,
+              "gain_rescues_95": [
+                -12.384486666698827,
+                4.012899730931962
+              ],
+              "gain_rescues_97_5": [
+                -13.382040384156523,
+                5.297323550298423
+              ],
+              "gain_accuracy_pp_95": [
+                -0.7740304166686767,
+                0.25080623318324763
+              ],
+              "fold_rescues": [
+                8,
+                4,
+                3,
+                4,
+                5
+              ],
+              "service": {
+                "monitor_charged": false,
+                "policy_slots": 330,
+                "random_slots": 330,
+                "policy_rescues": 33,
+                "uniform_expected": 34.306930693069305,
+                "gain_rescues": -1.3069306930693045,
+                "gain_rescues_95": [
+                  -10.10021266620111,
+                  7.856340741001519
+                ],
+                "envelope_ms": 307519.25119999994,
+                "timing_only_gain_rescues_95": [
+                  -3.594059405940591,
+                  1.0841584158415856
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -2.0708647142857113
+              },
+              "uniform_allocation_95_range": [
+                20.0,
+                37.0
+              ]
+            }
+          ]
+        },
+        "decoded_logistic": {
+          "auroc": 0.4987845303867404,
+          "average_precision": 0.10527675709101283,
+          "budgets": [
+            {
+              "budget": 68,
+              "rescues": 6,
+              "rescues_per_retry": 0.08823529411764706,
+              "uniform_expected": 7.069306930693069,
+              "gain_rescues": -1.0693069306930694,
+              "gain_accuracy_pp": -0.06683168316831684,
+              "gain_rescues_95": [
+                -5.278313273031582,
+                3.698882971641592
+              ],
+              "gain_rescues_97_5": [
+                -5.788007044942759,
+                4.567475032387465
+              ],
+              "gain_accuracy_pp_95": [
+                -0.3298945795644739,
+                0.2311801857275995
+              ],
+              "fold_rescues": [
+                2,
+                1,
+                1,
+                1,
+                1
+              ],
+              "service": {
+                "monitor_charged": true,
+                "policy_slots": 68,
+                "random_slots": 126,
+                "policy_rescues": 6,
+                "uniform_expected": 13.099009900990099,
+                "gain_rescues": -7.099009900990099,
+                "gain_rescues_95": [
+                  -11.587102077187808,
+                  -2.2314889162561578
+                ],
+                "envelope_ms": 253752.07279999997,
+                "timing_only_gain_rescues_95": [
+                  -9.386138613861386,
+                  -4.707920792079207
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -11.248560607142856
+              },
+              "uniform_allocation_95_range": [
+                3.0,
+                12.0
+              ]
+            },
+            {
+              "budget": 136,
+              "rescues": 17,
+              "rescues_per_retry": 0.125,
+              "uniform_expected": 14.138613861386139,
+              "gain_rescues": 2.8613861386138613,
+              "gain_accuracy_pp": 0.17883663366336633,
+              "gain_rescues_95": [
+                -3.946084442810499,
+                10.239787709980945
+              ],
+              "gain_rescues_97_5": [
+                -4.680333383430729,
+                11.216381549558703
+              ],
+              "gain_accuracy_pp_95": [
+                -0.24663027767565618,
+                0.6399867318738091
+              ],
+              "fold_rescues": [
+                6,
+                4,
+                3,
+                1,
+                3
+              ],
+              "service": {
+                "monitor_charged": true,
+                "policy_slots": 136,
+                "random_slots": 194,
+                "policy_rescues": 17,
+                "uniform_expected": 20.168316831683168,
+                "gain_rescues": -3.1683168316831676,
+                "gain_rescues_95": [
+                  -10.070355109357845,
+                  4.107055297276685
+                ],
+                "envelope_ms": 271674.46559999994,
+                "timing_only_gain_rescues_95": [
+                  -5.455445544554454,
+                  -0.7772277227722775
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -5.020278095238096
+              },
+              "uniform_allocation_95_range": [
+                8.0,
+                21.0
+              ]
+            },
+            {
+              "budget": 272,
+              "rescues": 30,
+              "rescues_per_retry": 0.11029411764705882,
+              "uniform_expected": 28.277227722772277,
+              "gain_rescues": 1.7227722772277225,
+              "gain_accuracy_pp": 0.10767326732673264,
+              "gain_rescues_95": [
+                -6.757751739805489,
+                10.448309149089527
+              ],
+              "gain_rescues_97_5": [
+                -7.990592171705248,
+                11.844119267196206
+              ],
+              "gain_accuracy_pp_95": [
+                -0.42235948373784304,
+                0.6530193218180954
+              ],
+              "fold_rescues": [
+                7,
+                7,
+                6,
+                4,
+                6
+              ],
+              "service": {
+                "monitor_charged": true,
+                "policy_slots": 272,
+                "random_slots": 330,
+                "policy_rescues": 30,
+                "uniform_expected": 34.306930693069305,
+                "gain_rescues": -4.3069306930693045,
+                "gain_rescues_95": [
+                  -12.876994089867416,
+                  4.302765510758091
+                ],
+                "envelope_ms": 307519.25119999994,
+                "timing_only_gain_rescues_95": [
+                  -6.594059405940591,
+                  -1.9158415841584144
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -6.824440535714287
+              },
+              "uniform_allocation_95_range": [
+                20.0,
+                37.0
+              ]
+            }
+          ]
+        },
+        "combined_logistic": {
+          "auroc": 0.49919494869771114,
+          "average_precision": 0.11238494267919705,
+          "budgets": [
+            {
+              "budget": 68,
+              "rescues": 11,
+              "rescues_per_retry": 0.16176470588235295,
+              "uniform_expected": 7.069306930693069,
+              "gain_rescues": 3.9306930693069306,
+              "gain_accuracy_pp": 0.24566831683168316,
+              "gain_rescues_95": [
+                -1.5509052760620485,
+                9.96876801235351
+              ],
+              "gain_rescues_97_5": [
+                -2.1663718052100025,
+                10.991495870607721
+              ],
+              "gain_accuracy_pp_95": [
+                -0.09693157975387803,
+                0.6230480007720943
+              ],
+              "fold_rescues": [
+                4,
+                2,
+                2,
+                1,
+                2
+              ],
+              "service": {
+                "monitor_charged": true,
+                "policy_slots": 68,
+                "random_slots": 126,
+                "policy_rescues": 11,
+                "uniform_expected": 13.099009900990099,
+                "gain_rescues": -2.099009900990099,
+                "gain_rescues_95": [
+                  -7.5813204862729355,
+                  3.804021430645163
+                ],
+                "envelope_ms": 253752.07279999997,
+                "timing_only_gain_rescues_95": [
+                  -4.386138613861386,
+                  0.2920792079207928
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -3.3259342380952375
+              },
+              "uniform_allocation_95_range": [
+                3.0,
+                12.0
+              ]
+            },
+            {
+              "budget": 136,
+              "rescues": 14,
+              "rescues_per_retry": 0.10294117647058823,
+              "uniform_expected": 14.138613861386139,
+              "gain_rescues": -0.13861386138613874,
+              "gain_accuracy_pp": -0.008663366336633671,
+              "gain_rescues_95": [
+                -6.263970640422055,
+                6.513832944399346
+              ],
+              "gain_rescues_97_5": [
+                -7.157727773381832,
+                7.614338210533409
+              ],
+              "gain_accuracy_pp_95": [
+                -0.39149816502637846,
+                0.40711455902495913
+              ],
+              "fold_rescues": [
+                5,
+                2,
+                2,
+                1,
+                4
+              ],
+              "service": {
+                "monitor_charged": true,
+                "policy_slots": 136,
+                "random_slots": 194,
+                "policy_rescues": 14,
+                "uniform_expected": 20.168316831683168,
+                "gain_rescues": -6.168316831683168,
+                "gain_rescues_95": [
+                  -12.509129583936014,
+                  0.5793836753189826
+                ],
+                "envelope_ms": 271674.46559999994,
+                "timing_only_gain_rescues_95": [
+                  -8.455445544554454,
+                  -3.7772277227722775
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -9.773853916666669
+              },
+              "uniform_allocation_95_range": [
+                8.0,
+                21.0
+              ]
+            },
+            {
+              "budget": 272,
+              "rescues": 30,
+              "rescues_per_retry": 0.11029411764705882,
+              "uniform_expected": 28.277227722772277,
+              "gain_rescues": 1.7227722772277225,
+              "gain_accuracy_pp": 0.10767326732673264,
+              "gain_rescues_95": [
+                -6.701142524458462,
+                10.488214114443945
+              ],
+              "gain_rescues_97_5": [
+                -8.013555763260673,
+                11.80889729773809
+              ],
+              "gain_accuracy_pp_95": [
+                -0.4188214077786539,
+                0.6555133821527465
+              ],
+              "fold_rescues": [
+                8,
+                6,
+                5,
+                4,
+                7
+              ],
+              "service": {
+                "monitor_charged": true,
+                "policy_slots": 272,
+                "random_slots": 330,
+                "policy_rescues": 30,
+                "uniform_expected": 34.306930693069305,
+                "gain_rescues": -4.3069306930693045,
+                "gain_rescues_95": [
+                  -12.997123612602936,
+                  4.419860942127132
+                ],
+                "envelope_ms": 307519.25119999994,
+                "timing_only_gain_rescues_95": [
+                  -6.594059405940591,
+                  -1.9158415841584144
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -6.824440535714287
+              },
+              "uniform_allocation_95_range": [
+                20.0,
+                37.0
+              ]
+            }
+          ]
+        },
+        "combined_histogram": {
+          "auroc": 0.4551433833201789,
+          "average_precision": 0.09214467381568874,
+          "budgets": [
+            {
+              "budget": 68,
+              "rescues": 4,
+              "rescues_per_retry": 0.058823529411764705,
+              "uniform_expected": 7.069306930693069,
+              "gain_rescues": -3.0693069306930694,
+              "gain_accuracy_pp": -0.19183168316831684,
+              "gain_rescues_95": [
+                -6.625766239159253,
+                1.0029385847064163
+              ],
+              "gain_rescues_97_5": [
+                -7.138572880722226,
+                1.4740921568627507
+              ],
+              "gain_accuracy_pp_95": [
+                -0.4141103899474533,
+                0.06268366154415102
+              ],
+              "fold_rescues": [
+                0,
+                2,
+                1,
+                0,
+                1
+              ],
+              "service": {
+                "monitor_charged": true,
+                "policy_slots": 68,
+                "random_slots": 126,
+                "policy_rescues": 4,
+                "uniform_expected": 13.099009900990099,
+                "gain_rescues": -9.099009900990099,
+                "gain_rescues_95": [
+                  -13.067383505823491,
+                  -4.898152180367782
+                ],
+                "envelope_ms": 253752.07279999997,
+                "timing_only_gain_rescues_95": [
+                  -11.386138613861386,
+                  -6.707920792079207
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -14.417611154761904
+              },
+              "uniform_allocation_95_range": [
+                3.0,
+                12.0
+              ]
+            },
+            {
+              "budget": 136,
+              "rescues": 11,
+              "rescues_per_retry": 0.08088235294117647,
+              "uniform_expected": 14.138613861386139,
+              "gain_rescues": -3.1386138613861387,
+              "gain_accuracy_pp": -0.19616336633663367,
+              "gain_rescues_95": [
+                -8.738713709431563,
+                2.974554013875121
+              ],
+              "gain_rescues_97_5": [
+                -9.45746589948948,
+                4.017830964397307
+              ],
+              "gain_accuracy_pp_95": [
+                -0.5461696068394727,
+                0.18590962586719506
+              ],
+              "fold_rescues": [
+                0,
+                3,
+                2,
+                2,
+                4
+              ],
+              "service": {
+                "monitor_charged": true,
+                "policy_slots": 136,
+                "random_slots": 194,
+                "policy_rescues": 11,
+                "uniform_expected": 20.168316831683168,
+                "gain_rescues": -9.168316831683168,
+                "gain_rescues_95": [
+                  -15.145069331983805,
+                  -2.9631817367792865
+                ],
+                "envelope_ms": 271674.46559999994,
+                "timing_only_gain_rescues_95": [
+                  -11.455445544554454,
+                  -6.7772277227722775
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -14.527429738095236
+              },
+              "uniform_allocation_95_range": [
+                8.0,
+                21.0
+              ]
+            },
+            {
+              "budget": 272,
+              "rescues": 23,
+              "rescues_per_retry": 0.08455882352941177,
+              "uniform_expected": 28.277227722772277,
+              "gain_rescues": -5.2772277227722775,
+              "gain_accuracy_pp": -0.32982673267326734,
+              "gain_rescues_95": [
+                -13.020128938437281,
+                2.894933033378673
+              ],
+              "gain_rescues_97_5": [
+                -14.073877245508982,
+                4.100835427451392
+              ],
+              "gain_accuracy_pp_95": [
+                -0.8137580586523301,
+                0.18093331458616707
+              ],
+              "fold_rescues": [
+                6,
+                5,
+                4,
+                2,
+                6
+              ],
+              "service": {
+                "monitor_charged": true,
+                "policy_slots": 272,
+                "random_slots": 330,
+                "policy_rescues": 23,
+                "uniform_expected": 34.306930693069305,
+                "gain_rescues": -11.306930693069305,
+                "gain_rescues_95": [
+                  -19.35016710439512,
+                  -2.984242031254938
+                ],
+                "envelope_ms": 307519.25119999994,
+                "timing_only_gain_rescues_95": [
+                  -13.594059405940591,
+                  -8.915841584158414
+                ],
+                "additional_scorer_break_even_ms_per_puzzle": -17.916117452380952
+              },
+              "uniform_allocation_95_range": [
+                20.0,
+                37.0
+              ]
+            }
+          ]
+        }
+      },
+      "fit_audit": {
+        "input_logistic": [
+          {
+            "fold": 0,
+            "train_rows": 806,
+            "test_rows": 204,
+            "train_rescues": 84,
+            "test_rescues": 21,
+            "disjoint_groups": true,
+            "training_mean": [
+              27.667493796526056,
+              1.2729528535980148,
+              4.750620347394541,
+              1.6997518610421836,
+              4.423076923076923
+            ]
+          },
+          {
+            "fold": 1,
+            "train_rows": 805,
+            "test_rows": 205,
+            "train_rescues": 82,
+            "test_rescues": 23,
+            "disjoint_groups": true,
+            "training_mean": [
+              27.62360248447205,
+              1.2919254658385093,
+              4.752795031055901,
+              1.7018633540372672,
+              4.395031055900621
+            ]
+          },
+          {
+            "fold": 2,
+            "train_rows": 811,
+            "test_rows": 199,
+            "train_rescues": 89,
+            "test_rescues": 16,
+            "disjoint_groups": true,
+            "training_mean": [
+              27.631319358816278,
+              1.2552404438964242,
+              4.758323057953144,
+              1.6954377311960542,
+              4.401972872996301
+            ]
+          },
+          {
+            "fold": 3,
+            "train_rows": 814,
+            "test_rows": 196,
+            "train_rescues": 83,
+            "test_rescues": 22,
+            "disjoint_groups": true,
+            "training_mean": [
+              27.665847665847664,
+              1.2874692874692875,
+              4.756756756756757,
+              1.7223587223587224,
+              4.399262899262899
+            ]
+          },
+          {
+            "fold": 4,
+            "train_rows": 804,
+            "test_rows": 206,
+            "train_rescues": 82,
+            "test_rescues": 23,
+            "disjoint_groups": true,
+            "training_mean": [
+              27.58955223880597,
+              1.2885572139303483,
+              4.7288557213930345,
+              1.685323383084577,
+              4.41044776119403
+            ]
+          }
+        ],
+        "decoded_logistic": [
+          {
+            "fold": 0,
+            "train_rows": 806,
+            "test_rows": 204,
+            "train_rescues": 84,
+            "test_rescues": 21,
+            "disjoint_groups": true,
+            "training_mean": [
+              32.140198511166254,
+              19.714640198511166,
+              25.557071960297765,
+              0.9987593052109182,
+              0.0,
+              80.92307692307692,
+              0.0,
+              34.14764267990074,
+              0.17970419436850338,
+              0.46236496806958177,
+              0.6876476441068625,
+              0.12827340524560465,
+              -0.24259407302507988,
+              -0.8013477368516011
+            ]
+          },
+          {
+            "fold": 1,
+            "train_rows": 805,
+            "test_rows": 205,
+            "train_rescues": 82,
+            "test_rescues": 23,
+            "disjoint_groups": true,
+            "training_mean": [
+              32.059627329192544,
+              19.659627329192546,
+              25.42360248447205,
+              0.9987577639751553,
+              0.0,
+              80.93788819875776,
+              0.0,
+              34.13913043478261,
+              0.181355902353614,
+              0.4655974097596192,
+              0.6846814042662982,
+              0.12958223347708306,
+              -0.2450576084370939,
+              -0.8048318411622729
+            ]
+          },
+          {
+            "fold": 2,
+            "train_rows": 811,
+            "test_rows": 199,
+            "train_rescues": 89,
+            "test_rescues": 16,
+            "disjoint_groups": true,
+            "training_mean": [
+              31.97410604192355,
+              19.678175092478423,
+              25.436498150431564,
+              0.9975339087546239,
+              0.0,
+              80.86189889025894,
+              0.0,
+              34.00123304562269,
+              0.17956997695782034,
+              0.4633902317664038,
+              0.6883608953873415,
+              0.1295218719433621,
+              -0.24173695359117225,
+              -0.8021103847960215
+            ]
+          },
+          {
+            "fold": 3,
+            "train_rows": 814,
+            "test_rows": 196,
+            "train_rescues": 83,
+            "test_rescues": 22,
+            "disjoint_groups": true,
+            "training_mean": [
+              32.056511056511056,
+              19.735872235872236,
+              25.464373464373466,
+              0.9975429975429976,
+              0.0,
+              80.86240786240786,
+              0.0,
+              34.07248157248157,
+              0.17850682123836487,
+              0.46299462916480527,
+              0.6890660877675916,
+              0.12753207988908893,
+              -0.241333876665526,
+              -0.800933757581787
+            ]
+          },
+          {
+            "fold": 4,
+            "train_rows": 804,
+            "test_rows": 206,
+            "train_rescues": 82,
+            "test_rescues": 23,
+            "disjoint_groups": true,
+            "training_mean": [
+              31.987562189054728,
+              19.686567164179106,
+              25.50995024875622,
+              0.9975124378109452,
+              0.0,
+              80.86069651741293,
+              0.0,
+              34.006218905472636,
+              0.17856717785468224,
+              0.46030331233432936,
+              0.6884688969275251,
+              0.12859079920089067,
+              -0.24098350591169884,
+              -0.7978241432328426
+            ]
+          }
+        ],
+        "combined_logistic": [
+          {
+            "fold": 0,
+            "train_rows": 806,
+            "test_rows": 204,
+            "train_rescues": 84,
+            "test_rescues": 21,
+            "disjoint_groups": true,
+            "training_mean": [
+              32.140198511166254,
+              19.714640198511166,
+              25.557071960297765,
+              0.9987593052109182,
+              0.0,
+              80.92307692307692,
+              0.0,
+              34.14764267990074,
+              0.17970419436850338,
+              0.46236496806958177,
+              0.6876476441068625,
+              0.12827340524560465,
+              -0.24259407302507988,
+              -0.8013477368516011,
+              27.667493796526056,
+              1.2729528535980148,
+              4.750620347394541,
+              1.6997518610421836,
+              4.423076923076923,
+              3.218196196139334,
+              0.3682736618220492
+            ]
+          },
+          {
+            "fold": 1,
+            "train_rows": 805,
+            "test_rows": 205,
+            "train_rescues": 82,
+            "test_rescues": 23,
+            "disjoint_groups": true,
+            "training_mean": [
+              32.059627329192544,
+              19.659627329192546,
+              25.42360248447205,
+              0.9987577639751553,
+              0.0,
+              80.93788819875776,
+              0.0,
+              34.13913043478261,
+              0.181355902353614,
+              0.4655974097596192,
+              0.6846814042662982,
+              0.12958223347708306,
+              -0.2450576084370939,
+              -0.8048318411622729,
+              27.62360248447205,
+              1.2919254658385093,
+              4.752795031055901,
+              1.7018633540372672,
+              4.395031055900621,
+              3.2183733720506718,
+              0.36922803904170376
+            ]
+          },
+          {
+            "fold": 2,
+            "train_rows": 811,
+            "test_rows": 199,
+            "train_rescues": 89,
+            "test_rescues": 16,
+            "disjoint_groups": true,
+            "training_mean": [
+              31.97410604192355,
+              19.678175092478423,
+              25.436498150431564,
+              0.9975339087546239,
+              0.0,
+              80.86189889025894,
+              0.0,
+              34.00123304562269,
+              0.17956997695782034,
+              0.4633902317664038,
+              0.6883608953873415,
+              0.1295218719433621,
+              -0.24173695359117225,
+              -0.8021103847960215,
+              27.631319358816278,
+              1.2552404438964242,
+              4.758323057953144,
+              1.6954377311960542,
+              4.401972872996301,
+              3.218346811159144,
+              0.3691386295578652
+            ]
+          },
+          {
+            "fold": 3,
+            "train_rows": 814,
+            "test_rows": 196,
+            "train_rescues": 83,
+            "test_rescues": 22,
+            "disjoint_groups": true,
+            "training_mean": [
+              32.056511056511056,
+              19.735872235872236,
+              25.464373464373466,
+              0.9975429975429976,
+              0.0,
+              80.86240786240786,
+              0.0,
+              34.07248157248157,
+              0.17850682123836487,
+              0.46299462916480527,
+              0.6890660877675916,
+              0.12753207988908893,
+              -0.241333876665526,
+              -0.800933757581787,
+              27.665847665847664,
+              1.2874692874692875,
+              4.756756756756757,
+              1.7223587223587224,
+              4.399262899262899,
+              3.216760730961235,
+              0.36862056862056863
+            ]
+          },
+          {
+            "fold": 4,
+            "train_rows": 804,
+            "test_rows": 206,
+            "train_rescues": 82,
+            "test_rescues": 23,
+            "disjoint_groups": true,
+            "training_mean": [
+              31.987562189054728,
+              19.686567164179106,
+              25.50995024875622,
+              0.9975124378109452,
+              0.0,
+              80.86069651741293,
+              0.0,
+              34.006218905472636,
+              0.17856717785468224,
+              0.46030331233432936,
+              0.6884688969275251,
+              0.12859079920089067,
+              -0.24098350591169884,
+              -0.7978241432328426,
+              27.58955223880597,
+              1.2885572139303483,
+              4.7288557213930345,
+              1.685323383084577,
+              4.41044776119403,
+              3.21786909524198,
+              0.36858564321250914
+            ]
+          }
+        ],
+        "combined_histogram": [
+          {
+            "fold": 0,
+            "train_rows": 806,
+            "test_rows": 204,
+            "train_rescues": 84,
+            "test_rescues": 21,
+            "disjoint_groups": true,
+            "training_mean": []
+          },
+          {
+            "fold": 1,
+            "train_rows": 805,
+            "test_rows": 205,
+            "train_rescues": 82,
+            "test_rescues": 23,
+            "disjoint_groups": true,
+            "training_mean": []
+          },
+          {
+            "fold": 2,
+            "train_rows": 811,
+            "test_rows": 199,
+            "train_rescues": 89,
+            "test_rescues": 16,
+            "disjoint_groups": true,
+            "training_mean": []
+          },
+          {
+            "fold": 3,
+            "train_rows": 814,
+            "test_rows": 196,
+            "train_rescues": 83,
+            "test_rescues": 22,
+            "disjoint_groups": true,
+            "training_mean": []
+          },
+          {
+            "fold": 4,
+            "train_rows": 804,
+            "test_rows": 206,
+            "train_rescues": 82,
+            "test_rescues": 23,
+            "disjoint_groups": true,
+            "training_mean": []
+          }
+        ]
+      },
+      "retry_slot_ms": 263.5646,
+      "original_confidence_alert_rescues": 21,
+      "fold_target_rates": [
+        {
+          "fold": 0,
+          "failures": 204,
+          "rescues": 21,
+          "rate": 0.10294117647058823
+        },
+        {
+          "fold": 1,
+          "failures": 205,
+          "rescues": 23,
+          "rate": 0.11219512195121951
+        },
+        {
+          "fold": 2,
+          "failures": 199,
+          "rescues": 16,
+          "rate": 0.08040201005025126
+        },
+        {
+          "fold": 3,
+          "failures": 196,
+          "rescues": 22,
+          "rate": 0.11224489795918367
+        },
+        {
+          "fold": 4,
+          "failures": 206,
+          "rescues": 23,
+          "rate": 0.11165048543689321
+        }
+      ],
+      "primary_paired_controls": {
+        "68": {
+          "hash_random": {
+            "gain_rescues": 0,
+            "gain_rescues_95": [
+              -9.0,
+              9.0
+            ]
+          },
+          "failure_risk_high": {
+            "gain_rescues": 4,
+            "gain_rescues_95": [
+              -4.0,
+              12.0
+            ]
+          },
+          "failure_risk_low": {
+            "gain_rescues": 1,
+            "gain_rescues_95": [
+              -7.0,
+              10.0
+            ]
+          },
+          "clues_high": {
+            "gain_rescues": 6,
+            "gain_rescues_95": [
+              -2.0,
+              14.0
+            ]
+          },
+          "current_conflicts_low": {
+            "gain_rescues": 0,
+            "gain_rescues_95": [
+              -8.0,
+              8.0
+            ]
+          },
+          "entropy_low": {
+            "gain_rescues": -1,
+            "gain_rescues_95": [
+              -10.0,
+              7.0
+            ]
+          },
+          "input_logistic": {
+            "gain_rescues": 1,
+            "gain_rescues_95": [
+              -6.0,
+              7.0
+            ]
+          }
+        },
+        "136": {
+          "hash_random": {
+            "gain_rescues": -4,
+            "gain_rescues_95": [
+              -14.0,
+              6.0
+            ]
+          },
+          "failure_risk_high": {
+            "gain_rescues": -1,
+            "gain_rescues_95": [
+              -11.0,
+              9.0
+            ]
+          },
+          "failure_risk_low": {
+            "gain_rescues": -4,
+            "gain_rescues_95": [
+              -14.0,
+              6.0
+            ]
+          },
+          "clues_high": {
+            "gain_rescues": 0,
+            "gain_rescues_95": [
+              -9.0,
+              9.0
+            ]
+          },
+          "current_conflicts_low": {
+            "gain_rescues": -5,
+            "gain_rescues_95": [
+              -14.0,
+              4.0
+            ]
+          },
+          "entropy_low": {
+            "gain_rescues": -4,
+            "gain_rescues_95": [
+              -13.0,
+              5.0
+            ]
+          },
+          "input_logistic": {
+            "gain_rescues": -1,
+            "gain_rescues_95": [
+              -8.0,
+              6.0
+            ]
+          }
+        },
+        "272": {
+          "hash_random": {
+            "gain_rescues": -4,
+            "gain_rescues_95": [
+              -17.0,
+              8.0
+            ]
+          },
+          "failure_risk_high": {
+            "gain_rescues": 7,
+            "gain_rescues_95": [
+              -6.0,
+              20.0
+            ]
+          },
+          "failure_risk_low": {
+            "gain_rescues": -4,
+            "gain_rescues_95": [
+              -16.0,
+              8.0
+            ]
+          },
+          "clues_high": {
+            "gain_rescues": 0,
+            "gain_rescues_95": [
+              -14.0,
+              14.0
+            ]
+          },
+          "current_conflicts_low": {
+            "gain_rescues": -1,
+            "gain_rescues_95": [
+              -13.0,
+              11.0
+            ]
+          },
+          "entropy_low": {
+            "gain_rescues": -8,
+            "gain_rescues_95": [
+              -19.0,
+              3.0
+            ]
+          },
+          "input_logistic": {
+            "gain_rescues": 6,
+            "gain_rescues_95": [
+              -4.0,
+              16.0
+            ]
+          }
+        }
+      },
+      "decision": "inconclusive_no_go",
+      "conditions": {
+        "gain_at_least_8_rescues": false,
+        "two_action_interval_lower_positive": false,
+        "positive_service_gain": false,
+        "beats_all_cheap_controls": false
+      }
+    }
+  },
+  "environment": {
+    "python": "3.12.10",
+    "numpy": "2.5.4",
+    "sklearn": "1.9.1"
+  },
+  "timing": {
+    "plain_mean_ms": 137.80460499999998,
+    "monitored_mean_ms": 147.39354999999998,
+    "overhead_ms": 9.588944999999995,
+    "overhead_95": [
+      5.8560062499999965,
+      13.256984999999998
+    ],
+    "new_scorer_latency_measured": false
+  },
+  "protected_sources_unchanged": true
+}
