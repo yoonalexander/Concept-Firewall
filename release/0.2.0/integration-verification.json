@@ -1,0 +1,54 @@
+{
+  "reviewed_base": "a5ea81eb1e3e6085473b69cb7944a571bdee8794",
+  "integrated_commit": "9912d4e7d3555689f278d18d6d0d5355f2615dab",
+  "pr_1_head": "f099075c18c920993ee481787b3c95785ac0a63e",
+  "pr_2_head": "0ba466f98d88eec8987d8a5d6502f49383db12ab",
+  "allocation_audit": {
+    "status": "passed",
+    "original_outcomes": 1600,
+    "retry_outcomes": 3200,
+    "exact_fallback_outcomes": 6400,
+    "new_model_calls": 0,
+    "new_fits": 0
+  },
+  "recoverability_audit": {
+    "status": "passed",
+    "new_fits": 0,
+    "new_model_outputs": 0,
+    "actions": [
+      {
+        "action": "level6_fixed_prefix_stochastic_suffix",
+        "potential_rescues": 63,
+        "original_alert_rescues": 9,
+        "ranked_policy_budget_checks": 30
+      },
+      {
+        "action": "full_stochastic_restart",
+        "potential_rescues": 105,
+        "original_alert_rescues": 21,
+        "ranked_policy_budget_checks": 30
+      }
+    ],
+    "protected_source_hashes_unchanged": true,
+    "train_only_scaler_means_verified": true,
+    "fold_identity_verified": true,
+    "cpu_seconds": 0.953125,
+    "wall_seconds": 1.2190000000409782,
+    "analysis_plus_audit_cpu_seconds": 8.53125,
+    "uncertainty": "Intervals retain their conditional fixed-OOF-score scope; this audit replays point estimates, not additional statistical fits"
+  },
+  "audit_scope": "No-fit retained-artifact audits on an extracted committed source copy; existing research dependencies reused; original artifacts and consumed ledgers preserved",
+  "regression": {
+    "tests_passed": 128,
+    "subtests_passed": 133,
+    "command": ".venv/Scripts/python.exe -m pytest -q --tb=short",
+    "pip_check": "No broken requirements found",
+    "temporary_directory": "workspace .test-tmp"
+  },
+  "historical_study_tag": {
+    "name": "sudoku-study-v0.1.1",
+    "tag_sha": "e81de0a98fa55b0dbd5b59fd6703adce7a078b5d",
+    "commit_sha": "98833cd97a466beec3e1ff0a7d6f36b32b288d99"
+  },
+  "scope": "Pre-publication integration verification. Final archive/install checks and exact release commit are recorded in the published cli-release-verification.json asset."
+}

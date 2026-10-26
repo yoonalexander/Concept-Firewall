@@ -11,3 +11,4 @@ results/recoverability/** -text whitespace=cr-at-eol
 src/concept_firewall/recoverability_analysis.py -text whitespace=cr-at-eol
 scripts/analyze_recoverability.py -text whitespace=cr-at-eol
 scripts/audit_recoverability.py -text whitespace=cr-at-eol
+release/0.2.0/** -text whitespace=cr-at-eol

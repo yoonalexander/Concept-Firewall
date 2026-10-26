@@ -21,12 +21,17 @@ but did not improve retry allocation under the tested policies. This exact
 solver is a classical engineering fallback, not a successful learned firewall.
 No research gate is reopened or upgraded by the `0.2.0` version number.
 
+The integrated repository also retains the completed saved-data recoverability
+analysis from PR #2. Its finding is inconclusive evidence and a no-go for
+advancing the learned allocator. The source distributions include that optional
+research module; the standalone verifier/solver imports no research dependencies.
+
 The historical `0.1.1` study release, `sudoku-study-v0.1.1` tag and
 `RELEASE_NOTES.md` are preserved. No PyPI publication or model runs are included.
 
 Release assets: `concept_firewall-0.2.0-py3-none-any.whl`,
 `concept_firewall-0.2.0.tar.gz`, `SHA256SUMS`, `cli-release-verification.json`,
-`CLI_README.md`, and these notes. The verification JSON records the exact tested
+`CLI_README.md`, `integration-verification.json`, and these notes. The verification JSON records the exact tested
 asset hashes, Python/platform/tool versions, archive inspection and clean
 environment checks; checksums cover all companion assets except `SHA256SUMS`
 itself. Build and verification instructions are in `docs/cli_release.md` in the

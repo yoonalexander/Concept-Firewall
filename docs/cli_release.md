@@ -1,6 +1,6 @@
 # Building and testing the CLI release
 
-Use a clean checkout of `codex/cli-release`. No research data, upstream submodule,
+Use a clean checkout or Git archive of the exact `main` commit to be tagged. No research data, upstream submodule,
 CUDA or model dependencies are needed. Run from the project root with Python
 3.10+ (commands below assume the build environment is activated):
 
@@ -49,14 +49,20 @@ automatic releases; the workflow never publishes to GitHub releases or PyPI.
 
 ## Delivery
 
-Copy `CLI_README.md` and `CLI_RELEASE_NOTES.md` beside the two distributions and
-verification report. Generate `SHA256SUMS` over precisely those five files. Keep
-the binaries in ignored `dist/`; commit the verification report and checksum
-manifest under `release/0.2.0/` for review. A GitHub draft release must attach
-exactly these tested files plus `SHA256SUMS`, target the reviewed release-branch
-commit, and preserve the `sudoku-study-v0.1.1` tag. Download each uploaded asset
-and compare its bytes/SHA-256 before reporting delivery. GitHub's automatic
-repository snapshots are separate from the tested `.tar.gz` source distribution.
+Copy `CLI_README.md`, `CLI_RELEASE_NOTES.md` and
+`release/0.2.0/integration-verification.json` from the selected source commit
+beside the distributions and the new verification report. Record the exact
+source commit in that report. Generate `SHA256SUMS` over precisely those six
+files. Keep the binaries and final measured asset report in ignored `dist/`;
+publish the authoritative report and checksums as release assets. Historical
+branch-only draft records remain under `release/0.2.0/pr1-draft/`.
+
+Update the existing GitHub draft to target the exact tested commit and replace
+its old assets. Download each uploaded asset and compare its bytes/SHA-256
+against the newly tested files. Require the selected commit's full six-job CI
+matrix to pass before publishing `cli-v0.2.0`. Preserve the historical
+`sudoku-study-v0.1.1` tag. GitHub's automatic repository snapshots are separate
+from the tested `.tar.gz` source distribution.
 
 No checkpoints, datasets or raw research evidence may be included in the tested
-archives or attached assets. Do not publish to PyPI, merge the PR, or move main.
+archives or attached assets. No PyPI publication is part of this release.

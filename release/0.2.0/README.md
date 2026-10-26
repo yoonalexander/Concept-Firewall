@@ -1,65 +1,54 @@
-# CLI 0.2.0 tested delivery
+# Integrated CLI 0.2.0 delivery
 
-Release branch: `codex/cli-release`, forked from `main` at
-`a5ea81eb1e3e6085473b69cb7944a571bdee8794`. Packaging/documentation phase:
-`11fa3579d443772478b86624e12e80f0a40eb948`. Build/verification phase:
-`162575ef2e432cd186569b1cfef0783b63873427`.
+PR #1 packages the dependency-free verifier and bounded exact fallback. PR #2
+adds the completed exposed-data recoverability analysis, with its inconclusive
+evidence/no-go conclusion preserved. Both PRs are integrated into `main`.
 
-The wheel and sdist were built from the package sources committed by those two
-phases. The delivery phase adds this record and checksums; a subsequent CI setup
-fix explicitly installs `setuptools>=68` because Windows Python 3.10 bundles an
-older version. No packaged files or tested assets change in these phases. The GitHub
-draft `cli-v0.2.0` targets the delivery commit on this branch; main is not merged
-or moved. Historical `RELEASE_NOTES.md` and the `sudoku-study-v0.1.1` tag
-(`e81de0a98fa55b0dbd5b59fd6703adce7a078b5d`) remain unchanged.
+## Reviewed integration
 
-## Acceptance evidence
+- PR #1 head: `f099075c18c920993ee481787b3c95785ac0a63e`; merge commit
+  `17c1e04fdc37b482c80498280b0c19ce47ac82b0`.
+- PR #2 head: `0ba466f98d88eec8987d8a5d6502f49383db12ab`; merge commit
+  `9912d4e7d3555689f278d18d6d0d5355f2615dab`.
+- Combined regression: **128 tests and 133 subtests passed**, plus `pip check`.
+- In an extracted committed source copy, no-fit audits independently checked
+  1,600 original outcomes, 3,200 retries, 6,400 exact-fallback outcomes, all 60
+  recoverability allocation/budget points, training-only means and protected
+  artifact/ledger hashes. No consumed experiment was rerun.
 
-[Machine-readable verification](cli-release-verification.json) records exact
-asset hashes, archive inventories, packaging-tool versions, installed packages
-and every successful command check:
+[Integration verification](integration-verification.json) records those checks.
+The earlier PR #1 branch-only draft report and checksums are retained under
+[pr1-draft/](pr1-draft/README.md); they do not identify the integrated release
+assets. No historical research result, source snapshot, consumed ledger or
+`sudoku-study-v0.1.1` tag was replaced.
 
-- Both the wheel and sdist installed offline in separate clean environments on
-  Windows with Python **3.12.10** and **3.14.2**: **4 clean installations**.
-- **82 checks per environment, 328 total**, exercise both installed console and
-  module entry points. Valid answers, incorrect/changed-clue proposals, incomplete
-  and malformed text, conflicting clues, consistent-but-unsatisfiable puzzles,
-  and exhausted search budgets all satisfy the documented output/exit contract.
-- Every environment ran the runnable demo and `pip check`; research packages,
-  Torch, CUDA packages and ML imports were absent. Each successful completion
-  passed a separate clue/row/column/box checker.
-- **26 adversarial parser/verifier unit tests** extracted from the sdist passed
-  against the final installed environment. The **31 existing verifier/solver
-  tests** also passed from source without research dependencies.
-- Additional compatibility check: **121 repository regression tests passed**
-  using the existing research venv and original checkout's pinned upstream source,
-  with `PYTHONPATH` pointing at this release worktree's changed package. The bare
-  release worktree intentionally has no upstream submodule. Those research tests
-  require optional dependencies/upstream files and are not the clean-install
-  acceptance suite. No study or real model generation was rerun.
-- The allowlist inspected every wheel/sdist member and confirmed identical
-  Python modules. No checkpoints, datasets, raw evidence, submodules, local
-  environments or retained-evidence archives are attached.
+## Final release assets
 
-The first Python 3.14 sdist installation exceeded Windows' path limit under this
-deeply nested worktree. Repeating the acceptance run with a shorter writable
-temporary path passed all four combinations. See [build instructions](../../docs/cli_release.md).
+The release process builds both distributions from a clean Git archive of the
+exact committed `main` revision selected for `cli-v0.2.0`. It rechecks archive
+allowlists, matching Python sources and clean offline installations of both
+wheel and sdist on Python 3.12 and 3.14. CI additionally checks Windows/Linux
+on Python 3.10, 3.12 and 3.14.
 
-The CI workflow independently checks rebuilt distributions on Windows/Linux
-with Python 3.10, 3.12 and 3.14. CI rebuilds are distinct from the exact local
-assets identified by this checksum manifest; do not substitute CI builds without
-retesting and regenerating checksums.
+The authoritative final asset hashes, exact build commit and measured clean
+installation results are published as release assets, outside the source tree
+being built. This avoids recording a source revision or checksum that refers
+to a different build. Obtain them from the
+[CLI 0.2.0 release](https://github.com/yoonalexander/Concept-Firewall/releases/tag/cli-v0.2.0):
 
-## Assets and use
+- `concept_firewall-0.2.0-py3-none-any.whl`
+- `concept_firewall-0.2.0.tar.gz`
+- `CLI_README.md`
+- `CLI_RELEASE_NOTES.md`
+- `cli-release-verification.json`
+- `integration-verification.json`
+- `SHA256SUMS` (covers the other six assets)
 
-The draft contains exactly the wheel, sdist, `CLI_README.md`,
-`CLI_RELEASE_NOTES.md`, `cli-release-verification.json`, and `SHA256SUMS`.
-[SHA256SUMS](SHA256SUMS) covers the other five files. Uploaded asset bytes are
-downloaded and compared with the local originals as the final delivery check.
-The tested archives are kept in this worktree's ignored `dist/` directory.
-GitHub's automatic repository source snapshots are not the tested sdist.
-
-Install the downloaded wheel with:
+The final release is published only after uploaded bytes match the tested local
+files and the selected source commit's six CI jobs pass. The tag targets that
+exact tested commit. Download files and verify `SHA256SUMS` before installing.
+GitHub's automatic repository snapshots are not the tested source distribution.
+No checkpoints, datasets, raw evidence or Python environments are attached.
 
 ```console
 python -m pip install --no-index ./concept_firewall-0.2.0-py3-none-any.whl
@@ -67,7 +56,7 @@ python -m concept_firewall --version
 ```
 
 See [CLI instructions](../../CLI_README.md), [demo](../../examples/sudoku_demo.py),
-and [release notes](../../CLI_RELEASE_NOTES.md). No PyPI publication or paid
-services are part of this delivery. The research findings remain closed and
-negative for tested retry-allocation benefit; exact solving is a classical
-fallback and does not validate a learned firewall.
+[release notes](../../CLI_RELEASE_NOTES.md) and
+[build instructions](../../docs/cli_release.md). No PyPI publication is included.
+Exact constraint solving is a classical Sudoku fallback and does not establish
+a successful learned firewall or general AI safety effectiveness.
